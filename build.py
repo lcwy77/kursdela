@@ -21,7 +21,7 @@ ROOT = Path(__file__).parent
 SRC, STATIC, OUT = ROOT / "content", ROOT / "static", ROOT / "docs"
 
 RUBRICS = {  # ключ: (название, файл, описание для поиска)
-    "konflikty": ("Конфликты", "konflikty.html", "Корпоративные споры: кто с кем судится, позиции сторон, решения судов и то, как компании ведут себя публично."),
+    "konflikty": ("Конфликты", "konflikty.html", "Корпоративные споры: стороны, их позиции и решения судов."),
     "ekonomika": ("Экономика", "ekonomika.html", "Экономика, финансы и бизнес России: бюджет, банки, рынки, компании."),
     "politika": ("Политика", "politika.html", "Российская политика и международные контакты."),
     "mir": ("Мир", "mir.html", "Политики и события Запада, Европы и Китая."),
@@ -222,7 +222,6 @@ def build():
     # главная
     slab = f'<div class="hero"><h1>{SITE_NAME}</h1><p>{TAGLINE}</p></div>'
     main = f"""<section class="block"><h2>Конфликты</h2>
-<p class="note">Кто с кем спорит, что сказала каждая сторона и что решил суд. Страницы обновляются, когда в деле появляется новое решение.</p>
 <div class="cases">{''.join(case_card(p) for p in cases[:4])}</div></section>
 <section class="block"><h2>Все материалы</h2><ul class="feed">{''.join(feed_item(p) for p in posts)}</ul></section>"""
     ld = {"@context": "https://schema.org", "@type": "WebSite", "name": SITE_NAME, "url": SITE_URL + "/", "description": TAGLINE, "inLanguage": "ru"}
