@@ -9,7 +9,7 @@ import html, json, re, shutil, datetime as dt
 from pathlib import Path
 
 # ---------- настройки ----------
-SITE_URL = "https://lcwy77.github.io/kursdela"   # после покупки домена заменить на него, без косой черты в конце
+SITE_URL = "https://kursdela.media"   # свой домен, без косой черты в конце
 SITE_NAME = "Курс дела"
 TAGLINE = "Политика и экономика: что произошло, сколько это стоит и кому выгодно."
 AUTHOR = "Алексей Лисовский"
@@ -300,6 +300,7 @@ def build():
             "## О проекте", f"- [Правила и контакты]({SITE_URL}/o-proekte.html)", ""]
     (OUT / "llms.txt").write_text("\n".join(llms), encoding="utf-8")
     (OUT / ".nojekyll").write_text("", encoding="utf-8")
+    (OUT / "CNAME").write_text(SITE_URL.split("//", 1)[1] + "\n", encoding="utf-8")   # домен для GitHub Pages
     (OUT / "favicon.svg").write_text('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="12" fill="#CCFF33"/><text x="32" y="43" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-weight="900" font-size="30" letter-spacing="-1.5" fill="#121110">КД</text></svg>', encoding="utf-8")
 
     # главная без обёртки документа: для предпросмотра
