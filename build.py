@@ -27,6 +27,7 @@ RUBRICS = {  # ключ: (название, файл, описание для п
     "mir": ("Мир", "mir.html", "Политики и события Запада, Европы и Китая."),
     "ukraina": ("Украина", "ukraina.html", "Что происходит на Украине и вокруг неё."),
 }
+NOW_MSK = (dt.datetime.now(dt.timezone.utc) + dt.timedelta(hours=3)).replace(tzinfo=None)   # даты в материалах московские
 MONTHS = "января февраля марта апреля мая июня июля августа сентября октября ноября декабря".split()
 
 
@@ -64,6 +65,9 @@ def load():
             else:
                 meta[k] = v
         meta["date"] = dt.datetime.strptime(meta["date"], "%Y-%m-%d %H:%M")
+        if meta["date"] > NOW_MSK:   # отложенный материал: выйдет при первой сборке после этой даты (время московское)
+            print(f"  отложено до {meta['date']:%d.%m %H:%M}: {f.stem}")
+            continue
         meta["updated"] = dt.datetime.strptime(meta["updated"], "%Y-%m-%d %H:%M") if "updated" in meta else meta["date"]
         meta.update(slug=f.stem, sources=sources, body=md(body), plain=" ".join(body.split()))
         meta.setdefault("seo_title", meta["title"])
