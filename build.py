@@ -10,9 +10,11 @@ from pathlib import Path
 
 # ---------- настройки ----------
 SITE_URL = "https://kursdela.media"   # свой домен, без косой черты в конце
-SITE_NAME = "Курс дела"
-TAGLINE = "Политика и экономика: что произошло, сколько это стоит и кому выгодно."
-AUTHOR = "Редакция «Курс дела»"
+SITE_NAME = "Курс дела Медиа"
+BRAND = "Курс дела"                   # короткое имя для логотипа и шапки
+MOTTO = "Конфликты, деньги, власть"
+TAGLINE = "Конфликты, деньги, власть: что произошло, сколько это стоит и кому выгодно."
+AUTHOR = "Редакция «Курс дела Медиа»"
 CHANNEL = "https://t.me/economskepticism"
 CONTACT = "@mishaasublime"                # контакт для рекламы и консультаций
 # -------------------------------
@@ -96,6 +98,8 @@ nav a{text-decoration:none;padding-block:.2rem;border-bottom:2px solid transpare
 nav a:hover,nav a[aria-current="page"]{border-bottom-color:currentColor}
 .hero{padding-block:clamp(1.5rem,5vw,3.5rem) clamp(1.75rem,5vw,3.25rem)}
 .hero h1{margin:0;font:900 clamp(3.25rem,15vw,11rem)/.86 var(--display);letter-spacing:-.055em;text-transform:uppercase}
+.hero h1 small{display:block;margin-top:.45em;font-size:.32em;letter-spacing:-.02em}
+.logo small{font-size:.62em;margin-left:.3em;opacity:.7}
 .hero p{margin:1.25rem 0 0;max-width:34ch;font:600 clamp(1.1rem,2.3vw,1.45rem)/1.3 var(--display)}
 .pagehead{padding-block:clamp(1.5rem,4vw,2.75rem)}
 .pagehead h1{margin:0;font:900 clamp(2.25rem,7vw,4.5rem)/.95 var(--display);letter-spacing:-.045em;text-wrap:balance}
@@ -178,7 +182,7 @@ def page(path, title, desc, slab, main, up="", current="", extra_head="", og_ima
 {FONTS}
 <style>{CSS}</style>{extra_head}"""
     body = f"""<header class="slab"><div class="wrap">
-<div class="top"><a class="logo" href="{up}index.html">{SITE_NAME}</a><nav aria-label="Рубрики">{nav}</nav></div>
+<div class="top"><a class="logo" href="{up}index.html">{BRAND}<small>Медиа</small></a><nav aria-label="Рубрики">{nav}</nav></div>
 {slab}
 </div></header>
 <main><div class="wrap">
@@ -228,12 +232,12 @@ def build():
     cases = [p for p in posts if p["rubric"] == "konflikty"]
 
     # главная
-    slab = f'<div class="hero"><h1>{SITE_NAME}</h1><p>{TAGLINE}</p></div>'
+    slab = f'<div class="hero"><h1>{BRAND}<small>{MOTTO}</small></h1><p>Что произошло, сколько это стоит и кому выгодно.</p></div>'
     main = f"""<section class="block"><h2>Конфликты</h2>
 <div class="cases">{''.join(case_card(p) for p in cases[:4])}</div></section>
 <section class="block"><h2>Все материалы</h2><ul class="feed">{''.join(feed_item(p) for p in posts)}</ul></section>"""
     ld = {"@context": "https://schema.org", "@type": "WebSite", "name": SITE_NAME, "url": SITE_URL + "/", "description": TAGLINE, "inLanguage": "ru"}
-    head, body = page("index.html", f"{SITE_NAME}: политика, экономика и корпоративные конфликты", TAGLINE, slab, main,
+    head, body = page("index.html", f"{SITE_NAME} — {MOTTO.lower()}: корпоративные споры, экономика и политика", TAGLINE, slab, main,
                       extra_head=f'\n<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>')
     write("index.html", head, body)
     index_parts = (head, body)
@@ -285,7 +289,7 @@ def build():
 <p>По вопросам консультаций и рекламы в канале, телеграм:</p>
 <p class="contact">{CONTACT}</p>
 </div>"""
-    write("o-proekte.html", *page("o-proekte.html", f"О проекте — {SITE_NAME}", "Кто пишет «Курс дела», правила рубрики о корпоративных конфликтах и контакты.", slab, main, current="about"))
+    write("o-proekte.html", *page("o-proekte.html", f"О проекте — {SITE_NAME}", "Кто пишет «Курс дела Медиа», правила рубрики о корпоративных конфликтах и контакты.", slab, main, current="about"))
 
     # 404
     write("404.html", *page("404.html", f"Страница не найдена — {SITE_NAME}", "Такой страницы нет.", '<div class="pagehead"><h1>Такой страницы нет</h1><p>Возможно, адрес изменился.</p></div>',
