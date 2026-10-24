@@ -12,7 +12,7 @@ from pathlib import Path
 SITE_URL = "https://kursdela.media"   # свой домен, без косой черты в конце
 SITE_NAME = "Курс дела"
 TAGLINE = "Политика и экономика: что произошло, сколько это стоит и кому выгодно."
-AUTHOR = "Алексей Лисовский"
+AUTHOR = "Редакция «Курс дела»"
 CHANNEL = "https://t.me/economskepticism"
 CONTACT = "@mishaasublime"                # контакт для рекламы и консультаций
 # -------------------------------
@@ -181,7 +181,7 @@ def page(path, title, desc, slab, main, up="", current="", extra_head="", og_ima
 {main}
 </div></main>
 <footer><div class="wrap">
-<p>© {dt.date.today().year} «{SITE_NAME}». Материалы подготовлены по открытым источникам, ссылки на них даны в каждом тексте. Оценки отражают мнение автора.</p>
+<p>© {dt.date.today().year} «{SITE_NAME}». Материалы подготовлены по открытым источникам, ссылки на них даны в каждом тексте. Оценки отражают мнение редакции.</p>
 <p class="fl"><a href="{CHANNEL}" rel="noopener">Телеграм-канал</a><a href="{up}rss.xml">RSS</a><a href="{up}o-proekte.html">Связаться</a></p>
 </div></footer>"""
     return head, body
@@ -256,27 +256,27 @@ def build():
         main = f"""<article>{box}{fig}
 {p['body']}
 <section class="sources"><h2>Источники</h2><ul>{src}</ul></section>
-<p class="sign"><strong>{AUTHOR}</strong>, автор «{SITE_NAME}». Канал в телеграме: <a href="{CHANNEL}" rel="noopener">t.me/economskepticism</a>. По вопросам коммуникаций в корпоративных спорах: <a href="../o-proekte.html">как связаться</a>.</p>
+<p class="sign"><strong>Редакция «{SITE_NAME}»</strong>. Канал в телеграме: <a href="{CHANNEL}" rel="noopener">t.me/economskepticism</a>. По вопросам коммуникаций в корпоративных спорах: <a href="../o-proekte.html">как связаться</a>.</p>
 </article>"""
         ld = {"@context": "https://schema.org", "@type": "NewsArticle", "headline": p["title"], "description": p["description"],
               "datePublished": p["date"].isoformat() + "+03:00", "dateModified": p["updated"].isoformat() + "+03:00", "inLanguage": "ru",
-              "author": {"@type": "Person", "name": AUTHOR}, "publisher": {"@type": "Organization", "name": SITE_NAME, "url": SITE_URL + "/"},
+              "author": {"@type": "Organization", "name": SITE_NAME, "url": SITE_URL + "/"}, "publisher": {"@type": "Organization", "name": SITE_NAME, "url": SITE_URL + "/"},
               "mainEntityOfPage": f"{SITE_URL}/{path}", "image": f"{SITE_URL}/img/{p.get('image', 'og.png')}"}
         write(path, *page(path, f"{p['seo_title']} — {SITE_NAME}", p["description"], slab, main, up="../", current=p["rubric"],
                           og_image=f"img/{p.get('image', 'og.png')}", og_type="article",
                           extra_head=f'\n<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>'))
 
     # о проекте
-    slab = '<div class="pagehead"><h1>О проекте</h1><p>Автор, правила и контакты.</p></div>'
+    slab = '<div class="pagehead"><h1>О проекте</h1><p>Редакция, правила и контакты.</p></div>'
     main = f"""<div class="prose">
-<p>«{SITE_NAME}» — издание о политике, экономике и корпоративных спорах. Автор — журналист {AUTHOR}. У издания есть <a href="{CHANNEL}" rel="noopener">телеграм-канал</a>, он внесён в реестр Роскомнадзора.</p>
+<p>«{SITE_NAME}» — издание о политике, экономике и корпоративных спорах. У издания есть <a href="{CHANNEL}" rel="noopener">телеграм-канал</a>, он внесён в реестр Роскомнадзора.</p>
 <h2>Как мы пишем о конфликтах</h2>
 <p>В рубрике «Конфликты» разбираются публичные корпоративные споры: иски, арбитражи, разбирательства компаний с регуляторами и друг с другом. Правила для всех разборов одни.</p>
 <p>Позиции сторон излагаются одинаково подробно и по их собственным заявлениям. Решения судов приводятся с номером дела, инстанцией и статусом: вступило ли решение в силу, обжалуется ли оно. О том, кто прав по существу, мы не судим: это дело суда. Мы описываем публичные действия сторон: иски, заявления, раскрытия.</p>
 <p>Разборы обновляются, когда в деле появляется новое решение или заявление. Если ваша компания участвует в споре и её позиция изложена неточно, напишите. Мы сверим текст с документами, исправим и укажем дату правки.</p>
 <p>Разборы не публикуются, не правятся и не снимаются за плату.</p>
 <h2>Консультации</h2>
-<p>Автор консультирует компании и акционеров по публичной коммуникации в корпоративных спорах и по защите репутации: позиция на время разбирательства, работа с прессой, ответ на информационные кампании.</p>
+<p>Редакция консультирует компании и акционеров по публичной коммуникации в корпоративных спорах и по защите репутации: позиция на время разбирательства, работа с прессой, ответ на информационные кампании.</p>
 <h2>Связаться</h2>
 <p>По вопросам консультаций и рекламы в канале, телеграм:</p>
 <p class="contact">{CONTACT}</p>
@@ -298,7 +298,7 @@ def build():
                     f"<pubDate>{p['date'].strftime('%a, %d %b %Y %H:%M:%S')} +0300</pubDate><description>{esc(p['description'])}</description></item>\n" for p in posts[:30])
     (OUT / "rss.xml").write_text(f'<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0"><channel><title>{SITE_NAME}</title><link>{SITE_URL}/</link>'
                                  f"<description>{esc(TAGLINE)}</description><language>ru</language>\n{items}</channel></rss>\n", encoding="utf-8")
-    llms = [f"# {SITE_NAME}", "", f"> {TAGLINE} Авторское издание, автор — {AUTHOR}. Отдельная рубрика посвящена публичным корпоративным конфликтам: стороны, позиции, решения судов.", "",
+    llms = [f"# {SITE_NAME}", "", f"> {TAGLINE} Отдельная рубрика посвящена публичным корпоративным конфликтам: стороны, позиции, решения судов.", "",
             "## Конфликты", *[f"- [{p['a']} против {p.get('b_rod', p['b'])}]({SITE_URL}/materialy/{p['slug']}.html): {p['description']}" for p in cases], "",
             "## Материалы", *[f"- [{p['title']}]({SITE_URL}/materialy/{p['slug']}.html): {p['description']}" for p in posts if p['rubric'] != 'konflikty'], "",
             "## О проекте", f"- [Правила и контакты]({SITE_URL}/o-proekte.html)", ""]
