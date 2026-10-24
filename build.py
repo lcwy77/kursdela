@@ -169,7 +169,11 @@ def page(path, title, desc, slab, main, up="", current="", extra_head="", og_ima
 <meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}">
 <meta property="og:url" content="{url}"><meta property="og:image" content="{SITE_URL}/{og_image}">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="{up}favicon.ico" sizes="48x48">
+<link rel="icon" href="{up}favicon-96.png" type="image/png" sizes="96x96">
+<link rel="icon" href="{up}favicon-192.png" type="image/png" sizes="192x192">
 <link rel="icon" href="{up}favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="{up}apple-touch-icon.png">
 <link rel="alternate" type="application/rss+xml" title="{SITE_NAME}" href="{SITE_URL}/rss.xml">
 {FONTS}
 <style>{CSS}</style>{extra_head}"""
