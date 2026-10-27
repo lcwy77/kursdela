@@ -3,8 +3,13 @@ seo_title: Сколько россиян имеют сбережения: опр
 date: 2026-10-09 15:45
 rubric: ekonomika
 description: Финансовую подушку регулярно пополняет 21% россиян. Главная причина у остальных: расходы превышают доходы. Наличные стали самым популярным способом хранить деньги.
-image: sberezheniya-21.png
-image_alt: Инфографика: 21% россиян копят регулярно, 42% тратят больше, чем зарабатывают, 38% хранят сбережения в наличных
+image: sberezheniya-rossiyan-opros.jpg
+image_caption: Посетители ВДНХ у фонтана «Дружба народов»
+image_credit: Retired electrician
+image_license: CC0
+image_src: https://commons.wikimedia.org/wiki/File:Moscow_car_show_2025-08-03_01.jpg
+graphic: sberezheniya-21-card.jpg
+graphic_alt: Инфографика: 21% россиян копят регулярно, 42% тратят больше, чем зарабатывают, 38% хранят сбережения в наличных
 src: РБК: что мешает россиянам копить | https://www.rbc.ru/rbcfreenews/6ac8c59978b0bd5c7c856057
 src: Вести: зарплатные ожидания снизились впервые за восемь лет | https://www.vesti.ru/ns/vedomosti-rossiyane-snizili-ozhidaniya-po-zarplatam-vpervye-za-vosem-let
 ---

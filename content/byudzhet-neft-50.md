@@ -3,8 +3,13 @@ seo_title: Цена отсечения $50 за баррель: Силуанов
 date: 2026-10-09 15:10
 rubric: ekonomika
 description: С 2027 года расходы бюджета будут считать от нефти по $50 за баррель вместо $59. Министр финансов оценил разницу почти в триллион рублей. Что это значит.
-image: byudzhet-neft-50.png
-image_alt: Инфографика: цена отсечения $50 вместо $59, около 1 трлн рублей расходов, доля нефтегаза в доходах 17%
+image: byudzhet-neft-50.jpg
+image_caption: Станки-качалки под Нижнекамском, Татарстан
+image_credit: Fatih Renkligil
+image_license: CC BY-SA 4.0
+image_src: https://commons.wikimedia.org/wiki/File:Pumpjacks_are_operating_in_Nizhnekamsk.jpg
+graphic: byudzhet-neft-50-card.jpg
+graphic_alt: Инфографика: цена отсечения $50 вместо $59, около 1 трлн рублей расходов, доля нефтегаза в доходах 17%
 src: Интерфакс: Силуанов об оценке в 1 трлн рублей | https://www.interfax.ru/business/1121398
 src: Интерфакс: цена Brent 9 октября | https://www.interfax.ru/business/1121394
 ---

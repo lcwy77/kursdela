@@ -9,6 +9,11 @@ b: Rio Tinto
 sud: Arbitration Court of the Kaliningrad Region; Arbitration Court of the North-Western District (cassation)
 cena: $1.278 billion and a 66% stake in Oyu Tolgoi LLC
 stadiya: Upheld on appeal; Rio Tinto has filed a cassation appeal
+image: rusal-protiv-rio-tinto.jpg
+image_caption: Construction at the Oyu Tolgoi copper and gold mine in Mongolia's South Gobi, 2010
+image_credit: Brücke-Osteuropa
+image_license: PD
+image_src: https://commons.wikimedia.org/wiki/File:Oyu_Tolgoi_23.JPG
 src: Kommersant: court levies execution on 66% of Oyu Tolgoi operator | https://www.kommersant.ru/doc/8973397
 src: Kommersant: court orders Rio Tinto to pay $1.278 billion | https://www.kommersant.ru/doc/8973545
 src: Interfax: Australian court rejects Rusal's claim (2024) | https://www.interfax.ru/world/944003

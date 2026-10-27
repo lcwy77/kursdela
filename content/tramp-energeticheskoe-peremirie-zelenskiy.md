@@ -4,6 +4,11 @@ date: 2026-10-11 20:40
 updated: 2026-10-12 13:30
 rubric: ukraina
 description: Дональд Трамп объявил, что Россия и Украина согласились на энергетическое перемирие. Зеленский назвал это новостью для себя и отдал приказы ВСУ. Москва договорённость не подтвердила: в Кремле говорят о продолжении контактов. Хроника и цитаты.
+image: tramp-energeticheskoe-peremirie-zelenskiy.jpg
+image_caption: Дональд Трамп встречает Владимира Зеленского в Белом доме, 28 февраля 2025 года
+image_credit: Белый дом / Daniel Torok
+image_license: PD
+image_src: https://commons.wikimedia.org/wiki/File:President_Donald_Trump_meets_Volodymyr_Zelenskyy_of_Ukraine_on_Friday,_28_February_2025_at_the_White_House,_USA.jpg
 src: Интерфакс: Песков о продолжении контактов по энергетическому перемирию | https://www.interfax.ru/russia/1121843
 src: Интерфакс: в Кремле заявили о желании достичь долгосрочного мира | https://www.interfax.ru/russia/1121841
 src: Фонтанка: Трамп заявил об «энергетическом перемирии» | https://www.fontanka.ru/2026/10/11/76693787/

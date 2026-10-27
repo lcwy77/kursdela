@@ -9,6 +9,11 @@ b: telecom operators
 sud: No court case yet; the dispute is before the Ministry of Digital Development and the Bank of Russia
 cena: Up to 20 bn rubles a year in call-labelling fees (Strategy Partners estimate); a market of 25.5 million MVNO SIM cards
 stadiya: Call-labelling dispute unresolved; ministry drafting MVNO rules, details "still being worked out"
+image: banki-protiv-operatorov-markirovka-zvonkov.jpg
+image_caption: A MegaFon store in Vyshny Volochyok, Russia
+image_credit: Artyom Svetlov
+image_license: CC BY-SA 4.0
+image_src: https://commons.wikimedia.org/wiki/File:Vyshny_Volochyok_Kazansky_Prospect_2012-05_1337451666.JPG
 src: Kommersant: Ministry preparing restrictions for virtual operators | https://www.kommersant.ru/doc/9061091
 src: RB.ru: new restrictions for MVNOs | https://rb.ru/news/besplatnyh-tarifov-bolshe-ne-budet-mincifry-gotovitsya-vvesti-novye-ogranicheniya-dlya-virtualnyh-operatorov-svyazi/
 src: Moskva 24: ministry to reform MVNO regulation | https://www.m24.ru/news/27102026/957280

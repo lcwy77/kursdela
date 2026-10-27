@@ -3,6 +3,11 @@ seo_title: Агроэкспорт России 2026: рекорд поставо
 date: 2026-10-27 16:20
 rubric: ekonomika
 description: К середине октября Россия продала в Китай продукции АПК почти на $7,8 млрд — больше, чем за весь 2025 год. Экспорт в Индию за девять месяцев вырос на 34%, до $1,45 млрд. Что везут, кто покупает и что это значит для отрасли.
+image: agroeksport-kitaj-indiya-rekord.jpg
+image_caption: Погрузка зерна на терминале КСК в порту Новороссийска
+image_credit: IvanStudenov
+image_license: CC BY-SA 4.0
+image_src: https://commons.wikimedia.org/wiki/File:Grain_shipments_at_KSK_terminal_6.jpg
 src: Интерфакс: экспорт продукции АПК в Индию за 9 месяцев вырос более чем на треть | https://www.interfax.ru/business/1125159
 src: Финансы Mail: экспорт АПК в Китай к середине октября превысил показатель за весь 2025 год | https://finance.mail.ru/article/eksport-produkcii-apk-rf-v-knr-k-seredine-oktyabrya-prevysil-pokazatel-za-ves-2025-g-69233859/
 src: Ведомости: выручка от агроэкспорта в Китай достигла около $7,8 млрд | https://www.vedomosti.ru/business/news/2026/10/23/1239518-agroeksporta-v-kitai

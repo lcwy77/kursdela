@@ -10,6 +10,12 @@ b_rod: «Русала»
 sud: Верховный суд РФ, экономическая коллегия
 cena: Права акционера с 25,52% голосующих акций
 stadiya: Жалоба «Русала» передана в экономколлегию ВС, заседание назначено на 10 ноября 2026 года.
+image: sual-protiv-rusala.jpg
+image_caption: Братский алюминиевый завод «Русала»
+image_credit: UC Rusal
+image_license: CC BY 2.0
+image_src: https://commons.wikimedia.org/wiki/File:Bratsk_Aluminium_Smelter_(34145098244).jpg
+next: 2026-11-10 | Экономколлегия Верховного суда рассмотрит спор СУАЛ и «Русала»
 src: Коммерсантъ через Финансы Mail: «С чистого листинга» | https://finance.mail.ru/article/s-chistogo-listinga-69231226/
 src: Рамблер: ВС рассмотрит спор «Русала» и СУАЛа | https://finance.rambler.ru/business/57188766-verhovnyy-sud-rassmotrit-spor-rusala-i-suala-o-pravilah-dlya-ustava-kompanii/
 src: Ведомости: у «Русала» могут забрать часть алюминия с Богучанского завода | https://vedomosti.ru/business/news/2026/10/15/1237419-chast-alyuminiya

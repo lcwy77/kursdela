@@ -9,6 +9,11 @@ b: операторы связи
 b_rod: операторов связи
 cena: До 20 млрд рублей в год для рынка, по оценке Strategy Partners
 stadiya: Спор о маркировке звонков продолжается; 27 октября стало известно, что Минцифры готовит ограничения для виртуальных операторов (MVNO), в том числе банковских
+image: banki-protiv-operatorov-markirovka-zvonkov.jpg
+image_caption: Салон «МегаФона» в Вышнем Волочке
+image_credit: Artyom Svetlov
+image_license: CC BY-SA 4.0
+image_src: https://commons.wikimedia.org/wiki/File:Vyshny_Volochyok_Kazansky_Prospect_2012-05_1337451666.JPG
 src: Коммерсантъ: Минцифры готовит ограничения для виртуальных операторов | https://www.kommersant.ru/doc/9061091
 src: RB.ru: Минцифры готовится ввести ограничения для MVNO | https://rb.ru/news/besplatnyh-tarifov-bolshe-ne-budet-mincifry-gotovitsya-vvesti-novye-ogranicheniya-dlya-virtualnyh-operatorov-svyazi/
 src: Москва 24: Минцифры подготовит реформу регулирования виртуальных операторов | https://www.m24.ru/news/27102026/957280

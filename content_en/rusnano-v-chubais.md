@@ -10,6 +10,11 @@ sud: Moscow Arbitration Court; Ninth Arbitration Court of Appeal; Arbitration Co
 delo: А40-76398/2025 (Plastic Logic); А40-342036/2025 (Crocus)
 cena: ~17.7 bn rubles in damages plus ~2.1 bn rubles enforcement fee (about $240 million in total)
 stadiya: Plastic Logic ruling (~5.5 bn rubles) is final after appeal and cassation; Crocus claim partly granted in July 2026. Bailiffs are enforcing.
+image: rosnano-protiv-chubaysa.jpg
+image_caption: Anatoly Chubais at the St Petersburg International Economic Forum, June 2019
+image_credit: Alexander Galperin / RIA Novosti
+image_license: CC BY 4.0
+image_src: https://commons.wikimedia.org/wiki/File:Анатолий_Чубайс_(06-06-2019).jpg
 src: Vedomosti: nearly 20 bn rubles being recovered from former Rusnano head | https://www.vedomosti.ru/society/news/2026/10/27/1240352-vziskivayut-20-mlrd
 src: Pravo.ru: bailiffs recovering nearly 20 bn rubles from Chubais | https://pravo.ru/news/266509/
 src: Fontanka: details of the enforcement proceedings | https://www.fontanka.ru/2026/10/27/76726205/

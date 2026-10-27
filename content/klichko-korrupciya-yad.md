@@ -3,8 +3,13 @@ seo_title: Кличко в интервью Bild о коррупции в окр
 date: 2026-10-09 14:30
 rubric: ukraina
 description: Мэр Киева Виталий Кличко в интервью немецкой Bild назвал коррупцию во время войны ядом и сказал, что она подрывает доверие союзников Украины.
-image: klichko-yad.png
-image_alt: Цитата Виталия Кличко: «Коррупция во время войны — это яд»
+image: klichko-korrupciya-yad.jpg
+image_caption: Мэр Киева Виталий Кличко, май 2024 года
+image_credit: Киевская городская государственная администрация
+image_license: CC BY 4.0
+image_src: https://commons.wikimedia.org/wiki/File:Vitali_Klitschko_in_2024.jpg
+graphic: klichko-yad-card.jpg
+graphic_alt: Цитата Виталия Кличко: «Коррупция во время войны — это яд»
 src: РИА Новости: Кличко в интервью Bild | https://ria.ru/20261009/ukraina-2123365322.html
 src: Российская газета: Кличко назвал коррупцию «ядом» | https://rg.ru/2026/10/09/klichko-nazval-korrupciiu-v-okruzhenii-zelenskogo-iadom-dlia-ukrainy.html
 src: EADaily: подробности интервью | https://eadaily.com/ru/news/2026/10/09/klichko-raskritikoval-zelenskogo-za-korrupciyu-kotoraya-podryvaet-doverie-zapada

@@ -3,6 +3,11 @@ seo_title: Лицензия OFAC на российский дизель: что 
 date: 2026-10-10 00:30
 rubric: ekonomika
 description: После разговора Путина и Трампа Минфин США выдал временную лицензию на операции с российским дизелем до 7 апреля 2027 года. Акции нефтяников выросли. Колонка редакции.
+image: dizel-licenziya-ofac.jpg
+image_caption: Московский нефтеперерабатывающий завод в Капотне
+image_credit: kishjar?
+image_license: CC BY 2.0
+image_src: https://commons.wikimedia.org/wiki/File:Moscow_oil_refinery_(52205614839).jpg
 src: Интерфакс: OFAC выдало лицензию на российский дизель | https://www.interfax.ru/world/1121506
 src: Интерфакс: Россия снимает ограничения на поставки дизеля | https://www.interfax.ru/russia/1121519
 src: РБК: Reuters о ценах на дизель в США | https://www.rbc.ru/economics/10/10/2026/6ac9bb1fa76fb52c5b98e2a1

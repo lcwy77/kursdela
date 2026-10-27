@@ -3,6 +3,11 @@ seo_title: Арест Августа Ханнинга, бывшего главы
 date: 2026-10-09 19:40
 rubric: mir
 description: В Германии арестован Август Ханнинг, бывший руководитель разведслужбы BND. Генпрокуратура подозревает его в работе на иностранные разведки. Politico приводит оценку: «катастрофа».
+image: hanning-bnd-arest.jpg
+image_caption: Штаб-квартира BND в Берлине
+image_credit: Olaf Kosinsky
+image_license: CC BY-SA 3.0 DE
+image_src: https://commons.wikimedia.org/wiki/File:2019-08-30_BND_Zentrale_Berlin_OK_0323.jpg
 src: Коммерсантъ: арест Августа Ханнинга | https://www.kommersant.ru/doc/9008302
 src: RT: Politico об аресте Ханнинга | https://russian.rt.com/world/news/1692691-arest-razvedka-katastrofa
 ---

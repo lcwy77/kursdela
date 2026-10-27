@@ -3,6 +3,11 @@ seo_title: Задержание Михаила Звинчука в Черног�
 date: 2026-10-09 18:35
 rubric: politika
 description: Полиция Черногории объявила, что основатель «Рыбаря» Михаил Звинчук и четверо его спутников не могут оставаться в стране. Обвинений не предъявлено. Что сказали в Москве.
+image: rybar-chernogoriya-vysylka.jpg
+image_caption: Полицейская машина в Черногории
+image_credit: Dickelbers
+image_license: CC BY-SA 3.0
+image_src: https://commons.wikimedia.org/wiki/File:Police_car_of_Montenegro_01.JPG
 src: РБК: власти Черногории решили выдворить Звинчука | https://www.rbc.ru/politics/09/10/2026/6ac8ff71d3830421c1cd5d32
 src: Фонтанка: чем закончилось задержание | https://www.fontanka.ru/2026/10/09/76691127/
 src: Интерфакс: Песков об опасности поездок в Европу | https://www.interfax.ru/russia/1121478

@@ -3,6 +3,11 @@ seo_title: Прибыль Сбербанка за 9 месяцев 2026 года
 date: 2026-10-09 14:05
 rubric: ekonomika
 description: Чистая прибыль Сбербанка за девять месяцев выросла на 18,2%, до 1,501 трлн рублей. Финансовый директор банка говорит о росте просрочки у корпоративных клиентов.
+image: sber-pribyl-i-prosrochka.jpg
+image_caption: Штаб-квартира Сбербанка в Москве
+image_credit: MBH
+image_license: CC BY 4.0
+image_src: https://commons.wikimedia.org/wiki/File:Sberbank_headquarters_03.jpg
 src: Интерфакс: прибыль Сбербанка за девять месяцев | https://www.interfax.ru/business/1121318
 src: Интерфакс: Скворцов об ухудшении состояния компаний | https://www.interfax.ru/business/1121342
 src: Интерфакс: Скворцов о кредитах маркетплейсов | https://www.interfax.ru/business/1121338

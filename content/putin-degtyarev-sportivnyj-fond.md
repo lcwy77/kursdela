@@ -3,6 +3,11 @@ seo_title: Российский спортивный фонд: Путин ука
 date: 2026-10-21 10:00
 rubric: ekonomika
 description: Из 42,9 млрд рублей букмекерских отчислений, поступивших в Российский спортивный фонд, до спорта дошло 16,9 млрд. Путин потребовал не оставлять федерации без денег и не тратить средства на бюрократию. Как устроена реформа Минспорта и что с ней не так.
+image: putin-degtyarev-sportivnyj-fond.jpg
+image_caption: Владимир Путин и министр спорта Михаил Дегтярёв на встрече 9 июня 2025 года
+image_credit: Kremlin.ru
+image_license: CC BY 4.0
+image_src: https://commons.wikimedia.org/wiki/File:Vladimir_Putin_and_Mikhail_Degtyarev_(2025-06-09).jpg
 src: Ведомости: Путин — финансирование спортивных федераций нельзя направлять на бюрократию | https://www.vedomosti.ru/politics/news/2026/10/20/1238551-putin-finansirovanie
 src: Life.ru: Путин потребовал обеспечить спортивные федерации деньгами без задержек | https://life.ru/p/putin-potreboval-obespechit-sportivnye-federatsii-dengami-bez-zaderzhek
 src: Известия: Путин потребовал не направлять финансирование спортфедераций на бюрократию | https://iz.ru/2187264/2026-10-20/putin-potreboval-ne-napravliat-finansirovanie-sportfederatcii-na-biurokratiiu

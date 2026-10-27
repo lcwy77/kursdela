@@ -9,6 +9,11 @@ b_rod: Минцифры
 sud: Арбитражный суд города Москвы
 cena: Включение в реестр российского ПО: налоговые льготы и доступ к госзакупкам
 stadiya: Первая инстанция отказала в иске, мотивировка опубликована 8 октября 2026 года; об обжаловании не объявлено
+image: bazalt-protiv-mincifry.jpg
+image_caption: Комплекс «IQ-квартал» в Москва-Сити, где работает Минцифры
+image_credit: Gennady Grachev
+image_license: CC BY 2.0
+image_src: https://commons.wikimedia.org/wiki/File:Moscow,_Testovskaya_Street,_IQ-Quarter_building_(31028599610).jpg
 src: Коммерсантъ: суд признал законным отказ Минцифры включить «Свободный офис» в реестр | https://www.kommersant.ru/doc/9023812
 src: CNews: «Свободный офис» не признан российским | https://www.cnews.ru/news/top/2026-10-12_mintsifry_vyigrala_sud_u_razrabotchika
 src: ComNews: почему «Свободный офис» не стал отечественным | https://www.comnews.ru/content/244891/2026-04-22/2026-w17/1008/libreoffice-russki-pochemu-svobodnyy-ofis-ne-stal-otechestvennym

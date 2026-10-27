@@ -9,6 +9,11 @@ b: Rio Tinto
 sud: Арбитражный суд Калининградской области
 cena: $1,278 млрд и 66% Oyu Tolgoi LLC
 stadiya: Апелляция поддержала решение, Rio Tinto подала кассационную жалобу
+image: rusal-protiv-rio-tinto.jpg
+image_caption: Стройка рудника Оюу-Толгой в монгольской Гоби, 2010 год
+image_credit: Brücke-Osteuropa
+image_license: PD
+image_src: https://commons.wikimedia.org/wiki/File:Oyu_Tolgoi_23.JPG
 src: Коммерсантъ: суд обратил взыскание на 66% оператора Оюу-Толгой | https://www.kommersant.ru/doc/8973397
 src: Коммерсантъ: суд взыскал с Rio Tinto $1,278 млрд | https://www.kommersant.ru/doc/8973545
 src: Интерфакс: австралийский суд отклонил иск «Русала», 2024 год | https://www.interfax.ru/world/944003

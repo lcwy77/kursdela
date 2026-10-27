@@ -8,6 +8,11 @@ b: Минфин
 b_rod: Минфина
 cena: 683 млрд рублей за 2027–2029 годы, по оценке Минфина
 stadiya: Законопроект внесён в Госдуму, параметры обсуждаются
+image: metallurgi-protiv-minfina.jpg
+image_caption: Надеждинский металлургический завод «Норникеля» в Норильске
+image_credit: Ninaras
+image_license: CC BY 4.0
+image_src: https://commons.wikimedia.org/wiki/File:Norilsk_05.jpg
 src: Интерфакс: Потанин призвал не брать налоги авансом | https://www.interfax.ru/business/1121581
 src: Коммерсантъ: письмо РСПП министру финансов | https://kommersant.ru/doc/9005103
 src: Вести: Силуанов сообщил о компромиссе по налогу | https://www.vesti.ru/ns/siluanov-soobshchil-o-kompromisse-po-nalogu-dlya-gorno-metallurgicheskogo-sektora

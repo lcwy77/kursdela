@@ -9,6 +9,11 @@ b_rod: Dollar General
 sud: Федеральный окружной суд Среднего округа Теннесси (США)
 cena: «Миллионы долларов» переплат, по версии истцов; требования к компании в публикациях не раскрыты
 stadiya: Иск подан 26 октября 2026 года, дело на рассмотрении
+image: ftc-protiv-dollar-general.jpg
+image_caption: Магазин Dollar General в Барстоу, Калифорния
+image_credit: YosemiteYamper
+image_license: CC BY-SA 4.0
+image_src: https://commons.wikimedia.org/wiki/File:Dollar_General,_Barstow.jpg
 src: FTC: Dollar General Shelf Pricing (карточка дела) | https://www.ftc.gov/legal-library/browse/cases-proceedings/2623006-dollar-general-shelf-pricing
 src: Quartz: FTC and 20 states sued Dollar General for charging above shelf prices | https://qz.com/ftc-20-states-sued-dollar-general-shelf-prices-102626
 src: CNBC: FTC and 20 states sue Dollar General | https://www.cnbc.com/2026/10/26/ftc-dollar-general-lawsuit.html

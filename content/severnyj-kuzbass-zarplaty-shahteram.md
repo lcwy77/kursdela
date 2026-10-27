@@ -4,6 +4,11 @@ date: 2026-10-21 15:10
 updated: 2026-10-22 16:30
 rubric: ekonomika
 description: По версии СК, угольная компания «Северный Кузбасс» задолжала работникам более 650 млн рублей зарплаты, а руководство получило свыше 400 млн рублей премий. Гендиректор задержан, имущество арестовано. Хронология дела и позиции сторон.
+image: severnyj-kuzbass-zarplaty-shahteram.jpg
+image_caption: Горняки на шахте «Байкаимская» в Кузбассе
+image_credit: «Кузбассразрезуголь»
+image_license: CC BY-SA 4.0
+image_src: https://commons.wikimedia.org/wiki/File:Coal_miners_working_at_Baikaimskaya_mine.jpg
 src: NGS42: задержали гендиректора «Северного Кузбасса» Станислава Лупия | https://ngs42.ru/text/criminal/2026/10/21/76714806/
 src: NGS42: директора «Северного Кузбасса» задержали | https://ngs42.ru/text/criminal/2026/10/20/76712668/
 src: NGS42: главу «Северного Кузбасса» будут судить за долг перед шахтёрами | https://ngs42.ru/text/criminal/2026/10/09/76689126/

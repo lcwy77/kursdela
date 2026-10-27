@@ -3,6 +3,11 @@ seo_title: Зеленский и Кличко: спор о подготовке 
 date: 2026-10-09 15:25
 rubric: ukraina
 description: Президент Украины заявил о «почти полном невыполнении» городскими властями Киева подготовки к зиме. Мэр накануне объявил, что столица переходит в «режим выживания».
+image: zelenskiy-klichko-zima-kiev.jpg
+image_caption: Отключение света в спальном районе Киева, февраль 2026 года
+image_credit: spoilt.exile
+image_license: CC BY-SA 4.0
+image_src: https://commons.wikimedia.org/wiki/File:Spot_of_light_-_Blackout_in_Kyiv.jpg
 src: РБК: Зеленский обвинил власти Киева | https://www.rbc.ru/politics/09/10/2026/6ac8d286d131fc3edcf40c2a
 src: Взгляд: Зеленский о подготовке Киева | https://vz.ru/news/2026/10/9/1461021.html
 src: РИА Новости: Кличко в интервью Bild | https://ria.ru/20261009/ukraina-2123365322.html

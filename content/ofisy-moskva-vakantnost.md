@@ -3,6 +3,11 @@ seo_title: Офисы в Москве: рекордный ввод и рост �
 date: 2026-10-12 17:50
 rubric: ekonomika
 description: В III квартале 2026 года в Москве ввели 836 тыс. кв. м офисов, на 52% больше, чем годом раньше. Доля свободных площадей выросла до 7,1%, в классе А — до 8,7%. Что происходит с рынком и почему ставки перестали расти.
+image: ofisy-moskva-vakantnost.jpg
+image_caption: Москва-Сити, вид с Воробьёвых гор
+image_credit: Dzasohovich
+image_license: CC BY-SA 4.0
+image_src: https://commons.wikimedia.org/wiki/File:Moscow_International_Business_Center-1.jpg
 src: АБН: ввод офисов в Москве в III квартале вырос на 52%, вакантность 7,1% | https://abn.agency/2026/10/05/vvod-ofisov-v-moskve-v-iii-kvartale-vyros-na-52-no-vakantnost-dostigla-71/
 src: Московская перспектива: потенциальная вакансия может приблизиться к 10% | https://mperspektiva.ru/topics/potentsialnaya-vakansiya-na-ofisnom-rynke-moskvy-mozhet-priblizitsya-k-10/
 src: Коммерсантъ: объём предложения офисов в Москве вырос вдвое | https://www.kommersant.ru/doc/8654091

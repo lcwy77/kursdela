@@ -8,6 +8,12 @@ b: Fennovoima
 sud: Арбитраж при Международной торговой палате (ICC)
 cena: Иски «Росатома» около €3 млрд, требования Fennovoima €1,75 млрд
 stadiya: Расторжение признано незаконным, размер убытков не определён
+image: rosatom-protiv-fennovoima.jpg
+image_caption: Ленинградская АЭС-2 в Сосновом Бору. «Ханхикиви-1» собирались строить по тому же проекту АЭС-2006
+image_credit: Екатерина Борисова
+image_license: CC BY-SA 4.0
+image_src: https://commons.wikimedia.org/wiki/File:Leningrad_Nuclear_Power_Plant_II_02.jpg
+next: 2026-11-26 | Арбитражный суд Москвы: иск структур «Росатома» к Fortum и Outokumpu на 227,8 млрд рублей
 src: Интерфакс: арбитраж признал незаконным расторжение контракта по АЭС «Ханхикиви» | https://www.interfax.ru/world/1121568
 src: Российская газета: «Росатом» выиграл суд против Fennovoima | https://rg.ru/2026/10/10/rosatom-vyigral-mnogoletnij-sud-protiv-finskoj-kompanii-fennovoima.html
 src: Коммерсантъ: «Атом почти нашёл справедливость» | https://www.kommersant.ru/doc/9023698

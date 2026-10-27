@@ -10,6 +10,11 @@ sud: Общий суд Европейского союза
 delo: T-664/26
 cena: Отмена санкций от 13 июля 2026 года
 stadiya: Иск зарегистрирован 7 октября, санкции продолжают действовать
+image: vk-protiv-soveta-es.jpg
+image_caption: Здание «Европа» в Брюсселе, где заседает Совет ЕС
+image_credit: Cbliu
+image_license: CC BY-SA 4.0
+image_src: https://commons.wikimedia.org/wiki/File:Europa_building_2024.jpg
 src: Фонтанка: подробности иска VK | https://www.fontanka.ru/2026/10/09/76689304/
 src: ТАСС: VK подал иск против санкций ЕС | https://tass.ru/ekonomika/28197389
 src: ComNews: VK подал иск против санкций ЕС | https://www.comnews.ru/content/247788/2026-10-09/2026-w41/1009/vk-podal-isk-protiv-sankciy-es

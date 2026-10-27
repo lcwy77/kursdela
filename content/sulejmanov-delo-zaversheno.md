@@ -3,6 +3,11 @@ seo_title: Ибрагим Сулейманов: следствие заверш�
 date: 2026-10-27 18:25
 rubric: politika
 description: СК завершил расследование дела бизнесмена Ибрагима Сулейманова, бывшего бенефициара «Сирены-Тревел». По версии следствия, он организовал убийство профсоюзного лидера «Внуковских авиалиний» в 1999 году, главы ФСФО Георгия Таля в 2004-м и покушение на юриста в 2021-м. Сулейманов вину не признаёт.
+image: sulejmanov-delo-zaversheno.jpg
+image_caption: Бутырская тюрьма в Москве
+image_credit: Станислав Козловский
+image_license: CC BY-SA 3.0
+image_src: https://commons.wikimedia.org/wiki/File:Butyrka_prison_ed.jpg
 src: Ведомости: миллиардера Ибрагима Сулейманова обвинили по делу об убийствах | https://www.vedomosti.ru/society/news/2026/10/27/1240355-suleimanova-obvinili
 src: РИА Новости: расследование дела Сулейманова об организации убийств завершено | https://ria.ru/20261027/delo-2127184885.html
 src: Профиль: миллиардеру Сулейманову предъявлено окончательное обвинение | https://profile.ru/news/society/milliarderu-sulejmanovu-predyavleno-okonchatelnoe-obvinenie-1917036/
