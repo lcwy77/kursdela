@@ -16,96 +16,125 @@
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="alternate" type="application/rss+xml" title="Курс дела Медиа" href="https://kursmedia.com/rss.xml">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,700;1,7..72,400&display=swap">
 <style>
-/* Раскладка: лаймовая плашка-шапка с логотипом, под ней одна читаемая колонка; всё выровнено влево. */
-:root{--paper:#F6F7EE;--ink:#121110;--muted:#565A4C;--rule:#D5D9C4;--lime:#CCFF33;--on-lime:#121110;--mark:#E9F7A8;
- --display:"Inter","Helvetica Neue",Arial,sans-serif;--text:"PT Serif",Georgia,"Times New Roman",serif}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#121110;--ink:#F1F3E6;--muted:#A5A996;--rule:#34362E;--mark:#39451A;color-scheme:dark}}
-:root[data-theme="dark"]{--paper:#121110;--ink:#F1F3E6;--muted:#A5A996;--rule:#34362E;--mark:#39451A;color-scheme:dark}
+/* Курс дела: строгая деловая вёрстка. Бумага и графит, лайм только в знаке и в отметках статуса.
+   Заголовки — Literata (серьёзная газетная антиква), интерфейс и стороны споров — Golos Text. */
+:root{--paper:#FBFBF8;--ink:#171B24;--muted:#5C6370;--rule:#DCDFE3;--panel:#F0F2EC;--lime:#CCFF33;--on-lime:#171B24;
+ --serif:"Literata",Georgia,"Times New Roman",serif;--sans:"Golos Text","Helvetica Neue",Arial,sans-serif;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#11141A;--ink:#E9ECF1;--muted:#9AA1AD;--rule:#2A2F39;--panel:#1A1F28;color-scheme:dark}}
+:root[data-theme="dark"]{--paper:#11141A;--ink:#E9ECF1;--muted:#9AA1AD;--rule:#2A2F39;--panel:#1A1F28;color-scheme:dark}
 *{box-sizing:border-box}
-body{margin:0;background:var(--paper);color:var(--ink);font:400 1.125rem/1.6 var(--text);-webkit-text-size-adjust:100%}
-a{color:inherit;text-decoration-color:var(--muted);text-underline-offset:.18em}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1.0625rem/1.65 var(--serif);border-top:5px solid var(--lime)}
+a{color:inherit;text-decoration-color:var(--rule);text-decoration-thickness:1px;text-underline-offset:.2em}
 a:hover{text-decoration-color:currentColor}
-a:focus-visible,summary:focus-visible{outline:3px solid var(--ink);outline-offset:3px;border-radius:2px}
-.wrap{max-width:70rem;margin-inline:auto;padding-inline:clamp(1rem,4vw,2.5rem)}
-.slab{background:var(--lime);color:var(--on-lime)}
-.slab a:focus-visible{outline-color:var(--on-lime)}
-.top{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.5rem 2rem;padding-block:1.1rem}
-.logo{font:900 1.5rem/1 var(--display);letter-spacing:-.03em;text-decoration:none;text-transform:uppercase}
-nav{display:flex;flex-wrap:wrap;gap:.35rem 1.25rem;font:600 .95rem/1.3 var(--display)}
-nav a{text-decoration:none;padding-block:.2rem;border-bottom:2px solid transparent}
-nav a:hover,nav a[aria-current="page"]{border-bottom-color:currentColor}
-.hero{padding-block:clamp(1.5rem,5vw,3.5rem) clamp(1.75rem,5vw,3.25rem)}
-.hero h1{margin:0;font:900 clamp(3.25rem,15vw,11rem)/.86 var(--display);letter-spacing:-.055em;text-transform:uppercase}
-.logo small{font-size:.62em;margin-left:.3em;opacity:.7}
-.hero .motto{margin:1.6rem 0 0;display:inline-block;padding:.35em .7em .4em;background:var(--on-lime);color:var(--lime);border-radius:.4rem;font:800 clamp(1rem,2vw,1.3rem)/1 var(--display);letter-spacing:-.01em}
-.hero .motto+p{margin-top:.9rem}
-.hero p{margin:1.25rem 0 0;max-width:34ch;font:600 clamp(1.1rem,2.3vw,1.45rem)/1.3 var(--display)}
-.pagehead{padding-block:clamp(1.5rem,4vw,2.75rem)}
-.pagehead h1{margin:0;font:900 clamp(2.25rem,7vw,4.5rem)/.95 var(--display);letter-spacing:-.045em;text-wrap:balance}
-.pagehead p{margin:.9rem 0 0;max-width:52ch;font:500 1.1rem/1.4 var(--display)}
-main{padding-block:clamp(1.75rem,4vw,3rem) 4rem}
-h2{font:900 clamp(1.6rem,3.6vw,2.35rem)/1.05 var(--display);letter-spacing:-.035em;margin:0 0 1.25rem;text-wrap:balance}
-.note{font:500 1rem/1.45 var(--display);color:var(--muted);max-width:60ch;margin:-.5rem 0 1.5rem}
-.block+.block{margin-top:clamp(2.5rem,6vw,4.5rem)}
-/* дела: стороны крупно, ниже карточка дела */
-.cases{display:grid;gap:0;border-top:3px solid var(--ink)}
-.case{padding-block:1.5rem;border-bottom:1px solid var(--rule);display:grid;gap:.9rem;min-width:0}
-.case h3{margin:0;font:900 clamp(1.5rem,4.2vw,2.6rem)/1.02 var(--display);letter-spacing:-.04em;text-wrap:balance}
-.case h3 a{text-decoration:none}
-.case h3 a:hover{text-decoration:underline;text-decoration-thickness:.08em}
-.vs{font-weight:500;letter-spacing:-.02em;color:var(--muted)}
-.docket{display:grid;grid-template-columns:repeat(auto-fit,minmax(11rem,1fr));gap:.75rem 1.5rem;margin:0;font:500 .95rem/1.35 var(--display)}
-.docket div{min-width:0}
-.docket dt{color:var(--muted)}
-.docket dd{margin:.1rem 0 0;font-weight:700}
-.lead{margin:0;max-width:62ch}
-/* лента */
-.feed{list-style:none;margin:0;padding:0;border-top:3px solid var(--ink)}
-.feed li{display:grid;grid-template-columns:8.5rem minmax(0,1fr);gap:.25rem 1.5rem;padding-block:1.15rem;border-bottom:1px solid var(--rule)}
-.when{font:500 .9rem/1.5 var(--display);color:var(--muted);font-variant-numeric:tabular-nums}
-.rub{display:inline-block;font:700 .8rem/1 var(--display);padding:.3rem .5rem;border-radius:.35rem;background:var(--ink);color:var(--paper);text-decoration:none}
-.feed h3{margin:.45rem 0 .3rem;font:800 clamp(1.2rem,2.6vw,1.5rem)/1.15 var(--display);letter-spacing:-.025em;text-wrap:balance}
-.feed h3 a{text-decoration:none}
-.feed h3 a:hover{text-decoration:underline}
-.feed p{margin:0;color:var(--muted);font-size:1rem;line-height:1.5;max-width:62ch}
-@media (max-width:40rem){.feed li{grid-template-columns:1fr}}
+a:focus-visible{outline:2px solid var(--ink);outline-offset:3px;border-radius:2px}
+.wrap{max-width:74rem;margin-inline:auto;padding-inline:clamp(1rem,4vw,2.5rem)}
+/* шапка */
+.mast{border-bottom:1px solid var(--ink)}
+.strip{display:flex;justify-content:space-between;gap:1rem;padding-block:.55rem;border-bottom:1px solid var(--rule);font:500 .8rem/1.4 var(--sans);color:var(--muted)}
+.strip a{text-decoration:none}.strip a:hover{color:var(--ink)}
+.strip .r{display:flex;gap:1.1rem}
+.brand{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.75rem 2rem;padding-block:1.4rem 1.1rem}
+.logo{display:inline-flex;align-items:center;gap:.8rem;text-decoration:none}
+.mark{display:inline-grid;grid-template-columns:1fr 1fr;width:2.9rem;height:2.9rem;border-radius:.45rem;overflow:hidden;font:700 1.15rem/1 var(--sans);flex:none}
+.mark span{display:grid;place-items:center}
+.mark span:first-child{background:var(--ink);color:var(--paper)}
+.mark span:last-child{background:var(--lime);color:var(--on-lime)}
+.wm{display:flex;flex-direction:column;gap:.15rem}
+.wm b{font:700 clamp(1.6rem,3.6vw,2.15rem)/1 var(--serif);letter-spacing:-.02em}
+.wm small{font:500 .82rem/1 var(--sans);color:var(--muted);letter-spacing:.01em}
+.motto{margin:0;font:500 .95rem/1.4 var(--sans);color:var(--muted);max-width:34ch;text-align:right}
+nav{display:flex;flex-wrap:wrap;gap:.2rem 1.6rem;padding-block:.15rem .7rem;font:600 .95rem/1.4 var(--sans)}
+nav a{text-decoration:none;padding-block:.35rem;border-bottom:3px solid transparent}
+nav a:hover{border-bottom-color:var(--rule)}
+nav a[aria-current="page"]{border-bottom-color:var(--lime)}
+nav .lang{margin-left:auto;color:var(--muted)}
+@media (max-width:40rem){.motto{text-align:left}nav .lang{margin-left:0}}
+/* заголовки страниц */
+.pagehead{padding-block:clamp(.5rem,2vw,1.25rem) clamp(1.5rem,3vw,2.25rem)}
+.pagehead h1{margin:0;font:700 clamp(2rem,5vw,3.3rem)/1.08 var(--serif);letter-spacing:-.025em;max-width:24ch;text-wrap:balance}
+.pagehead p{margin:.8rem 0 0;max-width:60ch;font:400 1.1rem/1.5 var(--sans);color:var(--muted)}
+main{padding-block:clamp(1.5rem,3.5vw,2.5rem) 4rem}
+.sh{margin:0 0 1rem;padding-bottom:.55rem;border-bottom:1px solid var(--ink);font:700 1.05rem/1.2 var(--sans)}
+.block+.block{margin-top:clamp(2.5rem,5vw,3.5rem)}
+.note{font:400 1rem/1.5 var(--sans);color:var(--muted);max-width:60ch}
+.rub{display:inline-block;font:600 .78rem/1 var(--sans);padding:.32rem .5rem .34rem;border-radius:.3rem;background:var(--ink);color:var(--paper);text-decoration:none}
+.rub.c{background:var(--lime);color:var(--on-lime)}
+time,.when{font:500 .85rem/1.4 var(--sans);color:var(--muted);font-variant-numeric:tabular-nums}
+/* первый экран главной: главный материал и колонка споров */
+.front{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);gap:clamp(1.5rem,4vw,3.5rem);padding-bottom:clamp(1.5rem,3vw,2rem)}
+.lead .cm{display:flex;align-items:center;gap:.75rem;margin-bottom:.9rem}
+.lead h2{margin:0;font:700 clamp(1.9rem,4.4vw,3.1rem)/1.08 var(--serif);letter-spacing:-.025em;text-wrap:balance}
+.lead h2 a{text-decoration:none}.lead h2 a:hover{text-decoration:underline;text-decoration-thickness:2px}
+.lead p{margin:1rem 0 0;font-size:1.15rem;line-height:1.6;color:var(--muted);max-width:58ch}
+.side{border-left:1px solid var(--rule);padding-left:clamp(1rem,2.5vw,2rem)}
+.mini{list-style:none;margin:0;padding:0}
+.mini li{padding-block:.85rem;border-bottom:1px solid var(--rule)}
+.mini li:first-child{padding-top:.2rem}
+.mini a{display:block;text-decoration:none;font:700 1.12rem/1.25 var(--sans);letter-spacing:-.01em}
+.mini a:hover .pt{text-decoration:underline}
+.vs{font-weight:400;color:var(--muted)}
+.mini .st{display:block;margin-top:.35rem;font:400 .88rem/1.45 var(--sans);color:var(--muted)}
+.more{display:inline-block;margin-top:.9rem;font:600 .9rem/1.4 var(--sans)}
+@media (max-width:52rem){.front{grid-template-columns:1fr}.side{border-left:0;padding-left:0}}
+/* лента: колонки без карточек, только линейки */
+.grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:0 clamp(1.25rem,3vw,2.25rem)}
+.grid li{padding-block:1.1rem 1.5rem;border-bottom:1px solid var(--rule)}
+.grid .cm{display:flex;align-items:center;gap:.6rem;margin-bottom:.6rem}
+.grid h3{margin:0 0 .45rem;font:700 1.22rem/1.25 var(--serif);letter-spacing:-.01em;text-wrap:balance}
+.grid h3 a{text-decoration:none}.grid h3 a:hover{text-decoration:underline}
+.grid p{margin:0;font:400 .95rem/1.5 var(--sans);color:var(--muted);display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+/* споры: стороны крупно, карточка дела как выписка */
+.cases{display:grid;gap:0;border-top:1px solid var(--ink)}
+.case{padding-block:1.6rem;border-bottom:1px solid var(--rule);display:grid;gap:1rem;min-width:0}
+.case h3{margin:0;font:700 clamp(1.45rem,3.6vw,2.2rem)/1.1 var(--sans);letter-spacing:-.025em;text-wrap:balance}
+.case h3 a{text-decoration:none}.case h3 a:hover .pt{text-decoration:underline;text-decoration-thickness:2px}
+.docket{display:grid;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));gap:.8rem 1.75rem;margin:0;font:400 .92rem/1.45 var(--sans)}
+.docket div{min-width:0;padding-left:.75rem;border-left:2px solid var(--rule)}
+.docket dt{color:var(--muted);font-size:.82rem}
+.docket dd{margin:.15rem 0 0;font-weight:600}
+.lead-c{margin:0;max-width:64ch;color:var(--muted)}
 /* материал */
-article{max-width:42rem}
-.meta{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;font:500 .95rem/1.4 var(--display);margin-bottom:1rem}
-.slab .rub{background:var(--on-lime);color:var(--lime)}
-article p{margin:0 0 1.15em}
-article p:first-of-type{font-size:1.25rem;line-height:1.5}
-article strong{font-weight:700}
+.meta{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;margin-bottom:1rem}
+article{max-width:44rem}
+article>p{margin:0 0 1.15em;font-size:1.125rem;line-height:1.72}
+article>p:first-of-type{font-size:1.28rem;line-height:1.6}
+article strong{font-family:var(--sans);font-weight:700;font-size:.95em}
 figure{margin:0 0 1.75rem}
-figure img{display:block;width:100%;height:auto;border-radius:.5rem}
-.box{background:var(--mark);border-radius:.6rem;padding:1.25rem 1.4rem;margin:0 0 2rem}
-.box h2{font-size:1.05rem;letter-spacing:-.01em;margin-bottom:.9rem}
-.sources{margin-top:2.5rem;padding-top:1.25rem;border-top:3px solid var(--ink);font:500 .98rem/1.45 var(--display)}
-.sources h2{font-size:1.05rem;letter-spacing:-.01em;margin-bottom:.6rem}
+figure img{display:block;width:100%;height:auto;border-radius:.4rem}
+.box{background:var(--panel);border-radius:.5rem;padding:1.25rem 1.4rem;margin:0 0 2rem;border-top:4px solid var(--lime)}
+.box h2{font:700 1rem/1.2 var(--sans);margin:0 0 .9rem}
+.box .docket div{border-left-color:var(--rule)}
+.sources{margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--ink);font:400 .95rem/1.5 var(--sans)}
+.sources h2{font:700 1rem/1.2 var(--sans);margin:0 0 .6rem}
 .sources ul{margin:0;padding-left:1.1rem}
 .sources li+li{margin-top:.35rem}
-.sign{margin-top:2.5rem;font:500 1rem/1.5 var(--display);max-width:42rem}
-.sign strong{font-weight:800}
-.prose{max-width:42rem}
-.prose h2{margin-top:2.25rem}
-.prose p{margin:0 0 1.1em}
-.contact{font:800 1.35rem/1.2 var(--display);user-select:all}
-footer{border-top:1px solid var(--rule);padding-block:2rem 3rem;font:500 .9rem/1.5 var(--display);color:var(--muted)}
-footer .wrap{display:flex;flex-wrap:wrap;gap:.75rem 2.5rem;justify-content:space-between}
-footer p{margin:0;max-width:52ch}
-.fl{display:flex;flex-wrap:wrap;gap:.4rem 1.5rem}
+.sign{margin-top:2rem;font:400 .98rem/1.55 var(--sans);color:var(--muted);max-width:44rem}
+.sign strong{color:var(--ink)}
+.prose{max-width:44rem}
+.prose h2{margin:2.2rem 0 .8rem;font:700 1.45rem/1.2 var(--serif)}
+.prose p{margin:0 0 1.1em;font-size:1.1rem}
+.contact{font:700 1.3rem/1.2 var(--sans)}
+footer{border-top:1px solid var(--ink);padding-block:1.75rem 3rem;font:400 .88rem/1.55 var(--sans);color:var(--muted)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:1rem 3rem;justify-content:space-between;align-items:flex-start}
+footer .logo{gap:.6rem}footer .mark{width:2.1rem;height:2.1rem;font-size:.85rem}
+footer p{margin:.6rem 0 0;max-width:52ch}
+.fl{display:flex;flex-wrap:wrap;gap:.4rem 1.5rem;margin:0!important}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "VK судится с Евросоюзом из-за санкций", "description": "VK подал иск к Совету ЕС в Общий суд Евросоюза и требует отменить санкции, введённые 13 июля 2026 года. Что говорит компания, чем объясняет санкции Брюссель и что это меняет.", "datePublished": "2026-10-09T13:40:00+03:00", "dateModified": "2026-10-09T13:40:00+03:00", "inLanguage": "ru", "author": {"@type": "Organization", "name": "Курс дела Медиа", "url": "https://kursmedia.com/"}, "publisher": {"@type": "Organization", "name": "Курс дела Медиа", "url": "https://kursmedia.com/"}, "mainEntityOfPage": "https://kursmedia.com/materialy/vk-protiv-soveta-es.html", "image": "https://kursmedia.com/img/og.png"}</script>
 </head>
 <body>
-<header class="slab"><div class="wrap">
-<div class="top"><a class="logo" href="../index.html">Курс дела<small>Медиа</small></a><nav aria-label="Рубрики"><a href="../konflikty.html" aria-current="page">Конфликты</a><a href="../ekonomika.html">Экономика</a><a href="../politika.html">Политика</a><a href="../mir.html">Мир</a><a href="../ukraina.html">Украина</a><a href="../o-proekte.html">О проекте</a><a href="../en/index.html" lang="en" hreflang="en">EN</a></nav></div>
-<div class="pagehead"><div class="meta"><a class="rub" href="../konflikty.html">Конфликты</a><time datetime="2026-10-09T13:40:00">9 октября 2026</time></div>
-<h1>VK судится с Евросоюзом из-за санкций</h1></div>
+<header class="mast"><div class="wrap">
+<div class="strip"><span>Обновлено 27 октября 2026</span><span class="r"><a href="https://t.me/economskepticism" rel="noopener">Telegram</a><a href="../rss.xml">RSS</a></span></div>
+<div class="brand"><a class="logo" href="../index.html"><span class="mark" aria-hidden="true"><span>К</span><span>Д</span></span><span class="wm"><b>Курс дела</b><small>медиа</small></span></a><p class="motto">Конфликты, деньги, власть: что произошло, сколько это стоит и кому выгодно</p></div>
+<nav aria-label="Рубрики"><a href="../konflikty.html" aria-current="page">Конфликты</a><a href="../ekonomika.html">Экономика</a><a href="../politika.html">Политика</a><a href="../mir.html">Мир</a><a href="../ukraina.html">Украина</a><a href="../o-proekte.html">О проекте</a><a class="lang" href="../en/index.html" lang="en" hreflang="en">English</a></nav>
 </div></header>
 <main><div class="wrap">
+<div class="pagehead"><div class="meta"><a class="rub c" href="../konflikty.html">Конфликты</a><time datetime="2026-10-09T13:40:00">9 октября 2026</time></div>
+<h1>VK судится с Евросоюзом из-за санкций</h1></div>
 <article><div class="box"><h2>Карточка дела</h2><dl class="docket"><div><dt>Суд</dt><dd>Общий суд Европейского союза</dd></div><div><dt>Номер дела</dt><dd>T-664/26</dd></div><div><dt>Цена вопроса</dt><dd>Отмена санкций от 13 июля 2026 года</dd></div><div><dt>Стадия</dt><dd>Иск зарегистрирован 7 октября, санкции продолжают действовать</dd></div></dl></div>
 <p>VK подал иск к Совету ЕС в Общий суд Европейского союза. Дело «VK против Совета ЕС» зарегистрировано 7 октября 2026 года под номером T-664/26. Процесс находится на ранней стадии, санкции продолжают действовать.</p>
 <p><strong>Позиция VK.</strong> Пресс-служба компании: «VK считает решение незаконным и необоснованным и требует отменить ранее введённые санкции».</p>
@@ -118,7 +147,7 @@ footer p{margin:0;max-width:52ch}
 </article>
 </div></main>
 <footer><div class="wrap">
-<p>© 2026 «Курс дела Медиа». Материалы подготовлены по открытым источникам, ссылки на них даны в каждом тексте. Оценки отражают мнение редакции.</p>
+<div><a class="logo" href="../index.html"><span class="mark" aria-hidden="true"><span>К</span><span>Д</span></span><span class="wm"><b style="font-size:1.25rem">Курс дела</b></span></a><p>© 2026 «Курс дела Медиа». Материалы подготовлены по открытым источникам, ссылки на них даны в каждом тексте. Оценки отражают мнение редакции.</p></div>
 <p class="fl"><a href="https://t.me/economskepticism" rel="noopener">Телеграм-канал</a><a href="../rss.xml">RSS</a><a href="../o-proekte.html">Связаться</a><a href="../en/index.html" lang="en">English</a></p>
 </div></footer>
 </body>
