@@ -21,7 +21,7 @@ The Federal Trade Commission and 20 states filed suit against Dollar General on 
 
 **The FTC's position.** "Dollar General has betrayed the trust of millions of American consumers," said Christopher Mufarrige, director of the FTC's Bureau of Consumer Protection.
 
-**Dollar General's position.** The company had not responded to media requests for comment at the time of publication. Kurs Media has sent questions to Dollar General.
+**Dollar General's position.** The company had not responded to media requests for comment at the time of publication.
 
 **Not the first time.** Since 2019 Dollar General has settled pricing-accuracy claims with six states for a combined $6 million. The new case is different in scale: a federal regulator and 20 states at once.
 
