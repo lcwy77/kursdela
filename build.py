@@ -30,16 +30,29 @@ RUBRICS = {  # ключ: (название, файл, описание для п
     "mir": ("Мир", "mir.html", "Политики и события Запада, Европы и Китая."),
     "ukraina": ("Украина", "ukraina.html", "Что происходит на Украине и вокруг неё."),
 }
+# английская версия: content_en/*.md, поле `ru:` — слаг русского оригинала (для hreflang и переключателя языка)
+SRC_EN = ROOT / "content_en"
+EN_NAME = "Kurs Media"
+EN_MOTTO = "Conflicts, money, power"
+EN_TAGLINE = "Russian business conflicts, money and power: what happened, what it costs and who benefits."
+RUBRICS_EN = {
+    "konflikty": ("Conflicts", "conflicts.html", "Russian corporate disputes: the parties, their positions and court rulings."),
+    "ekonomika": ("Economy", "economy.html", "Russia's economy, finance and business: budget, banks, markets, companies."),
+    "politika": ("Politics", "politics.html", "Russian politics and foreign relations."),
+    "mir": ("World", "world.html", "The West, Europe and China as seen from Moscow."),
+    "ukraina": ("Ukraine", "ukraine.html", "Ukraine and the war."),
+}
 NOW_MSK = (dt.datetime.now(dt.timezone.utc) + dt.timedelta(hours=3)).replace(tzinfo=None)   # даты в материалах московские
 MONTHS = "января февраля марта апреля мая июня июля августа сентября октября ноября декабря".split()
+MONTHS_EN = "January February March April May June July August September October November December".split()
 
 
 def esc(s):
     return html.escape(str(s), quote=True)
 
 
-def ru_date(d):
-    return f"{d.day} {MONTHS[d.month - 1]} {d.year}"
+def ru_date(d, lang="ru"):
+    return f"{d.day} {(MONTHS_EN if lang == 'en' else MONTHS)[d.month - 1]} {d.year}"
 
 
 def inline(s):
@@ -52,9 +65,9 @@ def md(body):
     return "\n".join(f"<p>{inline(' '.join(b.split()))}</p>" for b in re.split(r"\n\s*\n", body.strip()) if b.strip())
 
 
-def load():
+def load(src=SRC):
     posts = []
-    for f in sorted(SRC.glob("*.md")):
+    for f in sorted(src.glob("*.md")):
         head, body = f.read_text(encoding="utf-8").split("\n---\n", 1)
         meta, sources = {}, []
         for line in head.splitlines():
@@ -162,16 +175,36 @@ footer p{margin:0;max-width:52ch}
 FONTS = '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap">'
 
 
-def page(path, title, desc, slab, main, up="", current="", extra_head="", og_image="img/og.png", og_type="website"):
-    """Возвращает (head, body). up — префикс до корня ('' или '../')."""
-    url = f"{SITE_URL}/{path}" if path != "index.html" else f"{SITE_URL}/"
-    nav = "".join(
-        f'<a href="{up}{f}"{" aria-current=\"page\"" if current == k else ""}>{n}</a>' for k, (n, f, _) in RUBRICS.items()
-    ) + f'<a href="{up}o-proekte.html"{" aria-current=\"page\"" if current == "about" else ""}>О проекте</a>'
+def url_of(path):
+    return f"{SITE_URL}/" + (path[:-len("index.html")] if path.endswith("index.html") else path)
+
+
+def page(path, title, desc, slab, main, up="", current="", extra_head="", og_image="img/og.png", og_type="website",
+         lang="ru", alts=None, switch=None):
+    """Возвращает (head, body). up — префикс до корня сайта ('', '../', '../../').
+    alts — список (hreflang, url) для парных страниц; switch — ссылка переключателя языка."""
+    url = url_of(path)
+    cur = lambda k: ' aria-current="page"' if current == k else ""
+    if lang == "en":
+        base = f"{up}en/"
+        nav = "".join(f'<a href="{base}{f}"{cur(k)}>{n}</a>' for k, (n, f, _) in RUBRICS_EN.items()) + f'<a href="{base}about.html"{cur("about")}>About</a>'
+        nav += f'<a href="{switch or up + "index.html"}" lang="ru" hreflang="ru">RU</a>'
+        name, logo = EN_NAME, f'<a class="logo" href="{base}index.html">Kurs<small>Media</small></a>'
+        foot = f"© {dt.date.today().year} {EN_NAME}. Based on public sources, linked in every article. Opinions are those of the editors."
+        fl = f'<a href="{base}rss.xml">RSS</a><a href="{base}about.html">Contact</a><a href="{up}index.html" lang="ru">Русская версия</a>'
+        rss, locale, navlabel = f"{SITE_URL}/en/rss.xml", "en_US", "Sections"
+    else:
+        nav = "".join(f'<a href="{up}{f}"{cur(k)}>{n}</a>' for k, (n, f, _) in RUBRICS.items()) + f'<a href="{up}o-proekte.html"{cur("about")}>О проекте</a>'
+        nav += f'<a href="{switch or up + "en/index.html"}" lang="en" hreflang="en">EN</a>'
+        name, logo = SITE_NAME, f'<a class="logo" href="{up}index.html">{BRAND}<small>Медиа</small></a>'
+        foot = f"© {dt.date.today().year} «{SITE_NAME}». Материалы подготовлены по открытым источникам, ссылки на них даны в каждом тексте. Оценки отражают мнение редакции."
+        fl = f'<a href="{CHANNEL}" rel="noopener">Телеграм-канал</a><a href="{up}rss.xml">RSS</a><a href="{up}o-proekte.html">Связаться</a><a href="{up}en/index.html" lang="en">English</a>'
+        rss, locale, navlabel = f"{SITE_URL}/rss.xml", "ru_RU", "Рубрики"
+    hl = "".join(f'\n<link rel="alternate" hreflang="{h}" href="{u}">' for h, u in (alts or []))
     head = f"""<title>{esc(title)}</title>
 <meta name="description" content="{esc(desc)}">
-<link rel="canonical" href="{url}">
-<meta property="og:site_name" content="{SITE_NAME}"><meta property="og:type" content="{og_type}">
+<link rel="canonical" href="{url}">{hl}
+<meta property="og:site_name" content="{name}"><meta property="og:type" content="{og_type}"><meta property="og:locale" content="{locale}">
 <meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}">
 <meta property="og:url" content="{url}"><meta property="og:image" content="{SITE_URL}/{og_image}">
 <meta name="twitter:card" content="summary_large_image">
@@ -180,58 +213,68 @@ def page(path, title, desc, slab, main, up="", current="", extra_head="", og_ima
 <link rel="icon" href="{up}favicon-192.png" type="image/png" sizes="192x192">
 <link rel="icon" href="{up}favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="{up}apple-touch-icon.png">
-<link rel="alternate" type="application/rss+xml" title="{SITE_NAME}" href="{SITE_URL}/rss.xml">
+<link rel="alternate" type="application/rss+xml" title="{name}" href="{rss}">
 {FONTS}
 <style>{CSS}</style>{extra_head}"""
     body = f"""<header class="slab"><div class="wrap">
-<div class="top"><a class="logo" href="{up}index.html">{BRAND}<small>Медиа</small></a><nav aria-label="Рубрики">{nav}</nav></div>
+<div class="top">{logo}<nav aria-label="{navlabel}">{nav}</nav></div>
 {slab}
 </div></header>
 <main><div class="wrap">
 {main}
 </div></main>
 <footer><div class="wrap">
-<p>© {dt.date.today().year} «{SITE_NAME}». Материалы подготовлены по открытым источникам, ссылки на них даны в каждом тексте. Оценки отражают мнение редакции.</p>
-<p class="fl"><a href="{CHANNEL}" rel="noopener">Телеграм-канал</a><a href="{up}rss.xml">RSS</a><a href="{up}o-proekte.html">Связаться</a></p>
+<p>{foot}</p>
+<p class="fl">{fl}</p>
 </div></footer>"""
     return head, body
 
 
-def write(path, head, body):
+def write(path, head, body, lang="ru"):
     f = OUT / path
     f.parent.mkdir(parents=True, exist_ok=True)
-    f.write_text(f'<!doctype html>\n<html lang="ru">\n<head>\n<meta charset="utf-8">\n<meta name="viewport" content="width=device-width,initial-scale=1">\n{head}\n</head>\n<body>\n{body}\n</body>\n</html>\n', encoding="utf-8")
+    f.write_text(f'<!doctype html>\n<html lang="{lang}">\n<head>\n<meta charset="utf-8">\n<meta name="viewport" content="width=device-width,initial-scale=1">\n{head}\n</head>\n<body>\n{body}\n</body>\n</html>\n', encoding="utf-8")
 
 
-def rub_link(p, up=""):
-    n, f, _ = RUBRICS[p["rubric"]]
+# up в хелперах ниже — префикс до раздела языка: для русских страниц до корня, для английских до /en/
+def art_path(p, lang="ru"):
+    return f"articles/{p['slug']}.html" if lang == "en" else f"materialy/{p['slug']}.html"
+
+
+def rub_link(p, up="", lang="ru"):
+    n, f, _ = (RUBRICS_EN if lang == "en" else RUBRICS)[p["rubric"]]
     return f'<a class="rub" href="{up}{f}">{n}</a>'
 
 
-def docket(p):
-    rows = [("Суд", p.get("sud")), ("Номер дела", p.get("delo")), ("Цена вопроса", p.get("cena")), ("Стадия", p.get("stadiya"))]
+def docket(p, lang="ru"):
+    labels = ("Court", "Case No.", "At stake", "Status") if lang == "en" else ("Суд", "Номер дела", "Цена вопроса", "Стадия")
+    rows = zip(labels, (p.get("sud"), p.get("delo"), p.get("cena"), p.get("stadiya")))
     return '<dl class="docket">' + "".join(f"<div><dt>{k}</dt><dd>{esc(v)}</dd></div>" for k, v in rows if v) + "</dl>"
 
 
-def case_card(p, up=""):
+def case_card(p, up="", lang="ru"):
+    vs, b = ("v.", p["b"]) if lang == "en" else ("против", p.get("b_rod", p["b"]))
     return f"""<div class="case">
-<h3><a href="{up}materialy/{p['slug']}.html">{esc(p['a'])} <span class="vs">против</span> {esc(p.get('b_rod', p['b']))}</a></h3>
-{docket(p)}
+<h3><a href="{up}{art_path(p, lang)}">{esc(p['a'])} <span class="vs">{vs}</span> {esc(b)}</a></h3>
+{docket(p, lang)}
 <p class="lead">{esc(p['description'])}</p>
 </div>"""
 
 
-def feed_item(p, up=""):
-    return f"""<li><div class="when"><time datetime="{p['date'].isoformat()}">{ru_date(p['date'])}</time></div>
-<div>{rub_link(p, up)}<h3><a href="{up}materialy/{p['slug']}.html">{esc(p['title'])}</a></h3><p>{esc(p['description'])}</p></div></li>"""
+def feed_item(p, up="", lang="ru"):
+    return f"""<li><div class="when"><time datetime="{p['date'].isoformat()}">{ru_date(p['date'], lang)}</time></div>
+<div>{rub_link(p, up, lang)}<h3><a href="{up}{art_path(p, lang)}">{esc(p['title'])}</a></h3><p>{esc(p['description'])}</p></div></li>"""
 
 
 def build():
     posts = load()
+    posts_en = load(SRC_EN) if SRC_EN.exists() else []
+    en_of = {p["ru"]: p for p in posts_en if p.get("ru")}   # русский слаг → английский материал
     if OUT.exists():
         shutil.rmtree(OUT)
     shutil.copytree(STATIC, OUT)
     cases = [p for p in posts if p["rubric"] == "konflikty"]
+    pair = lambda ru, en: [("ru", url_of(ru)), ("en", url_of(en)), ("x-default", url_of(ru))]
 
     # главная
     slab = f'<div class="hero"><h1>{BRAND}</h1><p class="motto">{MOTTO}</p><p>Что произошло, сколько это стоит и кому выгодно.</p></div>'
@@ -240,6 +283,7 @@ def build():
 <section class="block"><h2>Все материалы</h2><ul class="feed">{''.join(feed_item(p) for p in posts)}</ul></section>"""
     ld = {"@context": "https://schema.org", "@type": "WebSite", "name": SITE_NAME, "url": SITE_URL + "/", "description": TAGLINE, "inLanguage": "ru"}
     head, body = page("index.html", f"{SITE_NAME} — {MOTTO.lower()}: корпоративные споры, экономика и политика", TAGLINE, slab, main,
+                      alts=pair("index.html", "en/index.html"),
                       extra_head=f'\n<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>')
     write("index.html", head, body)
     index_parts = (head, body)
@@ -252,7 +296,8 @@ def build():
             main = f'<div class="cases">{"".join(case_card(p) for p in items)}</div>'
         else:
             main = f'<ul class="feed">{"".join(feed_item(p) for p in items)}</ul>' if items else '<p class="note">Материалы в этой рубрике появятся скоро.</p>'
-        write(fname, *page(fname, f"{name} — {SITE_NAME}", rdesc, slab, main, current=key))
+        en_f = "en/" + RUBRICS_EN[key][1]
+        write(fname, *page(fname, f"{name} — {SITE_NAME}", rdesc, slab, main, current=key, alts=pair(fname, en_f), switch=en_f))
 
     # материалы
     for p in posts:
@@ -272,8 +317,11 @@ def build():
               "datePublished": p["date"].isoformat() + "+03:00", "dateModified": p["updated"].isoformat() + "+03:00", "inLanguage": "ru",
               "author": {"@type": "Organization", "name": SITE_NAME, "url": SITE_URL + "/"}, "publisher": {"@type": "Organization", "name": SITE_NAME, "url": SITE_URL + "/"},
               "mainEntityOfPage": f"{SITE_URL}/{path}", "image": f"{SITE_URL}/img/{p.get('image', 'og.png')}"}
+        en = en_of.get(p["slug"])
+        en_path = f"en/{art_path(en, 'en')}" if en else None
         write(path, *page(path, f"{p['seo_title']} — {SITE_NAME}", p["description"], slab, main, up="../", current=p["rubric"],
                           og_image=f"img/{p.get('image', 'og.png')}", og_type="article",
+                          alts=pair(path, en_path) if en else None, switch=f"../{en_path}" if en else None,
                           extra_head=f'\n<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>'))
 
     # о проекте
@@ -293,15 +341,19 @@ def build():
 <p>Консультации и реклама в канале, телеграм:</p>
 <p class="contact">{CONTACT}</p>
 </div>"""
-    write("o-proekte.html", *page("o-proekte.html", f"О проекте — {SITE_NAME}", "Кто пишет «Курс дела Медиа», правила рубрики о корпоративных конфликтах и контакты.", slab, main, current="about"))
+    write("o-proekte.html", *page("o-proekte.html", f"О проекте — {SITE_NAME}", "Кто пишет «Курс дела Медиа», правила рубрики о корпоративных конфликтах и контакты.", slab, main, current="about",
+                                  alts=pair("o-proekte.html", "en/about.html"), switch="en/about.html"))
+
+    en_urls = build_en(posts_en, {p["slug"]: p for p in posts}, pair)
 
     # 404
     write("404.html", *page("404.html", f"Страница не найдена — {SITE_NAME}", "Такой страницы нет.", '<div class="pagehead"><h1>Такой страницы нет</h1><p>Возможно, адрес изменился.</p></div>',
                             '<p class="note"><a href="index.html">Перейти на главную</a></p>'))
 
     # служебные файлы
-    urls = ["", *[f for _, f, _ in RUBRICS.values()], "o-proekte.html", *[f"materialy/{p['slug']}.html" for p in posts]]
+    urls = ["", *[f for _, f, _ in RUBRICS.values()], "o-proekte.html", *[f"materialy/{p['slug']}.html" for p in posts], *en_urls]
     last = {f"materialy/{p['slug']}.html": p["updated"].date().isoformat() for p in posts}
+    last.update({f"en/articles/{p['slug']}.html": p["updated"].date().isoformat() for p in posts_en})
     today = max(p["updated"] for p in posts).date().isoformat()
     (OUT / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
         "".join(f"<url><loc>{SITE_URL}/{u}</loc><lastmod>{last.get(u, today)}</lastmod></url>\n" for u in urls) + "</urlset>\n", encoding="utf-8")
@@ -322,7 +374,87 @@ def build():
     # главная без обёртки документа: для предпросмотра
     pv = re.sub(r"<title>.*?</title>", f"<title>{SITE_NAME}</title>", index_parts[0], count=1)
     (ROOT / "preview_index.html").write_text(pv + "\n" + index_parts[1] + "\n", encoding="utf-8")
-    print(f"Собрано: {len(posts)} материалов, {len(list(OUT.rglob('*.html')))} страниц → {OUT}")
+    print(f"Собрано: {len(posts)} материалов, {len(posts_en)} на английском, {len(list(OUT.rglob('*.html')))} страниц → {OUT}")
+
+
+def build_en(posts, ru_by_slug, pair):
+    """Английский раздел /en/. Возвращает список путей для sitemap."""
+    urls = []
+    cases = [p for p in posts if p["rubric"] == "konflikty"]
+
+    def put(path, title, desc, slab, main, up, alts=None, switch=None, **kw):
+        write(path, *page(path, title, desc, slab, main, up=up, lang="en", alts=alts, switch=switch, **kw), lang="en")
+        urls.append(path[:-len("index.html")] if path.endswith("index.html") else path)
+
+    # главная
+    slab = f'<div class="hero"><h1>Kurs Media</h1><p class="motto">{EN_MOTTO}</p><p>What happened, what it costs and who benefits — Russian business and power, explained.</p></div>'
+    blocks = []
+    if cases:
+        blocks.append(f'<section class="block"><h2>Conflicts</h2><div class="cases">{"".join(case_card(p, "", "en") for p in cases[:4])}</div></section>')
+    blocks.append(f'<section class="block"><h2>Latest</h2><ul class="feed">{"".join(feed_item(p, "", "en") for p in posts)}</ul></section>' if posts
+                  else '<p class="note">English coverage starts soon.</p>')
+    ld = {"@context": "https://schema.org", "@type": "WebSite", "name": EN_NAME, "url": SITE_URL + "/en/", "description": EN_TAGLINE, "inLanguage": "en"}
+    put("en/index.html", f"{EN_NAME} — Russian business conflicts, money and power", EN_TAGLINE, slab, "\n".join(blocks), "../",
+        alts=pair("index.html", "en/index.html"), switch="../index.html",
+        extra_head=f'\n<script type="application/ld+json">{json.dumps(ld)}</script>')
+
+    # рубрики
+    for key, (name, fname, rdesc) in RUBRICS_EN.items():
+        items = [p for p in posts if p["rubric"] == key]
+        slab = f'<div class="pagehead"><h1>{name}</h1><p>{rdesc}</p></div>'
+        if not items:
+            main = '<p class="note">English coverage in this section is coming soon.</p>'
+        elif key == "konflikty":
+            main = f'<div class="cases">{"".join(case_card(p, "", "en") for p in items)}</div>'
+        else:
+            main = f'<ul class="feed">{"".join(feed_item(p, "", "en") for p in items)}</ul>'
+        ru_f = RUBRICS[key][1]
+        put(f"en/{fname}", f"{name} — {EN_NAME}", rdesc, slab, main, "../", current=key, alts=pair(ru_f, f"en/{fname}"), switch=f"../{ru_f}")
+
+    # материалы
+    for p in posts:
+        path = f"en/{art_path(p, 'en')}"
+        upd = f'<span>updated <time datetime="{p["updated"].isoformat()}">{ru_date(p["updated"], "en")}</time></span>' if p["updated"] != p["date"] else ""
+        slab = f"""<div class="pagehead"><div class="meta">{rub_link(p, '../', 'en')}<time datetime="{p['date'].isoformat()}">{ru_date(p['date'], 'en')}</time>{upd}</div>
+<h1>{esc(p['title'])}</h1></div>"""
+        box = f'<div class="box"><h2>Case file</h2>{docket(p, "en")}</div>' if p["rubric"] == "konflikty" else ""
+        src = "".join(f'<li><a href="{esc(u)}" rel="noopener">{esc(t)}</a></li>' for t, u in p["sources"])
+        ru = ru_by_slug.get(p.get("ru"))
+        ru_link = f' <a href="../../materialy/{ru["slug"]}.html" lang="ru">Read in Russian</a>.' if ru else ""
+        main = f"""<article>{box}
+{p['body']}
+<section class="sources"><h2>Sources</h2><p class="note" style="margin:0 0 .6rem">Most sources are in Russian.</p><ul>{src}</ul></section>
+<p class="sign"><strong>Kurs Media editorial team.</strong> Corrections and statements from the parties: <a href="mailto:{EMAIL}">{EMAIL}</a>.{ru_link}</p>
+</article>"""
+        ld = {"@context": "https://schema.org", "@type": "NewsArticle", "headline": p["title"], "description": p["description"],
+              "datePublished": p["date"].isoformat() + "+03:00", "dateModified": p["updated"].isoformat() + "+03:00", "inLanguage": "en",
+              "author": {"@type": "Organization", "name": EN_NAME, "url": SITE_URL + "/en/"}, "publisher": {"@type": "Organization", "name": EN_NAME, "url": SITE_URL + "/"},
+              "mainEntityOfPage": url_of(path), "image": f"{SITE_URL}/img/og.png"}
+        ru_path = f"materialy/{ru['slug']}.html" if ru else None
+        put(path, f"{p['seo_title']} — {EN_NAME}", p["description"], slab, main, "../../", current=p["rubric"], og_type="article",
+            alts=pair(ru_path, path) if ru else None, switch=f"../../{ru_path}" if ru else None,
+            extra_head=f'\n<script type="application/ld+json">{json.dumps(ld)}</script>')
+
+    # о проекте
+    slab = '<div class="pagehead"><h1>About</h1><p>Who we are, how we cover disputes, how to reach us.</p></div>'
+    main = f"""<div class="prose">
+<p>Kurs Media is an independent Russian outlet covering business, money and power in Russia. The English edition focuses on corporate conflicts: lawsuits, arbitration and disputes between companies, shareholders and regulators. The Russian edition is at <a href="../index.html" lang="ru">kursmedia.com</a>; its Telegram channel <a href="{CHANNEL}" rel="noopener">«Курс дела»</a> is registered with Russia's media regulator.</p>
+<h2>How we cover disputes</h2>
+<p>We set out each party's position in equal detail, based on their own statements and filings. Court rulings are cited with the court, case number and status — whether a ruling is final or under appeal. We do not judge who is right on the merits; that is for the courts. Russian legal terms are explained for international readers, and ruble amounts are given alongside approximate dollar figures where useful.</p>
+<p>Case files are updated when a new ruling or statement appears. If your company is a party to a dispute and its position is stated inaccurately, write to {EMAIL}. We will check the text against the documents, correct it and note the date of the correction.</p>
+<p>Coverage is never published, edited or removed for payment.</p>
+<h2>Contact</h2>
+<p>Editorial, statements from the parties, corrections:</p>
+<p class="contact"><a href="mailto:{EMAIL}">{EMAIL}</a></p>
+</div>"""
+    put("en/about.html", f"About — {EN_NAME}", "Who writes Kurs Media, how we cover Russian corporate disputes, and how to contact the editors.", slab, main, "../",
+        current="about", alts=pair("o-proekte.html", "en/about.html"), switch="../o-proekte.html")
+
+    items = "".join(f"<item><title>{esc(p['title'])}</title><link>{url_of('en/' + art_path(p, 'en'))}</link><guid>{url_of('en/' + art_path(p, 'en'))}</guid>"
+                    f"<pubDate>{p['date'].strftime('%a, %d %b %Y %H:%M:%S')} +0300</pubDate><description>{esc(p['description'])}</description></item>\n" for p in posts[:30])
+    (OUT / "en" / "rss.xml").write_text(f'<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0"><channel><title>{EN_NAME}</title><link>{SITE_URL}/en/</link>'
+                                        f"<description>{esc(EN_TAGLINE)}</description><language>en</language>\n{items}</channel></rss>\n", encoding="utf-8")
+    return urls
 
 
 if __name__ == "__main__":
