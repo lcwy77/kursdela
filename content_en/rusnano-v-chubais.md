@@ -31,4 +31,4 @@ In April 2026 the Moscow Arbitration Court partly granted the claim, ordering Ch
 
 **The defendant's position.** Chubais has not commented publicly on the rulings. His defence has taken the form of appeals: in the Plastic Logic case the defendants went through both appeal and cassation. In March 2022 Chubais stepped down as the Russian president's special envoy for sustainable development and left Russia.
 
-**What next.** The Plastic Logic ruling is final at the appeal and cassation levels; the defendants can still petition Russia's Supreme Court. How much is actually recovered will depend on what assets of Chubais and the other defendants can be found in Russia. Kurs Media has sent questions to Rusnano and will update this page.
+**What next.** The Plastic Logic ruling is final at the appeal and cassation levels; the defendants can still petition Russia's Supreme Court. How much is actually recovered will depend on what assets of Chubais and the other defendants can be found in Russia. Kurs Media sent questions to Rusnano on 27 October; any response will be published on this page.
