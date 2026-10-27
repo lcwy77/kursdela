@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://kursdela.media/sitemap.xml
+Sitemap: https://kursmedia.com/sitemap.xml

@@ -16,8 +16,8 @@ jobs:
           python3 - <<'PY'
           import json, re, urllib.request
           urls = re.findall(r"<loc>([^<]+)</loc>", open("docs/sitemap.xml", encoding="utf-8").read())
-          body = json.dumps({"host": "kursdela.media", "key": "a14603104d871c14bd22b68dc57fa365",
-                             "keyLocation": "https://kursdela.media/a14603104d871c14bd22b68dc57fa365.txt", "urlList": urls}).encode()
+          body = json.dumps({"host": "kursmedia.com", "key": "a14603104d871c14bd22b68dc57fa365",
+                             "keyLocation": "https://kursmedia.com/a14603104d871c14bd22b68dc57fa365.txt", "urlList": urls}).encode()
           for ep in ["https://yandex.com/indexnow", "https://api.indexnow.org/indexnow"]:
               req = urllib.request.Request(ep, data=body, headers={"Content-Type": "application/json; charset=utf-8"})
               try:

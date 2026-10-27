@@ -9,7 +9,7 @@ import html, json, re, shutil, datetime as dt
 from pathlib import Path
 
 # ---------- настройки ----------
-SITE_URL = "https://kursdela.media"   # свой домен, без косой черты в конце
+SITE_URL = "https://kursmedia.com"   # свой домен, без косой черты в конце
 SITE_NAME = "Курс дела Медиа"
 BRAND = "Курс дела"                   # короткое имя для логотипа и шапки
 MOTTO = "Конфликты, деньги, власть"
