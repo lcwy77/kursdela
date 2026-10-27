@@ -254,7 +254,7 @@ h2 a:hover,h3 a:hover{text-decoration-thickness:2px}
 @media (max-width:72rem){.top{grid-template-columns:minmax(0,1.7fr) minmax(0,1fr)}
  .top>.col{grid-column:1/-1;border-left:0;padding:1.4rem 0 0;margin-top:1.4rem;border-top:1px solid var(--rule);display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:0 2rem}
  .col .mini{columns:2 15rem;column-gap:2rem}.col .dates{margin-top:0}}
-@media (max-width:48rem){.top{grid-template-columns:1fr}.top>*{padding-inline:0!important;border-left:0!important}
+@media (max-width:48rem){.top,.top.no-col{grid-template-columns:1fr}.top>*{padding-inline:0!important;border-left:0!important}
  .second{margin-top:1.3rem;padding-top:1.2rem;border-top:1px solid var(--rule)}.top>.col{display:block}.col .mini{columns:1}.col .dates{margin-top:1.5rem}}
 /* главная: рубрики */
 .sect{margin-top:2.4rem}
@@ -280,7 +280,7 @@ h2 a:hover,h3 a:hover{text-decoration-thickness:2px}
 .heads .kick{margin:0 0 .2rem}
 .rest .heads{margin-top:0}.rest .heads li:first-child{border-top:0;padding-top:0}
 @media (max-width:64rem){.feat{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:36rem){.feat,.cards,.sub{grid-template-columns:1fr;gap:0}.sub>*{padding-block:1rem;border-top:1px solid var(--rule)}.sub>:first-child{border-top:0;padding-top:0}
+@media (max-width:36rem){.feat,.cards,.sub{grid-template-columns:1fr;gap:0}.f-big{grid-column:auto;grid-row:auto}.sub>*{padding-block:1rem;border-top:1px solid var(--rule)}.sub>:first-child{border-top:0;padding-top:0}
  .feat>*,.cards>*{padding-block:1rem;border-top:1px solid var(--rule)}
  .feat>:first-child,.cards>:first-child{border-top:0;padding-top:0}
  .card,.duo .card,.solo .card{display:grid;grid-template-columns:minmax(0,1fr) 6.8rem;column-gap:.9rem;align-items:start}
