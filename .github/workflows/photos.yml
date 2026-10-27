@@ -1,0 +1,35 @@
+name: Фото с Wikimedia Commons
+# Поиск и загрузка свободных снимков для материалов. Результат — в ветке photos (папки cand/ и pick/).
+on:
+  workflow_dispatch:
+    inputs:
+      search:
+        description: "Запросы через точку с запятой"
+        required: false
+      pick:
+        description: "Выбранные снимки: слаг=File:Имя.jpg; слаг2=File:…"
+        required: false
+permissions:
+  contents: write
+jobs:
+  photos:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Commons
+        env:
+          SEARCH: ${{ inputs.search }}
+          PICK: ${{ inputs.pick }}
+        run: python3 tools/commons.py
+      - name: Push results
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          cd out
+          git init -q -b photos
+          git config user.name "github-actions"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -qm "photos"
+          git push -f "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" photos

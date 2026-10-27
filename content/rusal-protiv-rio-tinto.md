@@ -8,6 +8,7 @@ a: «Русал»
 b: Rio Tinto
 sud: Арбитражный суд Калининградской области
 cena: $1,278 млрд и 66% Oyu Tolgoi LLC
+cena_short: $1,28 млрд и 66% Oyu Tolgoi
 stadiya: Апелляция поддержала решение, Rio Tinto подала кассационную жалобу
 image: rusal-protiv-rio-tinto.jpg
 image_caption: Стройка рудника Оюу-Толгой в монгольской Гоби, 2010 год

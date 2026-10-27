@@ -8,6 +8,7 @@ a: Banks
 b: telecom operators
 sud: No court case yet; the dispute is before the Ministry of Digital Development and the Bank of Russia
 cena: Up to 20 bn rubles a year in call-labelling fees (Strategy Partners estimate); a market of 25.5 million MVNO SIM cards
+cena_short: up to 20 bn rubles a year
 stadiya: Call-labelling dispute unresolved; ministry drafting MVNO rules, details "still being worked out"
 image: banki-protiv-operatorov-markirovka-zvonkov.jpg
 image_caption: A MegaFon store in Vyshny Volochyok, Russia

@@ -4,6 +4,7 @@ date: 2026-10-09 14:30
 rubric: ukraina
 description: Мэр Киева Виталий Кличко в интервью немецкой Bild назвал коррупцию во время войны ядом и сказал, что она подрывает доверие союзников Украины.
 image: klichko-korrupciya-yad.jpg
+image_focus: 50% 28%
 image_caption: Мэр Киева Виталий Кличко, май 2024 года
 image_credit: Киевская городская государственная администрация
 image_license: CC BY 4.0

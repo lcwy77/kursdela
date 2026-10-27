@@ -391,7 +391,8 @@ def page(path, title, desc, main, up="", current="", extra_head="", og_image="im
 <link rel="canonical" href="{url}">{hl}
 <meta property="og:site_name" content="{name}"><meta property="og:type" content="{og_type}"><meta property="og:locale" content="{locale}">
 <meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}">
-<meta property="og:url" content="{url}"><meta property="og:image" content="{SITE_URL}/{og_image}">
+<meta property="og:url" content="{url}"><meta property="og:image" content="{SITE_URL}/{og_image}">{'<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">' if og_image.startswith("img/og/") else ""}
+<meta name="robots" content="max-image-preview:large">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#141922">
 <link rel="icon" href="{up}favicon.ico" sizes="48x48">
@@ -645,15 +646,32 @@ def article_main(p, posts, path, lang="ru", ru_link=""):
 <section class="related">{sect_head("More on this topic" if en else "Ещё по теме")}<div class="cards">{rel}</div></section>"""
 
 
-def news_ld(p, path, lang="ru"):
+def org_ld(lang="ru"):
     name, home = (EN_NAME, SITE_URL + "/en/") if lang == "en" else (SITE_NAME, SITE_URL + "/")
-    return {"@context": "https://schema.org", "@type": "NewsArticle", "headline": p["title"], "description": p["description"],
-            "datePublished": p["date"].isoformat() + "+03:00", "dateModified": p["updated"].isoformat() + "+03:00", "inLanguage": lang,
-            "author": {"@type": "Organization", "name": name, "url": home}, "publisher": {"@type": "Organization", "name": name, "url": SITE_URL + "/"},
-            "mainEntityOfPage": url_of(path), "image": f"{SITE_URL}/img/{p.get('image', 'og.png')}"}
+    return {"@type": "NewsMediaOrganization", "name": name, "url": home, "logo": {"@type": "ImageObject", "url": f"{SITE_URL}/favicon-192.png", "width": 192, "height": 192},
+            "email": EMAIL, "sameAs": [CHANNEL]}
 
 
-def og_of(p):
+def news_ld(p, path, lang="ru"):
+    R = RUBRICS_EN if lang == "en" else RUBRICS
+    home = SITE_URL + ("/en/" if lang == "en" else "/")
+    rub_name, rub_file, _ = R[p["rubric"]]
+    art = {"@type": "NewsArticle", "headline": p["title"], "description": p["description"],
+           "datePublished": p["date"].isoformat() + "+03:00", "dateModified": p["updated"].isoformat() + "+03:00", "inLanguage": lang,
+           "author": org_ld(lang), "publisher": org_ld(lang), "articleSection": rub_name,
+           "mainEntityOfPage": url_of(path), "image": [f"{SITE_URL}/img/{p.get('image', 'og.png')}", f"{SITE_URL}/{og_of(p, lang)}"]}
+    crumbs = {"@type": "BreadcrumbList", "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": EN_NAME if lang == "en" else SITE_NAME, "item": home},
+        {"@type": "ListItem", "position": 2, "name": rub_name, "item": home + rub_file},
+        {"@type": "ListItem", "position": 3, "name": p["title"], "item": url_of(path)}]}
+    return {"@context": "https://schema.org", "@graph": [art, crumbs]}
+
+
+def og_of(p, lang="ru"):
+    """Картинка для превью ссылки: фирменная обложка (tools/cover.py site), иначе фото, иначе общий знак."""
+    cover = f"img/og/{'en-' if lang == 'en' else ''}{p['slug']}.jpg"
+    if (STATIC / cover).exists():
+        return cover
     return f"img/{p['image']}" if p.get("image") else "img/og.png"
 
 
@@ -670,7 +688,7 @@ def build():
     ld_tag = lambda d: f'\n<script type="application/ld+json">{json.dumps(d, ensure_ascii=False)}</script>'
 
     # главная
-    ld = {"@context": "https://schema.org", "@type": "WebSite", "name": SITE_NAME, "url": SITE_URL + "/", "description": TAGLINE, "inLanguage": "ru"}
+    ld = {"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "name": SITE_NAME, "url": SITE_URL + "/", "description": TAGLINE, "inLanguage": "ru"}, org_ld()]}
     head, body = page("index.html", f"{SITE_NAME} — {MOTTO.lower()}: корпоративные споры, экономика и политика", TAGLINE, front(posts),
                       alts=pair("index.html", "en/index.html"), og_image=og_of(posts[0]), extra_head=ld_tag(ld))
     write("index.html", head, body)
@@ -770,9 +788,9 @@ def build_en(posts, ru_by_slug, pair):
 
     # главная
     main = front(posts, "en") if posts else '<p class="note">English coverage starts soon.</p>'
-    ld = {"@context": "https://schema.org", "@type": "WebSite", "name": EN_NAME, "url": SITE_URL + "/en/", "description": EN_TAGLINE, "inLanguage": "en"}
+    ld = {"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "name": EN_NAME, "url": SITE_URL + "/en/", "description": EN_TAGLINE, "inLanguage": "en"}, org_ld("en")]}
     put("en/index.html", f"{EN_NAME} — Russian business conflicts, money and power", EN_TAGLINE, main, "../",
-        alts=pair("index.html", "en/index.html"), switch="../index.html", og_image=og_of(posts[0]) if posts else "img/og.png", extra_head=ld_tag(ld))
+        alts=pair("index.html", "en/index.html"), switch="../index.html", og_image=og_of(posts[0], "en") if posts else "img/og.png", extra_head=ld_tag(ld))
 
     # рубрики
     for key, (name, fname, rdesc) in RUBRICS_EN.items():
@@ -788,7 +806,7 @@ def build_en(posts, ru_by_slug, pair):
         ru_link = f' <a href="../../materialy/{ru["slug"]}.html" lang="ru">Read in Russian</a>.' if ru else ""
         ru_path = f"materialy/{ru['slug']}.html" if ru else None
         put(path, f"{p['seo_title']} — {EN_NAME}", p["description"], article_main(p, posts, path, "en", ru_link), "../../", current=p["rubric"],
-            og_image=og_of(p), og_type="article", alts=pair(ru_path, path) if ru else None, switch=f"../../{ru_path}" if ru else None,
+            og_image=og_of(p, "en"), og_type="article", alts=pair(ru_path, path) if ru else None, switch=f"../../{ru_path}" if ru else None,
             extra_head=ld_tag(news_ld(p, path, "en")))
 
     # о проекте

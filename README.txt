@@ -55,3 +55,19 @@
   Скрипт кадрирует снимок в 3:2 вокруг точки fx fy (доли кадра, по умолчанию центр 0.5 0.5)
   и кладёт в static/img три размера: слаг.jpg, слаг-800.jpg, слаг-400.jpg.
 
+
+Обложки
+  python3 tools/cover.py news --slug слаг     фото и заголовок
+  python3 tools/cover.py case --slug слаг     спор: стороны, что на кону (поле cena_short), стадия, фото
+  python3 tools/cover.py quote --text '…' --who 'Имя, должность' --photo путь-к-фото --rubric Рубрика
+  python3 tools/cover.py number --num '$50' --text '…' --source 'Источник: …' --rubric Рубрика
+  python3 tools/cover.py flash --title '…'     срочная новость без фото
+  python3 tools/cover.py site                 превью ссылок для всех материалов сайта (static/img/og)
+  Готовые файлы — в папке covers/: имя-og.jpg (1200×630, превью ссылки) и имя-post.jpg (1600×1000, картинка для поста).
+  Текст пиши в одинарных кавычках: в двойных командная строка съедает знак доллара.
+  После нового материала: python3 tools/cover.py site, потом python3 build.py.
+
+Поиск фото
+  GitHub → Actions → «Фото с Wikimedia Commons» → Run workflow.
+  search — запросы через точку с запятой; pick — выбранные снимки в виде слаг=File:Имя.jpg.
+  Результат появится в ветке photos: превью кандидатов в cand/, выбранные снимки с автором и лицензией в pick/.
