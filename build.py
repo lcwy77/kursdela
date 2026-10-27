@@ -20,8 +20,9 @@ from urllib.parse import quote
 SITE_URL = "https://kursmedia.com"   # свой домен, без косой черты в конце
 SITE_NAME = "Курс медиа"
 BRAND = "Курс медиа"                  # название в шапке
-MOTTO = "Конфликты, деньги, власть"
-MOTTO_EAR = "Конфликты,<br>деньги, власть"   # тот же девиз в рамке слева от названия
+MOTTO = "Без гнева и пристрастия"           # девиз: Тацит, sine ira et studio
+MOTTO_EAR = "Без гнева<br>и пристрастия"     # тот же девиз в рамке слева от названия
+SUBJECT = "Конфликты, деньги, власть"         # о чём пишем: для заголовка главной и описаний
 TAGLINE = "Конфликты, деньги, власть: что произошло, сколько это стоит и кому выгодно."
 CHANNEL = "https://t.me/economskepticism"
 EMAIL = "press@kursmedia.com"           # почта редакции
@@ -42,8 +43,8 @@ RUBRICS = {  # ключ: (название, файл, описание для п
 SRC_EN = ROOT / "content_en"
 SRC_CO = ROOT / "content_kompanii"   # страницы компаний и людей: имя, заголовок, описание, вводный текст; материалы привязываются полем tags
 EN_NAME = "Kurs Media"
-EN_MOTTO = "Conflicts, money, power"
-EN_MOTTO_EAR = "Conflicts,<br>money, power"
+EN_MOTTO = "Sine ira et studio"
+EN_MOTTO_EAR = "Sine ira<br>et studio"
 EN_TAGLINE = "Russian business conflicts, money and power: what happened, what it costs and who benefits."
 RUBRICS_EN = {
     "konflikty": ("Conflicts", "conflicts.html", "Russian corporate disputes: the parties, their positions and court rulings."),
@@ -767,7 +768,7 @@ def build():
 
     # главная
     ld = {"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "name": SITE_NAME, "url": SITE_URL + "/", "description": TAGLINE, "inLanguage": "ru"}, org_ld()]}
-    head, body = page("index.html", f"{SITE_NAME} — {MOTTO.lower()}: корпоративные споры, экономика и политика", TAGLINE, front(posts),
+    head, body = page("index.html", f"{SITE_NAME} — {SUBJECT.lower()}: корпоративные споры, экономика и политика", TAGLINE, front(posts),
                       alts=pair("index.html", "en/index.html"), og_image=og_of(posts[0]), extra_head=ld_tag(ld))
     write("index.html", head, body)
     index_parts = (head, body)
@@ -815,6 +816,7 @@ def build():
 <p>Позиции сторон излагаются одинаково подробно и по их собственным заявлениям. Решения судов приводятся с номером дела, инстанцией и статусом: вступило ли решение в силу, обжалуется ли оно. О том, кто прав по существу, мы не судим: это дело суда. Мы описываем публичные действия сторон: иски, заявления, раскрытия.</p>
 <p>Разборы обновляются, когда в деле появляется новое решение или заявление. Если ваша компания участвует в споре и её позиция изложена неточно, напишите на {EMAIL}. Мы сверим текст с документами, исправим и укажем дату правки.</p>
 <p>Разборы не публикуются, не правятся и не снимаются за плату.</p>
+<p>Девиз издания — «Без гнева и пристрастия». Так римский историк Тацит описал правило, по которому собирался рассказывать о своём времени: sine ira et studio. Для нас это значит, что мы не играем ни за одну из сторон спора.</p>
 <h2>Фотографии</h2>
 <p>Мы используем снимки по свободным лицензиям: из Wikimedia Commons, с сайтов Kremlin.ru и Белого дома и из других открытых источников. Под каждым фото указаны автор и лицензия. Если вы автор снимка и видите ошибку в подписи, напишите на {EMAIL}.</p>
 <h2>Консультации</h2>
@@ -915,6 +917,7 @@ def build_en(posts, ru_by_slug, pair):
 <p>We set out each party's position in equal detail, based on their own statements and filings. Court rulings are cited with the court, case number and status — whether a ruling is final or under appeal. We do not judge who is right on the merits; that is for the courts. Russian legal terms are explained for international readers, and ruble amounts are given alongside approximate dollar figures where useful.</p>
 <p>Case files are updated when a new ruling or statement appears. If your company is a party to a dispute and its position is stated inaccurately, write to {EMAIL}. We will check the text against the documents, correct it and note the date of the correction.</p>
 <p>Coverage is never published, edited or removed for payment.</p>
+<p>Our motto, <i>sine ira et studio</i> — “without anger or partiality” — is how the Roman historian Tacitus described his rule for writing about his own time. For us it means we take no side in the disputes we cover.</p>
 <h2>Photos</h2>
 <p>We use photos under free licences: from Wikimedia Commons, Kremlin.ru, the White House and other open sources. The author and licence are credited under every photo. If you took a photo and the credit is wrong, write to {EMAIL}.</p>
 <h2>Contact</h2>
