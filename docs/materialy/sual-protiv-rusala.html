@@ -101,6 +101,8 @@ h2 a:hover,h3 a:hover{text-decoration-thickness:2px}
 .second .ph{margin-bottom:.65rem}
 .second h3{margin:0 0 .35rem;font:700 1.18rem/1.22 var(--serif);text-wrap:balance}
 .second .dek{font-size:.92rem;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.second .s-t .dek{-webkit-line-clamp:2}
+.col .cos{margin-top:1.6rem}.col .co-list{margin:0}
 .mini{list-style:none;margin:0;padding:0}
 .mini li{padding-block:.65rem;border-bottom:1px solid var(--rule);break-inside:avoid}
 .mini li:first-child{padding-top:0}
@@ -116,7 +118,10 @@ h2 a:hover,h3 a:hover{text-decoration-thickness:2px}
  .top>.col{grid-column:1/-1;border-left:0;padding:1.4rem 0 0;margin-top:1.4rem;border-top:1px solid var(--rule);display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:0 2rem}
  .col .mini{columns:2 15rem;column-gap:2rem}.col .dates{margin-top:0}}
 @media (max-width:48rem){.top,.top.no-col{grid-template-columns:1fr}.top>*{padding-inline:0!important;border-left:0!important}
- .second{margin-top:1.3rem;padding-top:1.2rem;border-top:1px solid var(--rule)}.top>.col{display:block}.col .mini{columns:1}.col .dates{margin-top:1.5rem}}
+ .second{margin-top:1.3rem;padding-top:1.2rem;border-top:1px solid var(--rule)}.top>.col{display:block}.col .mini{columns:1}.col .dates{margin-top:1.5rem}
+ .second .s-t{display:grid;grid-template-columns:minmax(0,1fr) 6.8rem;column-gap:.9rem;align-items:start}
+ .second .s-t .ph{grid-column:2;grid-row:1/span 3;margin:0}.second .s-t>:not(.ph){grid-column:1}
+ .second .s-t h3{font-size:1.06rem;line-height:1.26}.second .s-t .dek{display:none}}
 /* главная: рубрики */
 .sect{margin-top:2.4rem}
 .feat{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1.5rem 1.5rem}

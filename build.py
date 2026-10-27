@@ -240,6 +240,8 @@ h2 a:hover,h3 a:hover{text-decoration-thickness:2px}
 .second .ph{margin-bottom:.65rem}
 .second h3{margin:0 0 .35rem;font:700 1.18rem/1.22 var(--serif);text-wrap:balance}
 .second .dek{font-size:.92rem;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.second .s-t .dek{-webkit-line-clamp:2}
+.col .cos{margin-top:1.6rem}.col .co-list{margin:0}
 .mini{list-style:none;margin:0;padding:0}
 .mini li{padding-block:.65rem;border-bottom:1px solid var(--rule);break-inside:avoid}
 .mini li:first-child{padding-top:0}
@@ -255,7 +257,10 @@ h2 a:hover,h3 a:hover{text-decoration-thickness:2px}
  .top>.col{grid-column:1/-1;border-left:0;padding:1.4rem 0 0;margin-top:1.4rem;border-top:1px solid var(--rule);display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:0 2rem}
  .col .mini{columns:2 15rem;column-gap:2rem}.col .dates{margin-top:0}}
 @media (max-width:48rem){.top,.top.no-col{grid-template-columns:1fr}.top>*{padding-inline:0!important;border-left:0!important}
- .second{margin-top:1.3rem;padding-top:1.2rem;border-top:1px solid var(--rule)}.top>.col{display:block}.col .mini{columns:1}.col .dates{margin-top:1.5rem}}
+ .second{margin-top:1.3rem;padding-top:1.2rem;border-top:1px solid var(--rule)}.top>.col{display:block}.col .mini{columns:1}.col .dates{margin-top:1.5rem}
+ .second .s-t{display:grid;grid-template-columns:minmax(0,1fr) 6.8rem;column-gap:.9rem;align-items:start}
+ .second .s-t .ph{grid-column:2;grid-row:1/span 3;margin:0}.second .s-t>:not(.ph){grid-column:1}
+ .second .s-t h3{font-size:1.06rem;line-height:1.26}.second .s-t .dek{display:none}}
 /* главная: рубрики */
 .sect{margin-top:2.4rem}
 .feat{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1.5rem 1.5rem}
@@ -558,7 +563,7 @@ def upcoming(posts, lang="ru", n=5, up=""):
     return f'<section class="dates">{sect_head("Coming up" if lang == "en" else "Ближайшие даты")}<ol>{li}</ol></section>'
 
 
-def front(posts, lang="ru"):
+def front(posts, lang="ru", cos=None):
     """Главная: первый экран (главный материал, ещё три, колонка споров и календарь), затем рубрики."""
     en = lang == "en"
     R = RUBRICS_EN if en else RUBRICS
@@ -573,19 +578,25 @@ def front(posts, lang="ru"):
     sub = take(posts, 2)
     sec = take(posts, 3)
     cases = sorted([p for p in posts if is_case(p)], key=lambda p: p["updated"], reverse=True)
-    col = take(cases, 5)
+    left = sum(p["slug"] not in shown for p in cases)
+    col = take(cases, min(5, max(3, left - 4)))   # в колонке 3–5 споров, чтобы разделу «Конфликты» ниже остался полный ряд из четырёх с фото
     lead = f"""<div class="lead-col"><article class="lead">{kick(L, '', lang)}
 <h2><a href="{art_path(L, lang)}">{esc(L['title'])}</a></h2><p class="dek">{esc(L['description'])}</p>
 {ph(L, art_path(L, lang), "(min-width:72rem) 40rem, (min-width:48rem) 60vw, 100vw", eager=True)}<p class="credit">{credit(L, lang)}</p></article>
 {f'<div class="sub">{"".join(card(p, lang, rub=True, dek=False, sizes="(min-width:72rem) 19rem, (min-width:36rem) 30vw, 7rem") for p in sub)}</div>' if sub else ""}</div>"""
-    second = "".join(f'<article class="s">{ph(p, art_path(p, lang), "(min-width:72rem) 18rem, (min-width:48rem) 35vw, 100vw") if i == 0 else ""}{kick(p, "", lang)}'
+    second = "".join(f'<article class="s{" s-t" if i else ""}">{ph(p, art_path(p, lang), "(min-width:72rem) 18rem, (min-width:48rem) 35vw, " + ("7rem" if i else "100vw"))}{kick(p, "", lang)}'
                      f'<h3><a href="{art_path(p, lang)}">{esc(p["title"])}</a></h3><p class="dek">{esc(p["description"])}</p></article>' for i, p in enumerate(sec))
     second = f'<div class="second">{second}</div>' if sec else ""
     mini = "".join(f'<li><a href="{art_path(c, lang)}">{parties(c, lang)}</a><span class="st">{esc(short(c.get("stadiya", "")))}</span></li>' for c in col)
     k_name, k_file = R["konflikty"][0], R["konflikty"][1]
     cases_box = f'<div>{sect_head(k_name, k_file)}<ul class="mini">{mini}</ul><a class="more" href="{k_file}">{"All case files" if en else "Все разборы"}</a></div>' if col else ""
     dates = upcoming(posts, lang)
-    column = f'<aside class="col">{cases_box}{dates}</aside>' if cases_box or dates else ""
+    co = ""
+    if cos and not en:
+        top_co = sorted(cos.values(), key=lambda c: (-len(c["posts"]), c["name"].strip("«»")))[:5]
+        li = "".join(f'<li><a href="kompanii/{c["slug"]}.html">{esc(c["name"])}</a><span>{plural(len(c["posts"]))}</span></li>' for c in top_co)
+        co = f'<section class="cos">{sect_head("Компании", "kompanii/", "Все")}<ul class="co-list">{li}</ul></section>'
+    column = f'<aside class="col">{cases_box}<div class="col2">{dates}{co}</div></aside>' if cases_box or dates or co else ""
     out = [f'<section class="top{"" if column else " no-col"}">{lead}{second}{column}</section>']
 
     all_l = "All stories" if en else "Все материалы"
@@ -768,7 +779,7 @@ def build():
 
     # главная
     ld = {"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "name": SITE_NAME, "url": SITE_URL + "/", "description": TAGLINE, "inLanguage": "ru"}, org_ld()]}
-    head, body = page("index.html", f"{SITE_NAME} — {SUBJECT.lower()}: корпоративные споры, экономика и политика", TAGLINE, front(posts),
+    head, body = page("index.html", f"{SITE_NAME} — {SUBJECT.lower()}: корпоративные споры, экономика и политика", TAGLINE, front(posts, cos=cos),
                       alts=pair("index.html", "en/index.html"), og_image=og_of(posts[0]), extra_head=ld_tag(ld))
     write("index.html", head, body)
     index_parts = (head, body)
