@@ -255,6 +255,7 @@ figcaption a{text-decoration:underline;text-decoration-color:var(--rule)}
 W=en?'Sunday Monday Tuesday Wednesday Thursday Friday Saturday'.split(' '):'воскресенье понедельник вторник среда четверг пятница суббота'.split(' '),
 n=new Date(Date.now()+(180+new Date().getTimezoneOffset())*6e4),p=function(x){return(x<10?'0':'')+x},iso=n.getFullYear()+'-'+p(n.getMonth()+1)+'-'+p(n.getDate());
 var t=document.querySelector('[data-today]');if(t)t.textContent=en?W[n.getDay()]+', '+n.getDate()+' '+M[n.getMonth()]+' '+n.getFullYear():n.getDate()+' '+M[n.getMonth()]+' '+n.getFullYear()+', '+W[n.getDay()];
+var cur=document.querySelector('.band nav [aria-current]');if(cur&&cur.offsetLeft+cur.offsetWidth>cur.parentNode.clientWidth)cur.parentNode.scrollLeft=cur.offsetLeft-16;
 document.querySelectorAll('[data-d]').forEach(function(li){if(li.getAttribute('data-d')<iso)li.remove()});
 document.querySelectorAll('.dates').forEach(function(s){if(!s.querySelector('li'))s.remove()});
 document.querySelectorAll('[data-copy]').forEach(function(b){b.addEventListener('click',function(){if(navigator.clipboard)navigator.clipboard.writeText(location.href).then(function(){b.textContent=b.getAttribute('data-copy')})})});
