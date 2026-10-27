@@ -1,0 +1,9 @@
+kursdela.ru | status: SERVFAIL | ns=
+kursdela.press | status: NXDOMAIN | ns=
+kursdela.news | status: NXDOMAIN | ns=
+kursdelamedia.ru | status: NXDOMAIN | ns=
+kurs-dela.ru | status: NOERROR | ns=ns2.ihc.ru.
+kursdela.pro | status: NOERROR | ns=ns1.hosting.reg.ru.
+kursdela.info | status: NXDOMAIN | ns=;; communications error to 8.8.8.8#53: timed out
+kurs-dela.media | status: NXDOMAIN | ns=
+kursdela.online | status: NXDOMAIN | ns=
