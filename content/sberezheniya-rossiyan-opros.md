@@ -9,7 +9,7 @@ image_credit: Retired electrician
 image_license: CC0
 image_src: https://commons.wikimedia.org/wiki/File:Moscow_car_show_2025-08-03_01.jpg
 graphic: sberezheniya-21-card.jpg
-graphic_alt: Инфографика: 21% россиян копят регулярно, 42% тратят больше, чем зарабатывают, 38% хранят сбережения в наличных
+graphic_alt: Инфографика: 21% россиян регулярно пополняют финансовую подушку
 src: РБК: что мешает россиянам копить | https://www.rbc.ru/rbcfreenews/6ac8c59978b0bd5c7c856057
 src: Вести: зарплатные ожидания снизились впервые за восемь лет | https://www.vesti.ru/ns/vedomosti-rossiyane-snizili-ozhidaniya-po-zarplatam-vpervye-za-vosem-let
 ---

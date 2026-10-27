@@ -3,6 +3,7 @@ seo_title: Carlyle отказалась от покупки зарубежных
 date: 2026-10-09 16:50
 rubric: ekonomika
 description: Американский фонд Carlyle прекратил переговоры о покупке зарубежного бизнеса ЛУКОЙЛа. Соглашение утратило силу, потому что Минфин США не дал разрешения. Кто ещё претендует.
+tags: lukoil, carlyle
 image: carlyle-lukoil-zarubezhnye-aktivy.jpg
 image_caption: АЗС ЛУКОЙЛа в польском Забже
 image_credit: MichalPL

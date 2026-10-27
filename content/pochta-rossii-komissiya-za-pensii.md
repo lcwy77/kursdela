@@ -3,6 +3,7 @@ seo_title: «Почта России» получит больше за дост
 date: 2026-10-12 15:41
 rubric: ekonomika
 description: С 2027 года Соцфонд будет платить «Почте России» за доставку пенсий 1,5% вместо 1,17%. Кто платит, сколько теряет компания и почему повышение комиссии не решает её проблем.
+tags: pochta-rossii
 image: pochta-rossii-komissiya-za-pensii.jpg
 image_caption: Очередь в отделении «Почты России»
 image_credit: Rakoon

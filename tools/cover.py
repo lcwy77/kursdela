@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Обложки «Курса дела»: превью ссылок (og, 1200×630) и картинки для постов в канале (post, 1600×1000).
+"""Обложки «Курса медиа»: превью ссылок (og, 1200×630) и картинки для постов в канале (post, 1600×1000).
 
 Шаблоны:
   news    фото и заголовок        python3 tools/cover.py news --slug sulejmanov-delo-zaversheno
@@ -7,6 +7,7 @@
   quote   цитата и фото           python3 tools/cover.py quote --text "Коррупция во время войны — это яд" --who "Виталий Кличко, мэр Киева" --photo static/img/klichko-korrupciya-yad.jpg --rubric Украина
   number  крупная цифра           python3 tools/cover.py number --num "$50" --text "цена нефти, от которой бюджет считает расходы с 2027 года" --source "Минфин" --rubric Экономика
   flash   срочно, без фото        python3 tools/cover.py flash --title "Заголовок"
+  brand   знак издания: название, девиз, адрес  python3 tools/cover.py brand --format og --name og
   site    превью для всех материалов сайта → static/img/og/ (спор — шаблон case, остальное — news)
 
 Общие ключи: --title --rubric --photo --credit --focus "50% 35%" --format og|post|both (по умолчанию both)
@@ -88,9 +89,20 @@ h1{font-family:'Literata',Georgia,serif;font-weight:700;letter-spacing:-.012em;l
 .number .row{display:flex;justify-content:space-between;align-items:center}
 .number .rub,.number .site{color:@ink}
 .number .mid{margin:auto 0}
-.number .num{font:800 16vw/.9 'Literata';letter-spacing:-.035em}
+.number .num{font:800 19vw/.9 'Literata';letter-spacing:-.035em}
 .number .txt{font:500 2.9vw/1.22 'Literata';max-width:74vw;margin-top:1.8vw;text-wrap:balance}
 .number .src{font:500 1.15vw/1.3 'Golos Text';opacity:.78}
+/* quote без фото: цитата на всю ширину */
+.quote.solo{grid-template-columns:100%}
+.quote.solo .panel{border-right:0;border-bottom:.42vw solid @lime}
+.quote.solo blockquote{font-size:6.4vw;max-width:86vw}
+/* brand: знак издания для страниц без своей обложки */
+.brandc{display:flex;flex-direction:column;align-items:center;padding:3.4vw 4.2vw 3vw}
+.brandc .mid{margin:auto 0;text-align:center}
+.brandc .bnp{font:700 12.5vw/1 'Old Standard TT',Georgia,serif;letter-spacing:-.01em;white-space:nowrap}
+.brandc .bar{width:20vw;height:.7vw;border-radius:.35vw;background:@lime;margin:2.4vw auto 2.2vw}
+.brandc .motto{font:italic 400 3.1vw/1.25 'Old Standard TT',Georgia,serif;color:#C9CED6}
+.brandc .foot{display:flex;justify-content:space-between;width:100%;font:500 1.3vw/1 'Golos Text';color:@muted}
 /* flash: срочная новость без фото */
 .flash{display:flex;flex-direction:column;padding:3.4vw 4.2vw 3vw}
 .flash .row{display:flex;justify-content:space-between;align-items:center}
@@ -140,7 +152,7 @@ def render_html(kind, d, lang):
                 f'<div class="low">{stake}{stage}<div class="brand">{brand(lang)}</div></div></div>{ph}'
                 + (f'<span class="cr" style="right:1.1vw;bottom:1.1vw">{esc(cr)}</span>' if cr else "") + "</div>")
     elif kind == "quote":
-        body = (f'<div class="c quote"><div class="panel" data-box><span class="rub">{esc(d.get("rubric"))}</span>'
+        body = (f'<div class="c quote{"" if ph else " solo"}"><div class="panel" data-box><span class="rub">{esc(d.get("rubric"))}</span>'
                 f'<blockquote data-fit><span class="q">«</span>{esc(d["text"])}<span class="q">»</span></blockquote><div class="who">{esc(d.get("who"))}</div><div class="brand">{brand(lang)}</div></div>{ph}'
                 + (f'<span class="cr" style="right:1.1vw;bottom:1.1vw">{esc(cr)}</span>' if cr else "") + "</div>")
     elif kind == "number":
@@ -150,6 +162,10 @@ def render_html(kind, d, lang):
     elif kind == "flash":
         body = (f'<div class="c flash"><div class="row"><span class="lbl">{t["flash"]}</span><span class="brand" style="display:flex;align-items:baseline;gap:1.1vw">{brand(lang)}</span></div>'
                 f'<h1 data-fit>{esc(d["title"])}</h1><div class="foot"><span>{esc(d.get("when"))}</span><span>{esc(d.get("rubric"))}</span></div></div>')
+    elif kind == "brand":
+        body = (f'<div class="c brandc"><div class="mid"><div class="bnp" data-fit>{esc(t["np"])}</div><div class="bar"></div>'
+                f'<div class="motto">{esc(d.get("text") or (build.EN_MOTTO if lang == "en" else build.MOTTO))}</div></div>'
+                f'<div class="foot"><span>{t["site"]}</span><span>t.me/economskepticism</span></div></div>')
     else:
         raise SystemExit(f"Нет шаблона {kind}")
     return f'<!doctype html><html lang="{lang}"><head><meta charset="utf-8"><style>{font_css()}{CSS}</style></head><body>{body}{FIT}</body></html>'
@@ -215,7 +231,7 @@ def site_covers():
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("kind", choices=["news", "case", "quote", "number", "flash", "site"])
+    ap.add_argument("kind", choices=["news", "case", "quote", "number", "flash", "brand", "site"])
     for k in ("slug", "title", "rubric", "photo", "credit", "license", "focus", "text", "who", "num", "source", "a", "b", "stake", "stage", "when", "name"):
         ap.add_argument(f"--{k}")
     ap.add_argument("--format", default="both", choices=["og", "post", "both"])

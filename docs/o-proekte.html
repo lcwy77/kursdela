@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>О проекте — Курс дела Медиа</title>
-<meta name="description" content="Кто пишет «Курс дела Медиа», правила рубрики о корпоративных конфликтах и контакты.">
+<title>О проекте — Курс медиа</title>
+<meta name="description" content="Кто пишет «Курс медиа», правила рубрики о корпоративных конфликтах и контакты.">
 <link rel="canonical" href="https://kursmedia.com/o-proekte.html">
 <link rel="alternate" hreflang="ru" href="https://kursmedia.com/o-proekte.html">
 <link rel="alternate" hreflang="en" href="https://kursmedia.com/en/about.html">
 <link rel="alternate" hreflang="x-default" href="https://kursmedia.com/o-proekte.html">
-<meta property="og:site_name" content="Курс дела Медиа"><meta property="og:type" content="website"><meta property="og:locale" content="ru_RU">
-<meta property="og:title" content="О проекте — Курс дела Медиа"><meta property="og:description" content="Кто пишет «Курс дела Медиа», правила рубрики о корпоративных конфликтах и контакты.">
+<meta property="og:site_name" content="Курс медиа"><meta property="og:type" content="website"><meta property="og:locale" content="ru_RU">
+<meta property="og:title" content="О проекте — Курс медиа"><meta property="og:description" content="Кто пишет «Курс медиа», правила рубрики о корпоративных конфликтах и контакты.">
 <meta property="og:url" content="https://kursmedia.com/o-proekte.html"><meta property="og:image" content="https://kursmedia.com/img/og.png">
 <meta name="robots" content="max-image-preview:large">
 <meta name="twitter:card" content="summary_large_image">
@@ -20,7 +20,7 @@
 <link rel="icon" href="favicon-192.png" type="image/png" sizes="192x192">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="alternate" type="application/rss+xml" title="Курс дела Медиа" href="https://kursmedia.com/rss.xml">
+<link rel="alternate" type="application/rss+xml" title="Курс медиа" href="https://kursmedia.com/rss.xml">
 <link rel="preconnect" href="https://www.cbr-xml-daily.ru" crossorigin>
 <link rel="preload" href="/fonts/literata-cyrillic-standard-normal.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="/fonts/old-standard-tt-cyrillic-700-normal.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="/fonts/golos-text-cyrillic-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <style>@font-face{font-family:'Old Standard TT';src:url(/fonts/old-standard-tt-cyrillic-700-normal.woff2) format('woff2');font-weight:700;font-style:normal;font-display:swap;unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
@@ -34,7 +34,7 @@
 @font-face{font-family:'Golos Text';src:url(/fonts/golos-text-cyrillic-wght-normal.woff2) format('woff2');font-weight:400 900;font-style:normal;font-display:swap;unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
 @font-face{font-family:'Golos Text';src:url(/fonts/golos-text-latin-wght-normal.woff2) format('woff2');font-weight:400 900;font-style:normal;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
 
-/* Курс дела. Ориентир — деловые газеты: белая бумага, название по центру, тёмная полоса рубрик.
+/* Курс медиа. Ориентир — деловые газеты: белая бумага, название по центру, тёмная полоса рубрик.
    Название набрано Old Standard — шрифтом русских газет начала XX века. Заголовки и текст — Literata, интерфейс — Golos Text.
    Лайм — фирменный цвет канала — только на тёмном; на белом его заменяет оливковый. */
 :root{--paper:#FFFFFF;--ink:#141922;--ink-2:#394049;--muted:#646B77;--rule:#DCDFE3;--panel:#F3F4F0;
@@ -204,6 +204,22 @@ figcaption a{text-decoration:underline;text-decoration-color:var(--rule)}
 .related{margin-top:3rem}
 @media (max-width:62rem){.story-grid,.story-grid.has-file{grid-template-columns:1fr;grid-template-rows:auto;grid-template-areas:"hero" "file" "body" "rail"}.body,.hero{max-width:none}.story-grid>.rail{margin-top:2.6rem}.docket{grid-template-columns:repeat(auto-fit,minmax(12rem,1fr))}}
 @media (max-width:48rem){.hero{margin-inline:calc(-1*clamp(1rem,3vw,2rem))}.hero figcaption{padding-inline:clamp(1rem,3vw,2rem)}.body>p{font-size:1.0625rem;line-height:1.62}.byline{align-items:flex-start}}
+/* компании */
+.body>.tags{margin:1.8rem 0 0;font:400 .92rem/1.6 var(--sans);color:var(--muted)}
+.tags a{color:var(--ink);font-weight:600;text-decoration:underline;text-decoration-color:var(--olive);text-underline-offset:.15em}
+.co-intro{max-width:46rem;margin:-.4rem 0 1.6rem}
+.co-intro p{margin:0 0 .85em;font:400 1.08rem/1.62 var(--serif)}
+.pagehead+.co-intro{margin-top:0}
+.co-intro+.dates{margin:0 0 2rem}
+.co-list{list-style:none;margin:0 0 2rem;padding:0}
+.co-list li{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;padding-block:.6rem;border-bottom:1px solid var(--rule)}
+.co-list a{font:700 1rem/1.3 var(--serif)}
+.co-list span{font:400 .78rem/1.3 var(--sans);color:var(--muted);white-space:nowrap}
+.co-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:0 2rem}
+.co-grid article{padding-block:1.1rem 1.3rem;border-bottom:1px solid var(--rule)}
+.co-grid h2{margin:0 0 .4rem;font:700 1.35rem/1.2 var(--serif)}
+.co-grid p{margin:0;font:400 .94rem/1.5 var(--serif);color:var(--ink-2)}
+.co-grid .n{margin-top:.55rem;font:500 .8rem/1.3 var(--sans);color:var(--muted)}
 /* о проекте */
 .prose{max-width:42rem}
 .prose h2{margin:2.2rem 0 .7rem;font:700 1.4rem/1.25 var(--serif)}
@@ -226,15 +242,15 @@ figcaption a{text-decoration:underline;text-decoration-color:var(--rule)}
 <a class="skip" href="#main">К материалам</a>
 <header class="mast"><div class="wrap np-row">
 <div class="ear ear-l"><p class="motto">Конфликты,<br>деньги, власть</p></div>
-<div class="np-c"><a class="np" href="index.html">Курс дела</a><p class="motto-m">Конфликты, деньги, власть</p></div>
+<div class="np-c"><a class="np" href="./">Курс медиа</a><p class="motto-m">Конфликты, деньги, власть</p></div>
 <div class="ear ear-r"><p class="fx" id="fx" hidden></p></div>
 </div>
 <div class="band"><div class="wrap"><span class="today" data-today>27 октября 2026, вторник</span>
-<nav aria-label="Рубрики"><a href="konflikty.html">Конфликты</a><a href="ekonomika.html">Экономика</a><a href="politika.html">Политика</a><a href="mir.html">Мир</a><a href="ukraina.html">Украина</a><a href="o-proekte.html" aria-current="page">О проекте</a></nav>
+<nav aria-label="Рубрики"><a href="konflikty.html">Конфликты</a><a href="ekonomika.html">Экономика</a><a href="politika.html">Политика</a><a href="mir.html">Мир</a><a href="ukraina.html">Украина</a><a href="kompanii/">Компании</a><a href="o-proekte.html" aria-current="page">О проекте</a></nav>
 <span class="util"><a class="tg" href="https://t.me/economskepticism" rel="noopener">Телеграм-канал</a><a href="en/about.html" lang="en" hreflang="en">English</a></span></div></div></header>
 <main id="main"><div class="wrap">
 <div class="pagehead"><h1>О проекте</h1><p>Редакция, правила и контакты.</p></div><div class="prose">
-<p>«Курс дела Медиа» — издание о политике, экономике и корпоративных спорах. У издания есть <a href="https://t.me/economskepticism" rel="noopener">телеграм-канал</a>, он внесён в реестр Роскомнадзора.</p>
+<p>«Курс медиа» — издание о политике, экономике и корпоративных спорах. У издания есть <a href="https://t.me/economskepticism" rel="noopener">телеграм-канал</a>, он внесён в реестр Роскомнадзора.</p>
 <h2>Как мы пишем о конфликтах</h2>
 <p>В рубрике «Конфликты» разбираются публичные корпоративные споры: иски, арбитражи, разбирательства компаний с регуляторами и друг с другом. Правила для всех разборов одни.</p>
 <p>Позиции сторон излагаются одинаково подробно и по их собственным заявлениям. Решения судов приводятся с номером дела, инстанцией и статусом: вступило ли решение в силу, обжалуется ли оно. О том, кто прав по существу, мы не судим: это дело суда. Мы описываем публичные действия сторон: иски, заявления, раскрытия.</p>
@@ -252,8 +268,8 @@ figcaption a{text-decoration:underline;text-decoration-color:var(--rule)}
 </div>
 </div></main>
 <footer class="foot"><div class="wrap">
-<div><a class="np" href="index.html">Курс дела</a><p class="fm">Конфликты, деньги, власть</p></div>
-<div><nav aria-label="Рубрики"><a href="konflikty.html">Конфликты</a><a href="ekonomika.html">Экономика</a><a href="politika.html">Политика</a><a href="mir.html">Мир</a><a href="ukraina.html">Украина</a><a href="o-proekte.html">О проекте</a><a href="https://t.me/economskepticism" rel="noopener">Телеграм-канал</a><a href="rss.xml">RSS</a><a href="en/index.html" lang="en">English</a></nav><p>© 2026 «Курс дела Медиа». Материалы подготовлены по открытым источникам, ссылки на них даны в каждом тексте. Оценки отражают мнение редакции. Фото используются по свободным лицензиям (Wikimedia Commons, Kremlin.ru, Белый дом и другие), автор и лицензия указаны под каждым снимком.</p></div>
+<div><a class="np" href="./">Курс медиа</a><p class="fm">Конфликты, деньги, власть</p></div>
+<div><nav aria-label="Рубрики"><a href="konflikty.html">Конфликты</a><a href="ekonomika.html">Экономика</a><a href="politika.html">Политика</a><a href="mir.html">Мир</a><a href="ukraina.html">Украина</a><a href="kompanii/">Компании</a><a href="o-proekte.html">О проекте</a><a href="https://t.me/economskepticism" rel="noopener">Телеграм-канал</a><a href="rss.xml">RSS</a><a href="en/" lang="en">English</a></nav><p>© 2026 «Курс медиа». Материалы подготовлены по открытым источникам, ссылки на них даны в каждом тексте. Оценки отражают мнение редакции. Фото используются по свободным лицензиям (Wikimedia Commons, Kremlin.ru, Белый дом и другие), автор и лицензия указаны под каждым снимком.</p></div>
 </div></footer>
 <script>(function(){var en=document.documentElement.lang==='en',M=en?'January February March April May June July August September October November December'.split(' '):'января февраля марта апреля мая июня июля августа сентября октября ноября декабря'.split(' '),
 W=en?'Sunday Monday Tuesday Wednesday Thursday Friday Saturday'.split(' '):'воскресенье понедельник вторник среда четверг пятница суббота'.split(' '),

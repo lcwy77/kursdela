@@ -34,7 +34,7 @@
 @font-face{font-family:'Golos Text';src:url(/fonts/golos-text-cyrillic-wght-normal.woff2) format('woff2');font-weight:400 900;font-style:normal;font-display:swap;unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
 @font-face{font-family:'Golos Text';src:url(/fonts/golos-text-latin-wght-normal.woff2) format('woff2');font-weight:400 900;font-style:normal;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
 
-/* Курс дела. Ориентир — деловые газеты: белая бумага, название по центру, тёмная полоса рубрик.
+/* Курс медиа. Ориентир — деловые газеты: белая бумага, название по центру, тёмная полоса рубрик.
    Название набрано Old Standard — шрифтом русских газет начала XX века. Заголовки и текст — Literata, интерфейс — Golos Text.
    Лайм — фирменный цвет канала — только на тёмном; на белом его заменяет оливковый. */
 :root{--paper:#FFFFFF;--ink:#141922;--ink-2:#394049;--muted:#646B77;--rule:#DCDFE3;--panel:#F3F4F0;
@@ -204,6 +204,22 @@ figcaption a{text-decoration:underline;text-decoration-color:var(--rule)}
 .related{margin-top:3rem}
 @media (max-width:62rem){.story-grid,.story-grid.has-file{grid-template-columns:1fr;grid-template-rows:auto;grid-template-areas:"hero" "file" "body" "rail"}.body,.hero{max-width:none}.story-grid>.rail{margin-top:2.6rem}.docket{grid-template-columns:repeat(auto-fit,minmax(12rem,1fr))}}
 @media (max-width:48rem){.hero{margin-inline:calc(-1*clamp(1rem,3vw,2rem))}.hero figcaption{padding-inline:clamp(1rem,3vw,2rem)}.body>p{font-size:1.0625rem;line-height:1.62}.byline{align-items:flex-start}}
+/* компании */
+.body>.tags{margin:1.8rem 0 0;font:400 .92rem/1.6 var(--sans);color:var(--muted)}
+.tags a{color:var(--ink);font-weight:600;text-decoration:underline;text-decoration-color:var(--olive);text-underline-offset:.15em}
+.co-intro{max-width:46rem;margin:-.4rem 0 1.6rem}
+.co-intro p{margin:0 0 .85em;font:400 1.08rem/1.62 var(--serif)}
+.pagehead+.co-intro{margin-top:0}
+.co-intro+.dates{margin:0 0 2rem}
+.co-list{list-style:none;margin:0 0 2rem;padding:0}
+.co-list li{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;padding-block:.6rem;border-bottom:1px solid var(--rule)}
+.co-list a{font:700 1rem/1.3 var(--serif)}
+.co-list span{font:400 .78rem/1.3 var(--sans);color:var(--muted);white-space:nowrap}
+.co-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:0 2rem}
+.co-grid article{padding-block:1.1rem 1.3rem;border-bottom:1px solid var(--rule)}
+.co-grid h2{margin:0 0 .4rem;font:700 1.35rem/1.2 var(--serif)}
+.co-grid p{margin:0;font:400 .94rem/1.5 var(--serif);color:var(--ink-2)}
+.co-grid .n{margin-top:.55rem;font:500 .8rem/1.3 var(--sans);color:var(--muted)}
 /* о проекте */
 .prose{max-width:42rem}
 .prose h2{margin:2.2rem 0 .7rem;font:700 1.4rem/1.25 var(--serif)}
@@ -226,7 +242,7 @@ figcaption a{text-decoration:underline;text-decoration-color:var(--rule)}
 <a class="skip" href="#main">Skip to content</a>
 <header class="mast"><div class="wrap np-row">
 <div class="ear ear-l"><p class="motto">Conflicts,<br>money, power</p></div>
-<div class="np-c"><a class="np" href="../en/index.html">Kurs Media</a><p class="motto-m">Conflicts, money, power</p></div>
+<div class="np-c"><a class="np" href="../en/">Kurs Media</a><p class="motto-m">Conflicts, money, power</p></div>
 <div class="ear ear-r"><p class="fx" id="fx" hidden></p></div>
 </div>
 <div class="band"><div class="wrap"><span class="today" data-today>Tuesday, 27 October 2026</span>
@@ -234,7 +250,7 @@ figcaption a{text-decoration:underline;text-decoration-color:var(--rule)}
 <span class="util"><a class="tg" href="https://t.me/economskepticism" rel="noopener">Telegram</a><a href="../o-proekte.html" lang="ru" hreflang="ru">Русский</a></span></div></div></header>
 <main id="main"><div class="wrap">
 <div class="pagehead"><h1>About</h1><p>Who we are, how we cover disputes, how to reach us.</p></div><div class="prose">
-<p>Kurs Media is an independent Russian outlet covering business, money and power in Russia. The English edition focuses on corporate conflicts: lawsuits, arbitration and disputes between companies, shareholders and regulators. The Russian edition is at <a href="../index.html" lang="ru">kursmedia.com</a>; its Telegram channel <a href="https://t.me/economskepticism" rel="noopener">«Курс дела»</a> is registered with Russia's media regulator.</p>
+<p>Kurs Media is an independent Russian outlet covering business, money and power in Russia. The English edition focuses on corporate conflicts: lawsuits, arbitration and disputes between companies, shareholders and regulators. The Russian edition is at <a href="../" lang="ru">kursmedia.com</a>; its Telegram channel <a href="https://t.me/economskepticism" rel="noopener">«Курс медиа»</a> is registered with Russia's media regulator.</p>
 <h2>How we cover disputes</h2>
 <p>We set out each party's position in equal detail, based on their own statements and filings. Court rulings are cited with the court, case number and status — whether a ruling is final or under appeal. We do not judge who is right on the merits; that is for the courts. Russian legal terms are explained for international readers, and ruble amounts are given alongside approximate dollar figures where useful.</p>
 <p>Case files are updated when a new ruling or statement appears. If your company is a party to a dispute and its position is stated inaccurately, write to press@kursmedia.com. We will check the text against the documents, correct it and note the date of the correction.</p>
@@ -247,8 +263,8 @@ figcaption a{text-decoration:underline;text-decoration-color:var(--rule)}
 </div>
 </div></main>
 <footer class="foot"><div class="wrap">
-<div><a class="np" href="../en/index.html">Kurs Media</a><p class="fm">Conflicts, money, power</p></div>
-<div><nav aria-label="Sections"><a href="../en/conflicts.html">Conflicts</a><a href="../en/economy.html">Economy</a><a href="../en/politics.html">Politics</a><a href="../en/world.html">World</a><a href="../en/ukraine.html">Ukraine</a><a href="../en/about.html">About</a><a href="../en/rss.xml">RSS</a><a href="../index.html" lang="ru">Русская версия</a></nav><p>© 2026 Kurs Media. Based on public sources, linked in every article. Opinions are those of the editors. Photos are used under free licences (Wikimedia Commons, Kremlin.ru, the White House and others); authors and licences are credited under each photo.</p></div>
+<div><a class="np" href="../en/">Kurs Media</a><p class="fm">Conflicts, money, power</p></div>
+<div><nav aria-label="Sections"><a href="../en/conflicts.html">Conflicts</a><a href="../en/economy.html">Economy</a><a href="../en/politics.html">Politics</a><a href="../en/world.html">World</a><a href="../en/ukraine.html">Ukraine</a><a href="../en/about.html">About</a><a href="../en/rss.xml">RSS</a><a href="../" lang="ru">Русская версия</a></nav><p>© 2026 Kurs Media. Based on public sources, linked in every article. Opinions are those of the editors. Photos are used under free licences (Wikimedia Commons, Kremlin.ru, the White House and others); authors and licences are credited under each photo.</p></div>
 </div></footer>
 <script>(function(){var en=document.documentElement.lang==='en',M=en?'January February March April May June July August September October November December'.split(' '):'января февраля марта апреля мая июня июля августа сентября октября ноября декабря'.split(' '),
 W=en?'Sunday Monday Tuesday Wednesday Thursday Friday Saturday'.split(' '):'воскресенье понедельник вторник среда четверг пятница суббота'.split(' '),

@@ -10,7 +10,7 @@ image_credit: Киевская городская государственная
 image_license: CC BY 4.0
 image_src: https://commons.wikimedia.org/wiki/File:Vitali_Klitschko_in_2024.jpg
 graphic: klichko-yad-card.jpg
-graphic_alt: Цитата Виталия Кличко: «Коррупция во время войны — это яд»
+graphic_alt: Цитата Виталия Кличко: «Коррупция во время войны — это яд, яд для нашей страны»
 src: РИА Новости: Кличко в интервью Bild | https://ria.ru/20261009/ukraina-2123365322.html
 src: Российская газета: Кличко назвал коррупцию «ядом» | https://rg.ru/2026/10/09/klichko-nazval-korrupciiu-v-okruzhenii-zelenskogo-iadom-dlia-ukrainy.html
 src: EADaily: подробности интервью | https://eadaily.com/ru/news/2026/10/09/klichko-raskritikoval-zelenskogo-za-korrupciyu-kotoraya-podryvaet-doverie-zapada

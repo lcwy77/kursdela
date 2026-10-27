@@ -34,7 +34,7 @@
 @font-face{font-family:'Golos Text';src:url(/fonts/golos-text-cyrillic-wght-normal.woff2) format('woff2');font-weight:400 900;font-style:normal;font-display:swap;unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
 @font-face{font-family:'Golos Text';src:url(/fonts/golos-text-latin-wght-normal.woff2) format('woff2');font-weight:400 900;font-style:normal;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
 
-/* Курс дела. Ориентир — деловые газеты: белая бумага, название по центру, тёмная полоса рубрик.
+/* Курс медиа. Ориентир — деловые газеты: белая бумага, название по центру, тёмная полоса рубрик.
    Название набрано Old Standard — шрифтом русских газет начала XX века. Заголовки и текст — Literata, интерфейс — Golos Text.
    Лайм — фирменный цвет канала — только на тёмном; на белом его заменяет оливковый. */
 :root{--paper:#FFFFFF;--ink:#141922;--ink-2:#394049;--muted:#646B77;--rule:#DCDFE3;--panel:#F3F4F0;
@@ -204,6 +204,22 @@ figcaption a{text-decoration:underline;text-decoration-color:var(--rule)}
 .related{margin-top:3rem}
 @media (max-width:62rem){.story-grid,.story-grid.has-file{grid-template-columns:1fr;grid-template-rows:auto;grid-template-areas:"hero" "file" "body" "rail"}.body,.hero{max-width:none}.story-grid>.rail{margin-top:2.6rem}.docket{grid-template-columns:repeat(auto-fit,minmax(12rem,1fr))}}
 @media (max-width:48rem){.hero{margin-inline:calc(-1*clamp(1rem,3vw,2rem))}.hero figcaption{padding-inline:clamp(1rem,3vw,2rem)}.body>p{font-size:1.0625rem;line-height:1.62}.byline{align-items:flex-start}}
+/* компании */
+.body>.tags{margin:1.8rem 0 0;font:400 .92rem/1.6 var(--sans);color:var(--muted)}
+.tags a{color:var(--ink);font-weight:600;text-decoration:underline;text-decoration-color:var(--olive);text-underline-offset:.15em}
+.co-intro{max-width:46rem;margin:-.4rem 0 1.6rem}
+.co-intro p{margin:0 0 .85em;font:400 1.08rem/1.62 var(--serif)}
+.pagehead+.co-intro{margin-top:0}
+.co-intro+.dates{margin:0 0 2rem}
+.co-list{list-style:none;margin:0 0 2rem;padding:0}
+.co-list li{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;padding-block:.6rem;border-bottom:1px solid var(--rule)}
+.co-list a{font:700 1rem/1.3 var(--serif)}
+.co-list span{font:400 .78rem/1.3 var(--sans);color:var(--muted);white-space:nowrap}
+.co-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:0 2rem}
+.co-grid article{padding-block:1.1rem 1.3rem;border-bottom:1px solid var(--rule)}
+.co-grid h2{margin:0 0 .4rem;font:700 1.35rem/1.2 var(--serif)}
+.co-grid p{margin:0;font:400 .94rem/1.5 var(--serif);color:var(--ink-2)}
+.co-grid .n{margin-top:.55rem;font:500 .8rem/1.3 var(--sans);color:var(--muted)}
 /* о проекте */
 .prose{max-width:42rem}
 .prose h2{margin:2.2rem 0 .7rem;font:700 1.4rem/1.25 var(--serif)}
@@ -227,7 +243,7 @@ figcaption a{text-decoration:underline;text-decoration-color:var(--rule)}
 <a class="skip" href="#main">Skip to content</a>
 <header class="mast"><div class="wrap np-row">
 <div class="ear ear-l"><p class="motto">Conflicts,<br>money, power</p></div>
-<div class="np-c"><a class="np" href="../../en/index.html">Kurs Media</a><p class="motto-m">Conflicts, money, power</p></div>
+<div class="np-c"><a class="np" href="../../en/">Kurs Media</a><p class="motto-m">Conflicts, money, power</p></div>
 <div class="ear ear-r"><p class="fx" id="fx" hidden></p></div>
 </div>
 <div class="band"><div class="wrap"><span class="today" data-today>Tuesday, 27 October 2026</span>
@@ -246,14 +262,15 @@ figcaption a{text-decoration:underline;text-decoration-color:var(--rule)}
 <p>One further detail: the case file includes an application to assign the claim to a company called Selena-M. It was set up in November 2025, and its shareholders have not been disclosed.</p>
 <p>Lawyers interviewed by Kommersant expect years of litigation and suggest the ruling may be used mainly as leverage in negotiations. Rusal is unlikely to end up owning the mine. But in any talks with Rio Tinto it now holds an argument worth twelve billion dollars.</p>
 <p><strong>Another dispute.</strong> Rusal is also fighting a corporate battle at home: its shareholder SUAL is challenging the board&#x27;s refusal to put SUAL&#x27;s proposed charter amendments to a shareholder vote, with the board citing Hong Kong Stock Exchange listing rules. Russia&#x27;s Supreme Court will hear the case on 10 November.</p>
+
 <section class="sources"><h2>Sources</h2><p class="note" style="margin:0 0 .6rem">Most sources are in Russian.</p><ul><li><a href="https://www.kommersant.ru/doc/8973397" rel="noopener">Kommersant: court levies execution on 66% of Oyu Tolgoi operator</a></li><li><a href="https://www.kommersant.ru/doc/8973545" rel="noopener">Kommersant: court orders Rio Tinto to pay $1.278 billion</a></li><li><a href="https://www.interfax.ru/world/944003" rel="noopener">Interfax: Australian court rejects Rusal&#x27;s claim (2024)</a></li></ul></section>
 <p class="sign"><strong>Kurs Media editorial team.</strong> Corrections and statements from the parties: <a href="mailto:press@kursmedia.com">press@kursmedia.com</a>. <a href="../../materialy/rusal-protiv-rio-tinto.html" lang="ru">Read in Russian</a>.</p>
 </div><aside class="rail"></aside></div></article>
 <section class="related"><div class="sh"><h2>More on this topic</h2></div><div class="cards"><article class="card"><a class="ph" href="../articles/banks-v-telecom-operators.html" tabindex="-1" aria-hidden="true"><img src="/img/banki-protiv-operatorov-markirovka-zvonkov-800.jpg" srcset="/img/banki-protiv-operatorov-markirovka-zvonkov-400.jpg 400w, /img/banki-protiv-operatorov-markirovka-zvonkov-800.jpg 800w, /img/banki-protiv-operatorov-markirovka-zvonkov.jpg 1600w" sizes="(min-width:78rem) 17rem, (min-width:36rem) 45vw, 7rem" width="1600" height="1067" alt="A MegaFon store in Vyshny Volochyok, Russia" loading="lazy" decoding="async"></a><div class="kick"><a class="rub" href="../conflicts.html">Conflicts</a><time datetime="2026-10-27T15:25:00">27 October</time></div><h3><a href="../articles/banks-v-telecom-operators.html"><span class="pt">Banks</span> <span class="vs">v.</span> <span class="pt">telecom operators</span></a></h3><p class="st">Call-labelling dispute unresolved</p></article><article class="card"><a class="ph" href="../articles/ftc-v-dollar-general.html" tabindex="-1" aria-hidden="true"><img src="/img/ftc-protiv-dollar-general-800.jpg" srcset="/img/ftc-protiv-dollar-general-400.jpg 400w, /img/ftc-protiv-dollar-general-800.jpg 800w, /img/ftc-protiv-dollar-general.jpg 1600w" sizes="(min-width:78rem) 17rem, (min-width:36rem) 45vw, 7rem" width="1600" height="1067" alt="A Dollar General store in Barstow, California" loading="lazy" decoding="async"></a><div class="kick"><a class="rub" href="../conflicts.html">Conflicts</a><time datetime="2026-10-27T15:20:00">27 October</time></div><h3><a href="../articles/ftc-v-dollar-general.html"><span class="pt">FTC and 20 states</span> <span class="vs">v.</span> <span class="pt">Dollar General</span></a></h3><p class="st">Complaint filed 26 October 2026</p></article><article class="card"><a class="ph" href="../articles/rusnano-v-chubais.html" tabindex="-1" aria-hidden="true"><img src="/img/rosnano-protiv-chubaysa-800.jpg" srcset="/img/rosnano-protiv-chubaysa-400.jpg 400w, /img/rosnano-protiv-chubaysa-800.jpg 800w, /img/rosnano-protiv-chubaysa.jpg 1600w" sizes="(min-width:78rem) 17rem, (min-width:36rem) 45vw, 7rem" width="1600" height="1067" alt="Anatoly Chubais at the St Petersburg International Economic Forum, June 2019" loading="lazy" decoding="async"></a><div class="kick"><a class="rub" href="../conflicts.html">Conflicts</a><time datetime="2026-10-27T14:55:00">27 October</time></div><h3><a href="../articles/rusnano-v-chubais.html"><span class="pt">Rusnano</span> <span class="vs">v.</span> <span class="pt">Anatoly Chubais</span></a></h3><p class="st">Plastic Logic ruling (~5.5 bn rubles) is final after appeal and cassation</p></article></div></section>
 </div></main>
 <footer class="foot"><div class="wrap">
-<div><a class="np" href="../../en/index.html">Kurs Media</a><p class="fm">Conflicts, money, power</p></div>
-<div><nav aria-label="Sections"><a href="../../en/conflicts.html" aria-current="page">Conflicts</a><a href="../../en/economy.html">Economy</a><a href="../../en/politics.html">Politics</a><a href="../../en/world.html">World</a><a href="../../en/ukraine.html">Ukraine</a><a href="../../en/about.html">About</a><a href="../../en/rss.xml">RSS</a><a href="../../index.html" lang="ru">Русская версия</a></nav><p>© 2026 Kurs Media. Based on public sources, linked in every article. Opinions are those of the editors. Photos are used under free licences (Wikimedia Commons, Kremlin.ru, the White House and others); authors and licences are credited under each photo.</p></div>
+<div><a class="np" href="../../en/">Kurs Media</a><p class="fm">Conflicts, money, power</p></div>
+<div><nav aria-label="Sections"><a href="../../en/conflicts.html" aria-current="page">Conflicts</a><a href="../../en/economy.html">Economy</a><a href="../../en/politics.html">Politics</a><a href="../../en/world.html">World</a><a href="../../en/ukraine.html">Ukraine</a><a href="../../en/about.html">About</a><a href="../../en/rss.xml">RSS</a><a href="../../" lang="ru">Русская версия</a></nav><p>© 2026 Kurs Media. Based on public sources, linked in every article. Opinions are those of the editors. Photos are used under free licences (Wikimedia Commons, Kremlin.ru, the White House and others); authors and licences are credited under each photo.</p></div>
 </div></footer>
 <script>(function(){var en=document.documentElement.lang==='en',M=en?'January February March April May June July August September October November December'.split(' '):'января февраля марта апреля мая июня июля августа сентября октября ноября декабря'.split(' '),
 W=en?'Sunday Monday Tuesday Wednesday Thursday Friday Saturday'.split(' '):'воскресенье понедельник вторник среда четверг пятница суббота'.split(' '),
