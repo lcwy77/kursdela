@@ -3,7 +3,7 @@ seo_title: Trikafta compulsory licence upheld by Russia's Supreme Court; Axelpha
 date: 2026-10-28 00:16
 rubric: konflikty
 ru: patentnye-spory-trikafta-ruksolitinib
-description: Russia's Supreme Court let MIK keep supplying Trilexa, a copy of Vertex's cystic fibrosis drug Trikafta, until Vertex's patents expire. The same week the Moscow Arbitration Court, ruling for Incyte and Novartis, barred Axelpharm from selling its ruxolitinib generic until June 2028.
+description: Russia's Supreme Court kept MIK's licence on Vertex patents for a Trikafta copy, while a court barred Axelpharm from selling ruxolitinib until 2028.
 sud: Supreme Court of Russia (MIK and Vertex); Moscow Arbitration Court (Incyte and Novartis v. Axelpharm)
 delo: А40-147465/2024 (Incyte and Novartis v. Axelpharm); А40-113148/2025 (Adelis v. Vertex)
 cena: Over 16 bn rubles (about $200 million) in extra budget spending if Trilexa were replaced with the original, according to Adelis; 960.8 m rubles (about $12 million) sought by the competition watchdog FAS from Axelpharm over ruxolitinib

@@ -3,7 +3,7 @@ seo_title: Alexander Zharov on RUTUBE and technological sovereignty: audience, a
 date: 2026-10-28 16:55
 rubric: ekonomika
 ru: zharov-mediatehnologii-rutube
-description: Gazprom-Media Holding chief executive Alexander Zharov called media technology a matter of sovereignty. RUTUBE's daily audience has grown from 60,000 to more than 20 million, and the holding aims to lift the platform's advertising revenue from 2 billion to 7 billion rubles in 2026.
+description: Gazprom-Media's Alexander Zharov calls media technology a sovereignty issue as RUTUBE hits 20m daily viewers and targets 7bn rubles in ads.
 image: zharov-mediatehnologii-rutube.jpg
 image_caption: The Ostankino television centre in Moscow
 image_credit: Dzasohovich

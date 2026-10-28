@@ -3,7 +3,7 @@ seo_title: Polar LNG Alaska and Novatek: NYT and FT reports, company denials and
 date: 2026-10-28 16:19
 rubric: mir
 ru: novatek-polar-lng-alyaska
-description: The former chief executive of the company behind the Polar LNG plant in Alaska says Russia's Novatek secretly funded the project. Novatek and Polar LNG deny it. The project has already asked the US Treasury for a licence to buy a liquefaction base from Novatek.
+description: A former Polar LNG chief says Novatek secretly funded the Alaska LNG plant. The companies deny it; the project seeks a US Treasury licence.
 image: novatek-polar-lng-alyaska.jpg
 image_caption: A drilling rig at the Alpine oil field, North Slope, Alaska
 image_credit: Paxson Woelber
