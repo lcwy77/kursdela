@@ -53,6 +53,11 @@ RUBRICS_EN = {
     "mir": ("World", "world.html", "The West, Europe and China as seen from Moscow."),
     "ukraina": ("Ukraine", "ukraine.html", "Ukraine and the war."),
 }
+METRIKA_ID = 113896804   # Яндекс Метрика; цели: telegram (переход в канал), email (клик по почте)
+METRIKA = f"""<script>(function(m,e,t,r,i,k,a){{m[i]=m[i]||function(){{(m[i].a=m[i].a||[]).push(arguments)}};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){{if(document.scripts[j].src===r){{return;}}}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}})(window,document,'script','https://mc.yandex.ru/metrika/tag.js?id={METRIKA_ID}','ym');
+ym({METRIKA_ID},'init',{{ssr:true,webvisor:true,clickmap:true,referrer:document.referrer,url:location.href,accurateTrackBounce:true,trackLinks:true}});
+document.addEventListener('click',function(e){{var a=e.target.closest&&e.target.closest('a');if(!a)return;var h=a.getAttribute('href')||'';if(h.indexOf('t.me/')>-1)ym({METRIKA_ID},'reachGoal','telegram');else if(h.indexOf('mailto:')===0)ym({METRIKA_ID},'reachGoal','email');}});</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/{METRIKA_ID}" style="position:absolute;left:-9999px" alt=""></div></noscript>"""
 NOW_MSK = (dt.datetime.now(dt.timezone.utc) + dt.timedelta(hours=3)).replace(tzinfo=None)   # даты в материалах московские
 MONTHS = "января февраля марта апреля мая июня июля августа сентября октября ноября декабря".split()
 MONTHS_EN = "January February March April May June July August September October November December".split()
@@ -473,7 +478,7 @@ def page(path, title, desc, main, up="", current="", extra_head="", og_image="im
 def write(path, head, body, lang="ru"):
     f = OUT / path
     f.parent.mkdir(parents=True, exist_ok=True)
-    f.write_text(f'<!doctype html>\n<html lang="{lang}">\n<head>\n<meta charset="utf-8">\n<meta name="viewport" content="width=device-width,initial-scale=1">\n{head}\n</head>\n<body>\n{body}\n</body>\n</html>\n', encoding="utf-8")
+    f.write_text(f'<!doctype html>\n<html lang="{lang}">\n<head>\n<meta charset="utf-8">\n<meta name="viewport" content="width=device-width,initial-scale=1">\n{head}\n{METRIKA}\n</head>\n<body>\n{body}\n</body>\n</html>\n', encoding="utf-8")
 
 
 # up в хелперах ниже — префикс до раздела языка: для русских страниц до корня, для английских до /en/
