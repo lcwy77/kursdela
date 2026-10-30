@@ -90,7 +90,12 @@ def card_date(d, lang="ru"):
 
 def inline(s):
     s = esc(s)
-    s = re.sub(r"\[([^\]]+)\]\((https?://[^)\s]+)\)", r'<a href="\2" rel="noopener">\1</a>', s)
+    def link(m):   # внешние ссылки как есть; внутренние (../materialy/x.html, /kompanii/y.html) — в полный адрес сайта
+        t, u = m.group(1), m.group(2)
+        if u.startswith(("http://", "https://")):
+            return f'<a href="{u}" rel="noopener">{t}</a>'
+        return f'<a href="{SITE_URL}/{re.sub(r"^(?:\.\./)+|^/", "", u)}">{t}</a>'
+    s = re.sub(r"\[([^\]]+)\]\(((?:https?://|\.\./|/)[^)\s]+)\)", link, s)
     return re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", s)
 
 
