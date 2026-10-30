@@ -3,7 +3,7 @@ seo_title: Russian banks v. mobile operators: call-labelling fees, MVNO restrict
 date: 2026-10-27 15:25
 rubric: konflikty
 ru: banki-protiv-operatorov-markirovka-zvonkov
-description: Russia's four big mobile operators and its largest banks are locked in a dispute over money. First came fees for labelling banks' calls; now the Digital Development Ministry is drafting restrictions on virtual operators, many of them bank-owned. The parties, the numbers and what comes next.
+description: Russia's big four mobile operators and its largest banks are fighting over money: first fees for labelling bank calls, now curbs on bank-owned virtual operators.
 a: Banks
 b: telecom operators
 sud: No court case yet; the dispute is before the Ministry of Digital Development and the Bank of Russia

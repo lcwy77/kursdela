@@ -3,7 +3,7 @@ seo_title: FTC v. Dollar General: federal and state lawsuit over checkout prices
 date: 2026-10-27 15:20
 rubric: konflikty
 ru: ftc-protiv-dollar-general
-description: The Federal Trade Commission and 20 states have sued Dollar General, alleging that the 21,000-store discount chain charged shoppers more at the register than its shelf prices for years. The company has paid six states $6 million over similar claims since 2019.
+description: The FTC and 20 states have sued Dollar General, alleging the 21,000-store discount chain charged shoppers more at the register than on its shelves for years.
 a: FTC and 20 states
 b: Dollar General
 sud: U.S. District Court for the Middle District of Tennessee

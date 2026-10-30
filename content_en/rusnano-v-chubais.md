@@ -3,7 +3,7 @@ seo_title: Rusnano v. Chubais: Russian bailiffs enforce ~20 bn rubles in damages
 date: 2026-10-27 14:55
 rubric: konflikty
 ru: rosnano-protiv-chubaysa
-description: Russia's Federal Bailiff Service has opened 14 enforcement proceedings against former Rusnano chief Anatoly Chubais worth nearly 20 billion rubles (about $240 million). They stem from Moscow Arbitration Court rulings on losses from the Plastic Logic and Crocus projects.
+description: Bailiffs have opened 14 enforcement proceedings worth nearly 20 billion rubles against ex-Rusnano chief Anatoly Chubais over the Plastic Logic and Crocus projects.
 a: Rusnano
 b: Anatoly Chubais
 sud: Moscow Arbitration Court; Ninth Arbitration Court of Appeal; Arbitration Court of the Moscow District (cassation)

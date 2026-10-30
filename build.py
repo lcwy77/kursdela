@@ -33,11 +33,11 @@ ROOT = Path(__file__).parent
 SRC, STATIC, OUT = ROOT / "content", ROOT / "static", ROOT / "docs"
 
 RUBRICS = {  # ключ: (название, файл, описание для поиска)
-    "konflikty": ("Конфликты", "konflikty.html", "Корпоративные споры: стороны, их позиции и решения судов."),
-    "ekonomika": ("Экономика", "ekonomika.html", "Экономика, финансы и бизнес России: бюджет, банки, рынки, компании."),
-    "politika": ("Политика", "politika.html", "Российская политика и международные контакты."),
-    "mir": ("Мир", "mir.html", "Политики и события Запада, Европы и Китая."),
-    "ukraina": ("Украина", "ukraina.html", "Что происходит на Украине и вокруг неё."),
+    "konflikty": ("Конфликты", "konflikty.html", "Корпоративные споры в России: конфликты акционеров, иски к компаниям и бывшим руководителям, решения судов. Стороны, их позиции, суммы и ближайшие даты."),
+    "ekonomika": ("Экономика", "ekonomika.html", "Экономика России: бюджет и налоги, решения Банка России, банки, рынки и крупные компании. Цифры, документы и то, как решения властей влияют на бизнес."),
+    "politika": ("Политика", "politika.html", "Российская политика: решения Кремля, правительства и Госдумы, международные контакты, безопасность и право. Документы, заявления и их последствия."),
+    "mir": ("Мир", "mir.html", "Мир за пределами России: политика и экономика США, Европы и Китая, санкции, торговля и решения регуляторов, которые влияют на российский рынок."),
+    "ukraina": ("Украина", "ukraina.html", "Украина и вокруг неё: переговоры, заявления Москвы, Киева и Вашингтона, энергетика, экономика и внутренняя политика. Хроника событий и проверенные цитаты."),
 }
 # английская версия: content_en/*.md, поле `ru:` — слаг русского оригинала (для hreflang и переключателя языка)
 SRC_EN = ROOT / "content_en"
@@ -47,11 +47,11 @@ EN_MOTTO = "Sine ira et studio"
 EN_MOTTO_EAR = "Sine ira<br>et studio"
 EN_TAGLINE = "Russian business conflicts, money and power: what happened, what it costs and who benefits."
 RUBRICS_EN = {
-    "konflikty": ("Conflicts", "conflicts.html", "Russian corporate disputes: the parties, their positions and court rulings."),
-    "ekonomika": ("Economy", "economy.html", "Russia's economy, finance and business: budget, banks, markets, companies."),
-    "politika": ("Politics", "politics.html", "Russian politics and foreign relations."),
-    "mir": ("World", "world.html", "The West, Europe and China as seen from Moscow."),
-    "ukraina": ("Ukraine", "ukraine.html", "Ukraine and the war."),
+    "konflikty": ("Conflicts", "conflicts.html", "Russian corporate disputes: shareholder battles, claims against companies and former executives, court rulings. The parties, their positions and the sums at stake."),
+    "ekonomika": ("Economy", "economy.html", "Russia's economy: the budget and taxes, Bank of Russia decisions, banks, markets and major companies. The numbers, the documents and what they mean for business."),
+    "politika": ("Politics", "politics.html", "Russian politics: decisions by the Kremlin, the government and the State Duma, foreign relations, security and the law. Documents, statements and their consequences."),
+    "mir": ("World", "world.html", "The world beyond Russia: politics and economics in the US, Europe and China, sanctions, trade and regulatory decisions that affect the Russian market."),
+    "ukraina": ("Ukraine", "ukraine.html", "Ukraine and around it: negotiations, statements from Moscow, Kyiv and Washington, energy, the economy and domestic politics. A chronicle with verified quotes."),
 }
 METRIKA_ID = 113896804   # Яндекс Метрика; цели: telegram (переход в канал), email (клик по почте)
 METRIKA = f"""<script>(function(m,e,t,r,i,k,a){{m[i]=m[i]||function(){{(m[i].a=m[i].a||[]).push(arguments)}};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){{if(document.scripts[j].src===r){{return;}}}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}})(window,document,'script','https://mc.yandex.ru/metrika/tag.js?id={METRIKA_ID}','ym');
@@ -199,7 +199,7 @@ a:hover{text-decoration:underline;text-decoration-thickness:1px;text-underline-o
 .skip{position:absolute;left:-999px;top:0;background:var(--ink);color:var(--paper);padding:.6rem 1rem;font:600 .9rem var(--sans);z-index:9}.skip:focus{left:1rem}
 /* шапка */
 .np-row{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;gap:1.5rem;padding-block:1.15rem 1.05rem}
-.np-c{text-align:center}
+.np-c{text-align:center}.np-h{margin:0;font:inherit}
 .np{display:inline-block;font:700 clamp(2.75rem,6.6vw,5.4rem)/1 var(--plate);letter-spacing:-.005em;white-space:nowrap;padding-bottom:.06em}
 .np:hover{text-decoration:none}
 .ear{min-width:0}.ear-l{justify-self:start}.ear-r{justify-self:end;text-align:right}
@@ -441,6 +441,7 @@ def page(path, title, desc, main, up="", current="", extra_head="", og_image="im
                 "Фото используются по свободным лицензиям (Wikimedia Commons, Kremlin.ru, Белый дом и другие), автор и лицензия указаны под каждым снимком.")
         fl = f'{rub}<a href="{up}o-proekte.html">О проекте</a><a href="{CHANNEL}" rel="noopener">Телеграм-канал</a><a href="{up}rss.xml">RSS</a><a href="{up}en/" lang="en">English</a>'
         rss, locale, navlabel = f"{SITE_URL}/rss.xml", "ru_RU", "Рубрики"
+    h1o, h1c = ('<h1 class="np-h">', "</h1>") if path in ("index.html", "en/index.html") else ("", "")   # на главной логотип — заголовок H1
     hl = "".join(f'\n<link rel="alternate" hreflang="{h}" href="{u}">' for h, u in (alts or []))
     head = f"""<title>{esc(title)}</title>
 <meta name="description" content="{esc(desc)}">
@@ -463,7 +464,7 @@ def page(path, title, desc, main, up="", current="", extra_head="", og_image="im
     body = f"""<a class="skip" href="#main">{"Skip to content" if en else "К материалам"}</a>
 <header class="mast"><div class="wrap np-row">
 <div class="ear ear-l"><p class="motto">{motto2}</p></div>
-<div class="np-c"><a class="np" href="{home}">{wm}</a><p class="motto-m">{motto}</p></div>
+<div class="np-c">{h1o}<a class="np" href="{home}">{wm}</a>{h1c}<p class="motto-m">{motto}</p></div>
 <div class="ear ear-r"><p class="fx" id="fx" hidden></p></div>
 </div>
 <div class="band"><div class="wrap"><span class="today" data-today>{today}</span>

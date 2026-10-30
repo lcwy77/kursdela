@@ -3,7 +3,7 @@ seo_title: Rusal v. Rio Tinto: Russian court awards $1.278 billion and targets 6
 date: 2026-10-27 14:56
 rubric: konflikty
 ru: rusal-protiv-rio-tinto
-description: A Russian court has ordered Rio Tinto to pay Rusal $1.278 billion over its exclusion from an Australian alumina refinery and has levied execution on Rio's 66% stake in the operator of Mongolia's Oyu Tolgoi copper mine. The parties' positions and what comes next.
+description: A Russian court has ordered Rio Tinto to pay Rusal $1.278 billion and levied execution on Rio's 66% stake in the operator of Mongolia's Oyu Tolgoi copper mine.
 a: Rusal
 b: Rio Tinto
 sud: Arbitration Court of the Kaliningrad Region; Arbitration Court of the North-Western District (cassation)
