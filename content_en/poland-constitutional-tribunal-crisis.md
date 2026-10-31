@@ -1,10 +1,10 @@
-title: Two chiefs for one court: why Poland is talking about a 'coup'
+title: Poland: judges backed by Tusk's coalition oust the head of the Constitutional Tribunal
 seo_title: Poland's Constitutional Tribunal crisis: Nawrocki vs Tusk
 date: 2026-10-31 06:07
 updated: 2026-10-31 13:30
 rubric: mir
 ru: polsha-konstitucionnyj-tribunal-kriz
-description: A judge suspended the head of Poland's Constitutional Tribunal and President Nawrocki entered the court at night. Who is who in the crisis and what comes next.
+description: President Nawrocki called it a 'forcible takeover' and entered the court at night. Who is who in Poland's crisis, what happens on 3 November and what it means for markets.
 image: polsha-konstitucionnyj-tribunal-kriz.jpg
 image_caption: The entrance to the Constitutional Tribunal on Szucha Avenue in Warsaw
 image_credit: Adrian Grycuk
