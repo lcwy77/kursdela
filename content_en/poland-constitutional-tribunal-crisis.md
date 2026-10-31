@@ -4,7 +4,7 @@ date: 2026-10-31 06:07
 updated: 2026-10-31 13:30
 rubric: mir
 ru: polsha-konstitucionnyj-tribunal-kriz
-description: President Nawrocki called it a 'forcible takeover' and entered the court at night. Who is who in Poland's crisis, what happens on 3 November and what it means for markets.
+description: President Nawrocki called it a 'forcible takeover' and entered the court at night. Who is who, what happens on 3 November and what it means for markets.
 image: polsha-konstitucionnyj-tribunal-kriz.jpg
 image_caption: The entrance to the Constitutional Tribunal on Szucha Avenue in Warsaw
 image_credit: Adrian Grycuk
