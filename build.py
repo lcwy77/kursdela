@@ -99,8 +99,27 @@ def inline(s):
     return re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", s)
 
 
+PHOTO_MARK = "\x00PHOTO\x00"
+
+
 def md(body):
-    return [f"<p>{inline(' '.join(b.split()))}</p>" for b in re.split(r"\n\s*\n", body.strip()) if b.strip()]
+    """Абзацы; «## Заголовок» — подзаголовок раздела; «!фото: файл.jpg | подпись | автор | лицензия | ссылка» — фото внутри текста."""
+    out = []
+    for b in re.split(r"\n\s*\n", body.strip()):
+        b = b.strip()
+        if not b:
+            continue
+        if b.startswith("## "):
+            out.append(f'<h2 class="sub">{inline(" ".join(b[3:].split()))}</h2>')
+        elif b.startswith(("!фото:", "!photo:")):
+            out.append(PHOTO_MARK + b.split(":", 1)[1].strip())
+        else:
+            out.append(f"<p>{inline(' '.join(b.split()))}</p>")
+    return out
+
+
+def plain_text(body):
+    return " ".join(" ".join(l[3:] if l.startswith("## ") else l for l in body.splitlines() if not l.startswith(("!фото:", "!photo:"))).split())
 
 
 def load(src=SRC):
@@ -126,7 +145,7 @@ def load(src=SRC):
             print(f"  отложено до {meta['date']:%d.%m %H:%M}: {f.stem}")
             continue
         meta["updated"] = dt.datetime.strptime(meta["updated"], "%Y-%m-%d %H:%M") if "updated" in meta else meta["date"]
-        meta.update(slug=f.stem, sources=sources, next=nxt, paras=md(body), plain=" ".join(body.split()))
+        meta.update(slug=f.stem, sources=sources, next=nxt, paras=md(body), plain=plain_text(body))
         meta.setdefault("seo_title", meta["title"])
         meta["tags"] = [t.strip() for t in meta.get("tags", "").split(",") if t.strip()]
         posts.append(meta)
@@ -336,6 +355,8 @@ figcaption a{text-decoration:underline;text-decoration-color:var(--rule)}
 .body strong{font-weight:700}
 .body a{text-decoration:underline;text-decoration-color:var(--olive);text-underline-offset:.15em}
 .graphic{margin:1.6rem 0 1.9rem}.graphic img{border:1px solid var(--rule)}
+.body h2.sub{margin:2.1rem 0 .7rem;font:700 1.4rem/1.25 var(--serif);letter-spacing:-.01em}
+.inphoto{margin:1.6rem 0 1.9rem}.inphoto img{display:block;width:100%;height:auto}
 .box{background:var(--panel);border-top:3px solid var(--ink);padding:1rem 1.15rem 1.15rem;margin-bottom:1.6rem}
 .box h2{margin:0 0 .8rem;font:700 .95rem/1.2 var(--sans)}
 .docket{display:grid;gap:.75rem;margin:0;font:400 .88rem/1.42 var(--sans)}
@@ -685,7 +706,12 @@ def article_main(p, posts, path, lang="ru", ru_link="", cos=None):
 <div class="byline"><div class="when"><span class="by">{by}</span><time datetime="{p['date'].isoformat()}">{ru_date(p['date'], lang)}, {p['date']:%H:%M}</time>{upd}</div>{share}</div>"""
     hero = (f'<figure class="hero"><div class="ph">{img(p, "(min-width:78rem) 46rem, (min-width:62rem) 62vw, 100vw", eager=True)}</div>'
             f'<figcaption>{esc(p.get("image_caption", ""))}. <span class="cr">{credit(p, lang)}</span></figcaption></figure>') if p.get("image") else ""
-    paras = list(p["paras"])
+    def inphoto(spec):
+        f, cap, who, lic, src = [x.strip() for x in spec.split("|")]
+        q = {"image": f, "image_caption": cap, "image_credit": who, "image_license": lic, "image_src": src}
+        return (f'<figure class="inphoto"><div class="ph">{img(q, "(min-width:62rem) 42rem, 100vw")}</div>'
+                f'<figcaption>{esc(cap)}. <span class="cr">{credit(q, lang)}</span></figcaption></figure>')
+    paras = [inphoto(x[len(PHOTO_MARK):]) if x.startswith(PHOTO_MARK) else x for x in p["paras"]]
     if p.get("graphic"):
         g = (f'<figure class="graphic"><img src="/img/{p["graphic"]}" width="1440" height="900" alt="{esc(p.get("graphic_alt", ""))}" loading="lazy">'
              f'<figcaption>{"Graphic" if en else "Графика"}: «{BRAND}»</figcaption></figure>')
