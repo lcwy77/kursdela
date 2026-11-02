@@ -14,15 +14,17 @@ jobs:
       - name: Send URLs to IndexNow
         run: |
           python3 - <<'PY'
-          import json, re, urllib.request
+          import json, re, urllib.request, urllib.error
           urls = re.findall(r"<loc>([^<]+)</loc>", open("docs/sitemap.xml", encoding="utf-8").read())
           body = json.dumps({"host": "kursmedia.com", "key": "a14603104d871c14bd22b68dc57fa365",
                              "keyLocation": "https://kursmedia.com/a14603104d871c14bd22b68dc57fa365.txt", "urlList": urls}).encode()
-          for ep in ["https://yandex.com/indexnow", "https://api.indexnow.org/indexnow"]:
+          for ep in ["https://yandex.com/indexnow", "https://www.bing.com/indexnow", "https://api.indexnow.org/indexnow"]:
               req = urllib.request.Request(ep, data=body, headers={"Content-Type": "application/json; charset=utf-8"})
               try:
                   with urllib.request.urlopen(req, timeout=30) as r:
                       print(ep, r.status, len(urls), "urls")
+              except urllib.error.HTTPError as e:
+                  print(ep, "error:", e.code, e.read()[:300])
               except Exception as e:
                   print(ep, "error:", e)
           PY
