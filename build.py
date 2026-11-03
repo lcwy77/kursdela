@@ -9,6 +9,7 @@
   фото:      image (файл в static/img, готовится через tools/photo.py), image_caption, image_credit, image_license, image_src
   инфографика внутри текста: graphic, graphic_alt
   споры:     a, b, b_rod, sud, delo, cena, stadiya
+  главная:   home: rubric — не ставить на первый экран главной, только в рубрику
   календарь: next: ГГГГ-ММ-ДД | что произойдёт (сколько угодно)
 Одно фото — один материал: повтор снимка остановит сборку.
 """
@@ -606,9 +607,10 @@ def front(posts, lang="ru", cos=None):
         shown.update(p["slug"] for p in out)
         return out
 
-    L = take(posts, 1)[0]
-    sub = take(posts, 2)
-    sec = take(posts, 3)
+    top = [p for p in posts if p.get("home") != "rubric"] or posts   # home: rubric — материал не идёт на первый экран, только в рубрики
+    L = take(top, 1)[0]
+    sub = take(top, 2)
+    sec = take(top, 3)
     cases = sorted([p for p in posts if is_case(p)], key=lambda p: p["updated"], reverse=True)
     left = sum(p["slug"] not in shown for p in cases)
     col = take(cases, min(5, max(3, left - 4)))   # в колонке 3–5 споров, чтобы разделу «Конфликты» ниже остался полный ряд из четырёх с фото
@@ -817,7 +819,7 @@ def build():
     # главная
     ld = {"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "name": SITE_NAME, "url": SITE_URL + "/", "description": TAGLINE, "inLanguage": "ru"}, org_ld()]}
     head, body = page("index.html", f"{SITE_NAME} — {SUBJECT.lower()}: корпоративные споры, экономика и политика", TAGLINE, front(posts, cos=cos),
-                      alts=pair("index.html", "en/index.html"), og_image=og_of(posts[0]), extra_head=ld_tag(ld))
+                      alts=pair("index.html", "en/index.html"), og_image=og_of(next((q for q in posts if q.get("home") != "rubric"), posts[0])), extra_head=ld_tag(ld))
     write("index.html", head, body)
     index_parts = (head, body)
 
@@ -939,7 +941,7 @@ def build_en(posts, ru_by_slug, pair):
     main = front(posts, "en") if posts else '<p class="note">English coverage starts soon.</p>'
     ld = {"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "name": EN_NAME, "url": SITE_URL + "/en/", "description": EN_TAGLINE, "inLanguage": "en"}, org_ld("en")]}
     put("en/index.html", f"{EN_NAME} — Russian business conflicts, money and power", EN_TAGLINE, main, "../",
-        alts=pair("index.html", "en/index.html"), switch="../", og_image=og_of(posts[0], "en") if posts else "img/og.png", extra_head=ld_tag(ld))
+        alts=pair("index.html", "en/index.html"), switch="../", og_image=og_of(next((q for q in posts if q.get("home") != "rubric"), posts[0]), "en") if posts else "img/og.png", extra_head=ld_tag(ld))
 
     # рубрики
     for key, (name, fname, rdesc) in RUBRICS_EN.items():
