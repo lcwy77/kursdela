@@ -2,6 +2,7 @@ title: "A little bit different shape": what Russia, the US and Ukraine bring to 
 seo_title: Abu Dhabi talks, Nov 10–11: delegations, Trump, Europe
 date: 2026-11-09 13:27
 rubric: politika
+updated: 2026-11-10 14:00
 ru: abu-dabi-peregovory-noyabr
 description: The first three-way talks between Russia, the US and Ukraine in nine months open in Abu Dhabi. Who is going, what changed during the pause, and why Europe was left outside.
 image: abu-dabi-peregovory-noyabr.jpg
@@ -12,6 +13,8 @@ image_src: https://commons.wikimedia.org/wiki/File:Skyline_of_Abu_Dhabi_by_night
 src: CBS News: transcript of Donald Trump's interview with 60 Minutes (Nov 8, 2026) | https://www.cbsnews.com/news/donald-trump-2026-post-midterm-elections-interview-60-minutes-transcript/
 src: Interfax: Peskov names the delegation for the Abu Dhabi talks (Nov 7, 2026; in Russian) | https://www.interfax.ru/russia/1127551
 src: Kyiv Independent: Umerov to lead Ukraine's delegation (Nov 6, 2026) | https://kyivindependent.com/umerov-to-lead-ukraine-delegation-in-abu-dhabi-peace-talks-despite-media-confusion-top-official-confirms/
+src: ZN.ua: Umerov appointed head of the Foreign Intelligence Service (Aug 3, 2026; in Russian) | https://zn.ua/POLITICS/umerov-hlava-szr-a-klimenko-sekretar-snbo-opublikovany-ukazy.html
+src: Rambler / TASS: delegations in Abu Dhabi (Nov 10, 2026; in Russian) | https://news.rambler.ru/politics/57387131-v-abu-dabi-nachalis-peregovory-rf-i-ukrainy-pri-posrednichestve-ssha/
 src: MY.UA / Bloomberg: Russia raises the status of its delegation (Nov 8, 2026; in Russian) | https://my.ua/news/cluster/2026-11-08-rossiia-povysila-status-svoei-delegatsii-na-peregovorakh-s-ukrainoi-v-abu-dabi-bloomberg
 src: Latin Times: talks resume after a nine-month pause (Nov 3, 2026) | https://www.latintimes.com/us-mediate-russia-ukraine-talks-abu-dhabi-600870
 src: Wikipedia: 2026 United States–Ukraine–Russia meetings in Abu Dhabi | https://en.wikipedia.org/wiki/2026_United_States%E2%80%93Ukraine%E2%80%93Russia_meetings_in_Abu_Dhabi
@@ -55,7 +58,7 @@ Dmitry Peskov announced the Russian delegation on Saturday. It is once again hea
 
 Bloomberg called this the most senior line-up of any round: for the first time it includes the officer responsible for operational planning at the General Staff, as well as Ryabkov, a key figure in relations with Washington. In the agency's assessment, Moscow is ready to talk in detail about both political and military matters. Peskov promised that the security guarantees of the parties would be discussed and that the details would stay behind closed doors.
 
-Ukraine's delegation will be led by Rustem Umerov, secretary of the National Security and Defence Council. For several days Ukrainian media speculated that the talks might be handed to Kyrylo Budanov, but David Arakhamia, head of the pro-presidential faction, cut that short: "No, it's Umerov." The delegation includes Arakhamia himself, Zelensky's adviser Dmytro Lytvyn, Budanov, and Serhiy Kyslytsya, first deputy head of the Presidential Office. The American side is again represented by Witkoff and Kushner. According to Witkoff, the agenda covers security and de-escalation measures, humanitarian issues, a possible energy and maritime ceasefire, prisoner exchanges and the return of children.
+Ukraine's delegation will be led by Rustem Umerov, head of the Foreign Intelligence Service. For several days Ukrainian media speculated that the talks might be handed to Kyrylo Budanov, but David Arakhamia, head of the pro-presidential faction, cut that short: "No, it's Umerov." The delegation includes Arakhamia himself, Budanov, Serhiy Kyslytsya, first deputy head of the Presidential Office, Chief of the General Staff Andriy Hnatov and Vadym Skibitskyi, deputy head of military intelligence. The American side is again represented by Witkoff and Kushner. According to Witkoff, the agenda covers security and de-escalation measures, humanitarian issues, a possible energy and maritime ceasefire, prisoner exchanges and the return of children.
 
 !photo: abu-dabi-peregovory-noyabr-2.jpg | Downtown Abu Dhabi seen from the gardens of the Qasr Al Watan presidential palace | Matti Blume | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Qasr_Al_Watan,_Abu_Dhabi_(P1100960).jpg
 
