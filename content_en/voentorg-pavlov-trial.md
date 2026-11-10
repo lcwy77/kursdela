@@ -1,6 +1,6 @@
 title: Shampoo, razors and 6.6 billion rubles: the case against former Voentorg chief Vladimir Pavlov goes to trial
 seo_title: Ex-Voentorg chief Pavlov's 6.6bn ruble case goes to trial
-date: 2026-11-10 15:56
+date: 2026-11-10 15:52
 rubric: konflikty
 ru: voentorg-pavlov-sud
 description: Vladimir Pavlov, the former head of Voentorg, the Russian Defense Ministry's largest supplier, will stand trial over the alleged theft of 6.6 billion rubles on deliveries of uniforms, underwear and toiletry kits. How a restaurateur came to supply the army, and why the case grew almost seventeenfold.
