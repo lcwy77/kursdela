@@ -2,7 +2,7 @@ title: "A little bit different shape": what Russia, the US and Ukraine bring to 
 seo_title: Abu Dhabi talks, Nov 10–11: delegations, Trump, Europe
 date: 2026-11-09 13:27
 rubric: politika
-updated: 2026-11-10 14:00
+updated: 2026-11-11 15:40
 ru: abu-dabi-peregovory-noyabr
 description: The first three-way talks between Russia, the US and Ukraine in nine months open in Abu Dhabi. Who is going, what changed during the pause, and why Europe was left outside.
 image: abu-dabi-peregovory-noyabr.jpg
@@ -27,6 +27,9 @@ src: Lenta.ru: Federation Council responds to France (Nov 9, 2026; in Russian) |
 src: Vedomosti: Peskov on a Putin–Xi–Trump meeting (Nov 8, 2026; in Russian) | https://www.vedomosti.ru/politics/news/2026/11/08/1243470-peskov-vstrecha
 src: Kommersant / Fox News: White House weighs a new operation against Iran (Nov 6, 2026; in Russian) | https://www.kommersant.ru/doc/9091262
 src: Vedomosti: morning market review, Nov 9 (in Russian) | https://www.vedomosti.ru/investments/articles/2026/11/09/1243575-utrennii-zvon
+src: Izvestia: Medinsky sums up the trilateral talks in Abu Dhabi (Nov 11, 2026; in Russian) | https://iz.ru/2199866/2026-11-11/medinskii-podvel-itogi-trekhstoronnikh-peregovorov-v-abu-dabi-glavnoe
+src: Vedomosti: results of the Abu Dhabi talks (Nov 11, 2026; in Russian) | https://www.vedomosti.ru/politics/articles/2026/11/11/1244440-itogi-peregovorov
+src: RBC: second day of talks ends in Abu Dhabi (Nov 11, 2026; in Russian) | https://www.rbc.ru/politics/11/11/2026/6af3fcb764a8ad982d26f6cf
 ---
 The interview was recorded at the White House on Friday, three days after the Republican Party lost the congressional elections. Ross Douthat, the New York Times columnist who conducted it for 60 Minutes, asked Donald Trump whom he trusted more, Vladimir Putin or Volodymyr Zelensky. "Well, I'd rather not say, but I get along with both," the president replied.
 
@@ -77,3 +80,5 @@ The market is already betting on diplomacy. Last week the Moscow Exchange index 
 At the end of the interview, Douthat asked Trump the question Washington keeps asking: was Putin stringing him along?
 
 "Oh, I don't think so," the president said.
+
+**Update, November 11, 2026. Results of the two days.** The Abu Dhabi talks lasted two days: about four and a half hours on the first and less than two on the second. Their main result was an agreement on a new large-scale prisoner exchange: according to a Russian General Staff official, each side will release more than 1,000 people, possibly within two to three weeks. "Specific information will come later," said Vladimir Medinsky, head of the Russian delegation. He called a new European security system the central topic: "The whole body has to be treated; a band-aid won't do." According to Medinsky, Russia has received no peace proposals from European countries, understanding was not reached on every issue, and the discussion will continue. Jared Kushner called territory the hardest question and said a security guarantees agreement would not be signed until it is resolved. U.S. Secretary of State Marco Rubio called the first day "very productive." The next step is a visit by Steve Witkoff and Kushner to Moscow to meet Vladimir Putin, after which they plan to meet Volodymyr Zelensky in Dublin.
