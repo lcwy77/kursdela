@@ -1,6 +1,7 @@
 title: Banks v. telecom operators: Russia's fight over who pays for the networks
 seo_title: Russian banks v. mobile operators: call-labelling fees, MVNO restrictions and the 250-ruble tariff floor
 date: 2026-10-27 15:25
+updated: 2026-11-12 11:15
 rubric: konflikty
 ru: banki-protiv-operatorov-markirovka-zvonkov
 description: Russia's big four mobile operators and its largest banks are fighting over money: first fees for labelling bank calls, now curbs on bank-owned virtual operators.
@@ -9,11 +10,14 @@ b: telecom operators
 sud: No court case yet; the dispute is before the Ministry of Digital Development and the Bank of Russia
 cena: Up to 20 bn rubles a year in call-labelling fees (Strategy Partners estimate); a market of 25.5 million MVNO SIM cards
 cena_short: up to 20 bn rubles a year
-stadiya: Call-labelling dispute unresolved; ministry drafting MVNO rules, details "still being worked out"
+stadiya: Grace period for blocking unlabelled bank calls expires November 13; on November 11 banks rejected a package pricing model offered by MegaFon and MTS
 image: banki-protiv-operatorov-markirovka-zvonkov.jpg
 image_caption: A MegaFon store in Vyshny Volochyok, Russia
 image_credit: Artyom Svetlov
 image_license: CC BY-SA 4.0
+src: RB.ru: MegaFon and MTS fail to agree with banks on call labelling (Nov 11, 2026; in Russian) | https://rb.ru/news/megafon-i-mts-ne-dogovorilis-s-bankami-o-markirovke-zvonkov-finansovyj-sektor-ne-prinyal-predlozheniya-operatorov
+src: Interfax: operators see progress in talks with banks on call labelling (Oct 30, 2026; in Russian) | https://www.interfax.ru/russia/1126192
+src: Rossiyskaya Gazeta: blocking of unlabelled bank calls postponed to November 13 (Oct 30, 2026; in Russian) | https://rg.ru/2026/10/30/mincifry-blokirovku-nemarkirovannyh-zvonkov-bankov-otlozhili-do-13-noiabria.html
 image_src: https://commons.wikimedia.org/wiki/File:Vyshny_Volochyok_Kazansky_Prospect_2012-05_1337451666.JPG
 src: Kommersant: Ministry preparing restrictions for virtual operators | https://www.kommersant.ru/doc/9061091
 src: RB.ru: new restrictions for MVNOs | https://rb.ru/news/besplatnyh-tarifov-bolshe-ne-budet-mincifry-gotovitsya-vvesti-novye-ogranicheniya-dlya-virtualnyh-operatorov-svyazi/
@@ -41,3 +45,11 @@ Estimates of the stakes vary. Strategy Partners puts the cost at up to 1 billion
 **How the dispute is being fought.** Both sides lobby the regulators, and both sides' letters have leaked to the press. The operators speak of protecting subscribers and funding networks; the banks speak of customer security and fair pricing. Nobody has yet published a cost calculation that would justify a 250-ruble floor.
 
 **What next.** The call-labelling dispute remains unresolved, and the ministry's MVNO proposals have not yet taken the form of a draft law. This page will be updated.
+
+**Update, November 12, 2026. The grace period runs out, with no deal.** The blocking threatened for October 15 never began. On October 14 the Ministry of Digital Development asked operators to wait until early November, and on October 30 the two sides agreed to postpone it again, to November 13. The banks asked for the two weeks to agree commercial terms and write them into contracts. MegaFon spoke at the time of "positive dynamics": every bank that had not yet signed, it said, was at least at the stage of signing with one operator. MTS hoped to reach agreement "as soon as possible."
+
+They did not. On November 11, RB.ru, citing a joint statement by the operators, reported that MegaFon and MTS had offered the banks a package model: a fixed volume of calls instead of payment for every call. The financial sector rejected the offer. Banks fear that a "debt collection services" label will cut the share of answered calls and raise their costs. The National Financial Market Council opposed the restrictions and appealed to the ministry and the Bank of Russia.
+
+The operators point to where most of the traffic comes from: by their count, more than 85% of banks' outgoing calls concern overdue debt, and a single subscriber sometimes receives five to ten calls a day from one organisation. They call fears that labelling will hamper the fight against fraud exaggerated, since banks can warn customers about suspicious transactions by text message and in their apps.
+
+The grace period expires on Friday, November 13. Neither the operators, the banks nor the ministry has said publicly whether it will be extended again.
