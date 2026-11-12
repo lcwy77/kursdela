@@ -16,6 +16,7 @@ image_caption: A MegaFon store in Vyshny Volochyok, Russia
 image_credit: Artyom Svetlov
 image_license: CC BY-SA 4.0
 src: RB.ru: MegaFon and MTS fail to agree with banks on call labelling (Nov 11, 2026; in Russian) | https://rb.ru/news/megafon-i-mts-ne-dogovorilis-s-bankami-o-markirovke-zvonkov-finansovyj-sektor-ne-prinyal-predlozheniya-operatorov
+src: iPhones.ru: MTS and MegaFon to block unlabelled bank calls from November 13 (Nov 11, 2026; in Russian) | https://iphones.ru/iNotes/mts-i-megafon-s-13-noyabrya-budut-blokirovat-zvonki-bankov-kotorye-ne-platyat-za-markirovku
 src: Interfax: operators see progress in talks with banks on call labelling (Oct 30, 2026; in Russian) | https://www.interfax.ru/russia/1126192
 src: Rossiyskaya Gazeta: blocking of unlabelled bank calls postponed to November 13 (Oct 30, 2026; in Russian) | https://rg.ru/2026/10/30/mincifry-blokirovku-nemarkirovannyh-zvonkov-bankov-otlozhili-do-13-noiabria.html
 image_src: https://commons.wikimedia.org/wiki/File:Vyshny_Volochyok_Kazansky_Prospect_2012-05_1337451666.JPG
@@ -52,4 +53,4 @@ They did not. On November 11, RB.ru, citing a joint statement by the operators, 
 
 The operators point to where most of the traffic comes from: by their count, more than 85% of banks' outgoing calls concern overdue debt, and a single subscriber sometimes receives five to ten calls a day from one organisation. They call fears that labelling will hamper the fight against fraud exaggerated, since banks can warn customers about suspicious transactions by text message and in their apps.
 
-The grace period expires on Friday, November 13. Neither the operators, the banks nor the ministry has said publicly whether it will be extended again.
+The grace period expires on Friday, November 13. On the evening of November 11, MTS and MegaFon announced that from that day they will start blocking unlabelled calls from banks. The ministry has not announced another postponement.
