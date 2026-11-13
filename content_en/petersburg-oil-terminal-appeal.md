@@ -10,6 +10,11 @@ sud: Appeal court in the case on seizing PNT shares for the state
 cena: 45% of Petersburg Oil Terminal JSC; about 4.5 billion rubles in accrued dividends
 cena_short: 45% of PNT
 stadiya: On November 12, 2026, the appeal court ruled against the Prosecutor General; the September 2026 first-instance refusal stands
+image: pnt-apellyaciya-genprokuratura-otkaz.jpg
+image_caption: The entrance to the seaport of St. Petersburg
+image_credit: Рустам Абдрахимов
+image_license: CC BY 3.0
+image_src: https://commons.wikimedia.org/wiki/File:Морские_ворота_города_Ленинграда_-_panoramio.jpg
 src: Fontanka: appeal court rejects Prosecutor General's bid to nationalize Petersburg Oil Terminal shares (Nov 12, 2026; in Russian) | https://www.fontanka.ru/2026/11/12/76761965/
 src: Interfax: Prosecutor General appeals refusal to nationalize private PNT stake (Oct 2026; in Russian) | https://www.interfax.ru/business/1121082
 src: Interfax: court rejects claim against former and current private shareholders of Petersburg oil terminal (Sep 2026; in Russian) | https://interfax.ru/russia/1115503
