@@ -1,6 +1,7 @@
 title: "They get budget money, and there's no result": how Russia's youth agency became a regular address for investigators
 seo_title: Rosmolodezh under investigation: Ashirov detained, Razuvaeva case, missing "Movement of the First" hats and Bastrykin's words
-date: 2026-11-15 08:01
+date: 2026-11-13 18:39
+home: rubric
 rubric: politika
 ru: rosmolodezh-dela-ashirov-razuvaeva-bastrykin
 description: Rosmolodezh state secretary Denis Ashirov was detained on Friday over 40.5 million rubles in contracts with Synergy University. His former boss Ksenia Razuvaeva has admitted guilt in an embezzlement case, 46,800 hats went missing at the "Movement of the First", and Investigative Committee chief Alexander Bastrykin said of the agency in June: "They get budget money, and there's no result."
