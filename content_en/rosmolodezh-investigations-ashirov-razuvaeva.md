@@ -1,6 +1,7 @@
 title: "They get budget money, and there's no result": how Russia's youth agency became a regular address for investigators
 seo_title: Rosmolodezh under investigation: Ashirov detained, Razuvaeva case, missing "Movement of the First" hats and Bastrykin's words
 date: 2026-11-13 18:39
+updated: 2026-11-14 06:59
 home: rubric
 rubric: politika
 ru: rosmolodezh-dela-ashirov-razuvaeva-bastrykin
@@ -24,6 +25,9 @@ src: Vedomosti: Mishustin relieves Razuvaeva of her post as head of Rosmolodezh 
 src: Vedomosti: Grigory Gurov — biography (in Russian) | https://www.vedomosti.ru/person/1207096-gurov-grigorii
 src: Kommersant: almost 1.8 trillion rubles for the "Youth and Children" national project in 2026–2028 (Oct 1, 2025; in Russian) | https://www.kommersant.ru/doc/8079556
 src: Fontanka: Mishustin redistributes duties among deputy prime ministers (Oct 30, 2026; in Russian) | https://www.fontanka.ru/2026/10/30/76736315/
+src: Interfax: court declines to jail Rosmolodezh deputy head Ashirov (Nov 13, 2026; in Russian) | https://www.interfax.ru/russia/1128915
+src: Fontanka: Rosmolodezh deputy head case — measure of restraint chosen (Nov 13, 2026; in Russian) | https://www.fontanka.ru/2026/11/13/76765980/
+src: Rambler/TASS: Rosmolodezh says all services under Synergy contracts were provided (Nov 13, 2026; in Russian) | https://news.rambler.ru/incidents/57412825-v-rosmolodezhi-uvereny-chto-po-kontraktam-s-sinergiey-okazany-vse-uslugi/
 ---
 More than 50,000 people, according to Synergy University, took its online courses for specialists who work with young people. The courses taught the prevention of "negative social phenomena." The client was Rosmolodezh, Russia's Federal Agency for Youth Affairs: two contracts, in 2023 and 2024, worth 40.5 million rubles.
 
@@ -98,3 +102,9 @@ The agency is now headed by Grigory Gurov, 41. He first joined Rosmolodezh in 20
 For Ashirov, 38, this may end a career that began in the Moscow branch of the Young Guard of United Russia. For Rosmolodezh, it is another episode in a chronicle Bastrykin summed up in June. Recalling his Pioneer childhood, he quoted words he attributed to Marx: "We did not have a single minute of free time to commit crimes."
 
 Judging by the criminal record, the officials responsible for Russia's youth have found the time.
+
+**Update, November 14, 2026. House arrest instead of jail.** On the evening of November 13, Moscow's Tverskoy District Court rejected the investigator's request to remand Denis Ashirov in custody and placed him under house arrest until December 10, Interfax reported. He is charged under Part 4 of Article 159 of the Criminal Code, large-scale fraud. According to TASS, Synergy vice-rector Mikhail Erofeev was also placed under house arrest. He denies guilt.
+
+According to investigators, almost 20 million rubles may have been stolen in the performance of one of the contracts. Media reports say it was a 31.5 million ruble contract to create an online course, much of which the university passed on to subcontractors, paying them about 13.5 million.
+
+Rosmolodezh told TASS that the contracts were awarded "following open competitive procedures," that the services were provided "in full, with more than 50,000 people completing the training," and that the agency is assisting law enforcement.
