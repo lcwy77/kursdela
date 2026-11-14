@@ -1,7 +1,7 @@
 title: A bomb on the day of talks: who Sergei Zavorotny is, and why explosions in Russia go off when Moscow talks peace
 seo_title: Zavorotny car bomb in Moscow: who he is, attacks from Dugina to Shushary, and the peace talks
 date: 2026-11-13 15:45
-updated: 2026-11-13 16:11
+updated: 2026-11-14 08:03
 rubric: politika
 ru: zavorotnyj-vzryv-chertanovo
 description: On November 13 a car belonging to 72-year-old Sergei Zavorotny, former press secretary to ex-Ukrainian prime minister Mykola Azarov, was blown up in Moscow. A day earlier an Air Force colonel was killed near St. Petersburg. Both blasts came during the Kremlin talks with US envoys — as did the killings of generals Moskalik and Sarvarov.
@@ -25,6 +25,7 @@ src: Moskva 24: blast on Yasenevaya Street kills General Sarvarov (Dec 22, 2025;
 src: Lenta.ru: Dmitriev concludes Ukraine talks in Miami (Dec 21, 2025; in Russian) | https://lenta.ru/news/2025/12/21/diskussii-prohodyat-konstruktivno-dmitriev-zavershil-peregovory-po-ukraine-v-mayami/
 src: Profile: Ushakov's statements after Putin's meeting with Witkoff and Kushner (Nov 12, 2026; in Russian) | https://profile.ru/news/politics/vstrecha-putina-s-uitkoffom-i-kushnerom-gummissiya-v-konstantinovke-obmen-plennymi-s-ukrainoj-evropejskaya-bezopasnost-zayavleniya-ushakova-1923089/
 src: Vedomosti: Kushner reports progress in Ukraine talks (Nov 13, 2026; in Russian) | https://www.vedomosti.ru/politics/news/2026/11/13/1245012-kushner-soobschil
+src: 74.ru: car bombing of Sergei Zavorotny — details (Nov 14, 2026; in Russian) | https://74.ru/text/incidents/2026/11/14/76766035/
 ---
 On Friday morning, a black Toyota Fortuner pulled out of a courtyard on Kirovogradskaya Street in Moscow's Chertanovo district — an ordinary residential neighborhood, an ordinary morning queue to get onto the road. The car had gone about two hundred meters when a bomb went off beneath the driver's seat.
 
@@ -95,3 +96,5 @@ Now Shushary and Chertanovo: two blasts in exactly the hours when the American e
 Investigators have not yet named who ordered the attacks, and may not for a long time. But if these are coincidences, they are remarkably precise. Each time the talks move forward, a bomb goes off in Russia. The victims differ — generals and colonels, war correspondents, journalists, an elderly former prime minister's press secretary. What they share is timing. It looks less like revenge on individuals than like a provocation: a bet that Moscow will respond not at the negotiating table but by slamming the door.
 
 On Thursday, Ushakov spoke of the largest prisoner exchange of the entire conflict. On Friday, Sergei Zavorotny was rushed into intensive care.
+
+**Update, November 14, 2026. Zavorotny in a coma.** Sergei Zavorotny has fallen into a coma, Izvestia reported, citing a source. Mykola Azarov called the bombing a terrorist attack and said Kyiv's intelligence services were behind it, with his former press secretary's writing as the main motive. Investigators have not officially confirmed that version. The case has been opened as attempted murder by an organized group. No arrests had been reported as of the morning of November 14.
