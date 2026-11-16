@@ -1,0 +1,39 @@
+title: Debt through the roof: how Russia's largest homebuilder ended up in the hands of its banks
+seo_title: Samolet and its creditor banks: the recovery plan and the debt
+date: 2026-10-29 20:03
+updated: 2026-11-10 20:15
+rubric: ekonomika
+ru: samolet-kreditory-restrukturizaciya
+description: Creditors of Samolet Group have agreed on a recovery plan for the developer. Revenue for nine months fell 31%, the net loss was 22.3 billion rubles, and loans total 773 billion.
+image: samolet-kreditory-restrukturizaciya.jpg
+image_caption: A Samolet residential complex in the Zenino district of Lyubertsy
+image_credit: moskva.pictures
+image_license: CC BY 4.0
+image_src: https://commons.wikimedia.org/wiki/File:Moscow-2100_-_30_%D0%9B%D1%8E%D0%B1%D0%B5%D1%80%D1%86%D1%8B,_%D0%BC%D0%B8%D0%BA%D1%80%D0%BE%D1%80%D0%B0%D0%B9%D0%BE%D0%BD_%D0%97%D0%B5%D0%BD%D0%B8%D0%BD%D0%BE_%D0%96%D0%9A_%D0%A1%D0%B0%D0%BC%D0%BE%D0%BB%D1%91%D1%82.jpg
+src: Kommersant: Samolet's costs (in Russian) | https://www.kommersant.ru/doc/9063909
+src: Interfax: Samolet's main creditors agree on a plan to improve its finances (in Russian) | https://www.interfax.ru/business/1125474
+src: Interfax: Sber does not plan to take a stake in Samolet (in Russian) | https://www.interfax.ru/business/1125555
+src: RIA Real Estate: Sberbank does not plan to take a stake in Samolet (in Russian) | https://realty.ria.ru/20261028/samolet-2127627677.html
+src: Frank Media: Samolet's latest technical default (Nov 10, 2026; in Russian) | https://frankmedia.ru/314944
+src: Finance Mail: Samolet shares plunge 12% over bond buyback problems (Nov 10, 2026; in Russian) | https://finance.mail.ru/article/aktsii-samoleta-obvalilis-na-12-iz-za-problem-s-vyikupom-obligatsij-69236617/
+src: T—Zh: Samolet's bond payment problems (Oct 6, 2026; in Russian) | https://t-j.ru/samolet-fails-again/
+---
+In Moscow and the Moscow region, Samolet is building 4.3 million square meters of housing, more than any other developer in the country. By Kommersant's estimate, about 40,000 people have bought into its projects off-plan. Their future now depends largely not on Samolet's owners but on its banks. On October 28, Sberbank deputy chairman Taras Skvortsov said the main creditors had agreed on a comprehensive program to pull the developer out of its current situation. "Overall, agreements have now been reached, but some time is still needed to finalize all the decisions," he said.
+
+The numbers explain how it came to this. In the first nine months of 2026, the group's revenue fell 31.3% to 117.4 billion rubles. The net loss was 22.3 billion rubles, compared with a profit of 1.8 billion a year earlier. At the end of June, the balance sheet showed 325.3 billion rubles in short-term loans and 448.1 billion in long-term loans, about 773 billion in total. Samolet has 15 bond issues worth 104.9 billion rubles, and at the end of September the company delayed a payment on them for the second time in a year, citing technical reasons. The market values the developer at 16 billion rubles: a share that cost 4,980 rubles in July 2021 traded at 260.6 rubles on October 29. The debts, Kommersant writes, far exceed the company's value.
+
+The warning signs came all year. In early February, Samolet asked the government for a 50 billion ruble subsidized loan, explaining it as an effort to optimize financing amid tight monetary policy. The company called this "normal market practice for many systemically important industries." A Finance Ministry subcommission found no critical problems and recommended continuing to work with the banks. At the time, Sberbank chief executive Herman Gref said Samolet had enough liquidity to service its obligations. After the first-half report, creditors' concern apparently grew. In September, sources said Sberbank might take over management of part of the business, and that the owners' non-construction assets would serve as collateral in a restructuring.
+
+Sberbank rejected that version. "That's definitely a no, we don't plan to," Skvortsov said of a possible stake, adding that the bank has no construction experience: "Our task is to make sure, as far as possible, that an effective owner manages these projects." The bank does not expect a major hit to its reserves in the fourth quarter and considers the reserves already set aside sufficient. Details of the plan have not been disclosed. Skvortsov said he "would like" to complete and announce the deal before the end of the year. VTB declined to comment to Kommersant, and Sberbank and Dom.RF did not answer the newspaper's questions. Samolet itself has not commented on the program in these reports.
+
+Pavel Golubkov and Igor Evtushevsky are considered the company's major shareholders. In August, the heirs of founder Mikhail Kenin, who died last year, sold their 18% to Fonte Inceptia Alpha Fund, managed by Fonte Capital, which then disposed of almost the entire stake. Earlier, in 2024, Gleb Nisanov, co-owner of Kievskaya Ploshchad, sold a 10% stake.
+
+Market participants also see causes in the company's strategy. According to Alexei Popov of Cian, Samolet took risks: a large land bank, non-core investments — for example, 45.6 billion rubles in MIC Group in 2023 — and expansion into individual housing, hotels and its own ecosystem. Investment consultant Ivan Peshkov considers restructuring the most likely rescue scenario. A full handover of the company to a bank is unlikely, and, he says, no buyer was found for a discounted sale of the developer.
+
+Many experts stress that Samolet is not an exception but the extreme point of a general trend. According to the Bank of Russia, developers' project-finance debt rose 16% to 11.4 trillion rubles. At the end of August, money in escrow accounts covered only 66% of that debt, compared with 72% a year earlier and 87% two years earlier. The average project-finance rate in the second quarter was 9.9%, but every fifth ruble costs developers more than 16% a year. In the first half of the year, more than half of developers pushed back completion dates. Yaroslav Gutnov of SIS Development calls it a crisis of overproduction: supply has doubled in five years, while demand has fallen back to 2014–2016 levels. By early 2027, by his estimate, 830,000 apartments will remain unsold. The Construction Ministry says it is working with the banks and is focused first of all on market stability and buyers' rights.
+
+For the housing market, the decision on Samolet will set a benchmark. Sberbank, VTB and Dom.RF hold most of the industry's project finance, and how they deal with the largest developer will show what awaits smaller companies in a similar position. For buyers, the key question is different: will their homes be completed on schedule while the creditors work out the details? All our coverage of Sberbank is collected on our [Sberbank page](https://kursmedia.com/kompanii/sber.html) (in Russian).
+
+Creditors expect to agree on the final terms of the program by the end of the year. We will keep updating this story.
+
+**Update, November 10, 2026. A new technical default and a drop in the shares.** On November 9, Samolet failed to buy back its BO-P05 bonds on time under a put option and moved the buyback to November 11, citing "technical problems." It is the third such episode in six months: in May, the Moscow Exchange recorded technical defaults on issues 01 and BO-P19, and at the end of September only about 0.6 billion of the 2.5 billion rubles due on issue BO-P20 was transferred on time. On November 10, the company's shares fell more than 12% intraday on the Moscow Exchange, to 287 rubles, but by 6:10 p.m. Moscow time they had recovered some of the losses and were trading around 295 rubles (Frank Media data). In January 2027, Samolet must redeem its BO-P13 issue worth 24.5 billion rubles.
