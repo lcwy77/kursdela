@@ -1,7 +1,7 @@
 title: "They get budget money, and there's no result": how Russia's youth agency became a regular address for investigators
 seo_title: Rosmolodezh under investigation: Ashirov detained, Razuvaeva case, missing "Movement of the First" hats and Bastrykin's words
 date: 2026-11-13 18:39
-updated: 2026-11-14 06:59
+updated: 2026-11-16 10:53
 home: rubric
 rubric: politika
 ru: rosmolodezh-dela-ashirov-razuvaeva-bastrykin
@@ -28,6 +28,8 @@ src: Fontanka: Mishustin redistributes duties among deputy prime ministers (Oct 
 src: Interfax: court declines to jail Rosmolodezh deputy head Ashirov (Nov 13, 2026; in Russian) | https://www.interfax.ru/russia/1128915
 src: Fontanka: Rosmolodezh deputy head case — measure of restraint chosen (Nov 13, 2026; in Russian) | https://www.fontanka.ru/2026/11/13/76765980/
 src: Rambler/TASS: Rosmolodezh says all services under Synergy contracts were provided (Nov 13, 2026; in Russian) | https://news.rambler.ru/incidents/57412825-v-rosmolodezhi-uvereny-chto-po-kontraktam-s-sinergiey-okazany-vse-uslugi/
+src: Synergy: university wins Rosmolodezh grant for "Synergy of Opportunities" program (Jul 2025; in Russian) | https://synergy.ru/about/blog/universitet_sinergiya_poluchil_grant_rosmolodezhi_na_programmu_razvitiya_studentov_sinergiya_vozmozhnostej
+src: Synergy: several projects win Rosmolodezh.Grants competition among universities (2023; in Russian) | https://synergy.ru/about/blog/srazu_neskolko_proektov_sinergii_stali_pobeditelyami_konkursa_rosmolodyozh.grantyi_sredi_vuzov_2023
 ---
 More than 50,000 people, according to Synergy University, took its online courses for specialists who work with young people. The courses taught the prevention of "negative social phenomena." The client was Rosmolodezh, Russia's Federal Agency for Youth Affairs: two contracts, in 2023 and 2024, worth 40.5 million rubles.
 
@@ -108,3 +110,5 @@ Judging by the criminal record, the officials responsible for Russia's youth hav
 According to investigators, almost 20 million rubles may have been stolen in the performance of one of the contracts. Media reports say it was a 31.5 million ruble contract to create an online course, much of which the university passed on to subcontractors, paying them about 13.5 million.
 
 Rosmolodezh told TASS that the contracts were awarded "following open competitive procedures," that the services were provided "in full, with more than 50,000 people completing the training," and that the agency is assisting law enforcement.
+
+**Update, November 16, 2026. Not just a contractor.** Synergy was not only a contractor for Rosmolodezh but also a recipient of its grants, Kurs Media found in the university's own publications. In 2023, three of its projects won the "Rosmolodezh.Grants among universities" competition, receiving more than 2.5 million rubles in total. In July 2025, the university received a 14.7 million ruble subsidy from the agency for its "Synergy of Opportunities" program and described itself as the only private university among the winners. Investigators have not been reported to have raised any claims concerning the grants.
