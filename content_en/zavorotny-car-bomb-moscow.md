@@ -1,7 +1,7 @@
 title: A bomb on the day of talks: who Sergei Zavorotny is, and why explosions in Russia go off when Moscow talks peace
 seo_title: Zavorotny car bomb in Moscow: who he is, attacks from Dugina to Shushary, and the peace talks
 date: 2026-11-13 15:45
-updated: 2026-11-14 08:03
+updated: 2026-11-16 16:56
 rubric: politika
 ru: zavorotnyj-vzryv-chertanovo
 description: On November 13 a car belonging to 72-year-old Sergei Zavorotny, former press secretary to ex-Ukrainian prime minister Mykola Azarov, was blown up in Moscow. A day earlier an Air Force colonel was killed near St. Petersburg. Both blasts came during the Kremlin talks with US envoys — as did the killings of generals Moskalik and Sarvarov.
@@ -26,6 +26,8 @@ src: Lenta.ru: Dmitriev concludes Ukraine talks in Miami (Dec 21, 2025; in Russi
 src: Profile: Ushakov's statements after Putin's meeting with Witkoff and Kushner (Nov 12, 2026; in Russian) | https://profile.ru/news/politics/vstrecha-putina-s-uitkoffom-i-kushnerom-gummissiya-v-konstantinovke-obmen-plennymi-s-ukrainoj-evropejskaya-bezopasnost-zayavleniya-ushakova-1923089/
 src: Vedomosti: Kushner reports progress in Ukraine talks (Nov 13, 2026; in Russian) | https://www.vedomosti.ru/politics/news/2026/11/13/1245012-kushner-soobschil
 src: 74.ru: car bombing of Sergei Zavorotny — details (Nov 14, 2026; in Russian) | https://74.ru/text/incidents/2026/11/14/76766035/
+src: Ura.ru: suspect detained in car bombing of former Ukrainian PM adviser Zavorotny (Nov 16, 2026; in Russian) | https://ura.news/news/1053144649
+src: Rambler: suspect detained in attempt on former Azarov adviser (Nov 16, 2026; in Russian) | https://news.rambler.ru/incidents/57425636-zaderzhana-podozrevaemaya-v-pokushenii-na-eks-sovetnika-azarova/
 ---
 On Friday morning, a black Toyota Fortuner pulled out of a courtyard on Kirovogradskaya Street in Moscow's Chertanovo district — an ordinary residential neighborhood, an ordinary morning queue to get onto the road. The car had gone about two hundred meters when a bomb went off beneath the driver's seat.
 
@@ -98,3 +100,7 @@ Investigators have not yet named who ordered the attacks, and may not for a long
 On Thursday, Ushakov spoke of the largest prisoner exchange of the entire conflict. On Friday, Sergei Zavorotny was rushed into intensive care.
 
 **Update, November 14, 2026. Zavorotny in a coma.** Sergei Zavorotny has fallen into a coma, Izvestia reported, citing a source. Mykola Azarov called the bombing a terrorist attack and said Kyiv's intelligence services were behind it, with his former press secretary's writing as the main motive. Investigators have not officially confirmed that version. The case has been opened as attempted murder by an organized group. No arrests had been reported as of the morning of November 14.
+
+**Update, November 16, 2026. A suspect has been detained.** A suspect in the car bombing of Sergei Zavorotny has been detained in Moscow, the Investigative Committee said. She is a Moscow resident born in 2005. According to investigators, fraudsters posing as bank employees first persuaded the young woman to transfer a large sum to "safe accounts." Then, following instructions from anonymous handlers, she planted an explosive device under Zavorotny's car. The device, according to the Investigative Committee, was detonated remotely. Investigators are questioning her and searching for other possible accomplices.
+
+The pattern, in which a person is first deceived by "bank employees" and then pushed by "handlers" to commit arson or a bombing, is familiar to Russian investigators: in recent years it has been used to recruit perpetrators for arson attacks and sabotage in various regions of the country.
