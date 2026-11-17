@@ -1,7 +1,7 @@
 title: Debt through the roof: how Russia's largest homebuilder ended up in the hands of its banks
 seo_title: Samolet and its creditor banks: the recovery plan and the debt
 date: 2026-10-29 20:03
-updated: 2026-11-10 20:15
+updated: 2026-11-17 12:00
 rubric: ekonomika
 ru: samolet-kreditory-restrukturizaciya
 description: Creditors of Samolet Group have agreed on a recovery plan for the developer. Revenue for nine months fell 31%, the net loss was 22.3 billion rubles, and loans total 773 billion.
@@ -17,6 +17,7 @@ src: RIA Real Estate: Sberbank does not plan to take a stake in Samolet (in Russ
 src: Frank Media: Samolet's latest technical default (Nov 10, 2026; in Russian) | https://frankmedia.ru/314944
 src: Finance Mail: Samolet shares plunge 12% over bond buyback problems (Nov 10, 2026; in Russian) | https://finance.mail.ru/article/aktsii-samoleta-obvalilis-na-12-iz-za-problem-s-vyikupom-obligatsij-69236617/
 src: T—Zh: Samolet's bond payment problems (Oct 6, 2026; in Russian) | https://t-j.ru/samolet-fails-again/
+src: Agency Business News: court orders Samolet to pay about 320 million rubles to Realweb (Nov 16, 2026; in Russian) | https://abn.agency/2026/11/16/sud-vzyskal-s-samoleta-okolo-320-mln-rublej-po-isku-realweb/
 ---
 In Moscow and the Moscow region, Samolet is building 4.3 million square meters of housing, more than any other developer in the country. By Kommersant's estimate, about 40,000 people have bought into its projects off-plan. Their future now depends largely not on Samolet's owners but on its banks. On October 28, Sberbank deputy chairman Taras Skvortsov said the main creditors had agreed on a comprehensive program to pull the developer out of its current situation. "Overall, agreements have now been reached, but some time is still needed to finalize all the decisions," he said.
 
@@ -37,3 +38,5 @@ For the housing market, the decision on Samolet will set a benchmark. Sberbank, 
 Creditors expect to agree on the final terms of the program by the end of the year. We will keep updating this story.
 
 **Update, November 10, 2026. A new technical default and a drop in the shares.** On November 9, Samolet failed to buy back its BO-P05 bonds on time under a put option and moved the buyback to November 11, citing "technical problems." It is the third such episode in six months: in May, the Moscow Exchange recorded technical defaults on issues 01 and BO-P19, and at the end of September only about 0.6 billion of the 2.5 billion rubles due on issue BO-P20 was transferred on time. On November 10, the company's shares fell more than 12% intraday on the Moscow Exchange, to 287 rubles, but by 6:10 p.m. Moscow time they had recovered some of the losses and were trading around 295 rubles (Frank Media data). In January 2027, Samolet must redeem its BO-P13 issue worth 24.5 billion rubles.
+
+**Update, November 17, 2026. The ad agencies go to court.** A court has ordered Samolet to pay about 320 million rubles to the advertising agency Realweb: 299.7 million in principal under an advertising services contract, 18.2 million in penalties and 2 million in court fees, Agency Business News reported, citing Dvizhenie.ru. The ruling can be appealed within a month. It is not the first such claim: earlier, at the request of another advertising agency, a court ordered the developer to pay 299.1 million rubles. Realweb and Twiga Digital Performance are seeking another 370.5 million rubles in other cases. Published reports contain no comment from Samolet.
