@@ -308,7 +308,8 @@ figcaption a{text-decoration:underline;text-decoration-color:var(--rule)}
 @media (max-width:62rem){
  .with-rail{grid-template-columns:1fr;max-width:none}
  .with-rail>.rail{margin-top:2.3rem;padding-top:1rem;border-top:2px solid var(--ink)}
- .story-grid,.story-grid.has-file{grid-template-columns:1fr;grid-template-rows:auto;grid-template-areas:"hero" "file" "body" "rail";max-width:none}
+ .story-grid{grid-template-columns:1fr;grid-template-rows:auto;grid-template-areas:"hero" "body" "rail";max-width:none}
+ .story-grid.has-file{grid-template-areas:"hero" "file" "body" "rail"}
  .body,.hero{max-width:54rem}
  .story-grid>.rail{margin-top:2.5rem;padding-top:1rem;border-top:2px solid var(--ink)}
  .story-head{max-width:54rem}
