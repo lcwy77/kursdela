@@ -180,7 +180,7 @@ def check_photos(posts, posts_en):
             if p["image"] in seen:
                 raise SystemExit(f"Фото {p['image']} уже стоит в материале {seen[p['image']]} — нужен другой снимок для {p['slug']}")
             seen[p["image"]] = p["slug"]
-            if not (STATIC / "img" / p["image"]).exists():
+            if not p.get("image_url") and not (STATIC / "img" / p["image"]).exists():
                 raise SystemExit(f"Нет файла static/img/{p['image']} для {p['slug']}")
     for p in posts_en:
         if p.get("image") and p["image"] in seen and seen[p["image"]] != p.get("ru"):
