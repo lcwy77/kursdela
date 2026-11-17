@@ -1,0 +1,71 @@
+name: Сборка и публикация сайта
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'content/**'
+      - 'content_en/**'
+      - 'content_kompanii/**'
+      - 'static/**'
+      - 'tools/**'
+      - 'build.py'
+  push:
+    branches: [main]
+    paths:
+      - 'content/**'
+      - 'content_en/**'
+      - 'content_kompanii/**'
+      - 'static/**'
+      - 'tools/**'
+      - 'build.py'
+  workflow_dispatch:
+
+# Та же группа, что и у отложенной публикации: две сборки не перезаписывают docs одновременно.
+concurrency:
+  group: publish
+  cancel-in-progress: false
+
+jobs:
+  validate:
+    name: Проверка перед согласованием
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Получить исходники
+        uses: actions/checkout@v4
+      - name: Установить Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Проверить сборку сайта
+        run: python3 build.py
+
+  publish:
+    name: Сборка и выкладка одобренных изменений
+    if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Получить исходники
+        uses: actions/checkout@v4
+      - name: Установить Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Собрать сайт
+        run: python3 build.py
+      - name: Сохранить готовые страницы в docs
+        run: |
+          if [ -z "$(git status --porcelain -- docs)" ]; then
+            echo "Изменений в docs нет — публикация не требуется."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A docs
+          git commit -m "Сборка сайта"
+          git push
