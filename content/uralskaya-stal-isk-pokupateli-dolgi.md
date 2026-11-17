@@ -4,6 +4,12 @@ date: 2026-11-17 16:00
 rubric: konflikty
 updated: 2026-11-17 16:00
 description: К «Уральской стали» предъявили 103 уникальных иска на 2,48 млрд рублей. Поставщик угля «Талтэк» намерен увеличить требования до 4,7 млрд и заявил о планах добиваться банкротства комбината.
+image: uralskaya-stal-isk-pokupateli-dolgi.jpg
+image_url: https://kursmedia.com/img/metallurgi-protiv-minfina.jpg
+image_caption: Надеждинский металлургический завод «Норникеля» в Норильске. Иллюстрация к материалу о металлургической отрасли; это не площадка «Уральской стали»
+image_credit: Ninaras
+image_license: CC BY 4.0
+image_src: https://commons.wikimedia.org/wiki/File:Norilsk_05.jpg
 src: Коммерсантъ: к заводу «Уральская сталь» поданы иски на 2,48 млрд рублей (11 ноября 2026) | https://www.kommersant.ru/doc/9094478
 src: Коммерсантъ: «Уральская сталь» закончила 2025 год с убытком по РСБУ (15 апреля 2026) | https://www.kommersant.ru/doc/8589417
 src: Ведомости: АКРА присвоило статус «под наблюдением» кредитному рейтингу «Уральской стали» (29 октября 2026) | https://www.vedomosti.ru/investments/news/2026/10/29/1241315-akra-prisvoilo-status
