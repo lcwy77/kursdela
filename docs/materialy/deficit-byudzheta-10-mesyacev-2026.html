@@ -103,9 +103,12 @@ h2 a:hover,h3 a:hover{text-decoration-thickness:2px}
 .lead .dek{font-size:1.08rem;line-height:1.5;margin-bottom:1rem}
 .lead .credit{margin-bottom:0}
 .sub{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem;margin-top:1.1rem;padding-top:1.1rem;border-top:1px solid var(--rule)}
-.second .s+.s{margin-top:1rem;padding-top:1rem;border-top:1px solid var(--rule)}
-.second .ph{margin-bottom:.65rem}
-.second h3{margin:0 0 .35rem;font:700 1.18rem/1.22 var(--serif);text-wrap:balance}
+.second{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.2rem 1rem;align-content:start}
+.second .s+.s{margin:0;padding:0;border:0}
+.second .ph{margin-bottom:.55rem}
+.second h3{margin:0 0 .35rem;font:700 1.06rem/1.2 var(--serif);text-wrap:balance}
+.second .dek{-webkit-line-clamp:3}
+.second .s-t .dek{-webkit-line-clamp:2}
 .second .dek{font-size:.92rem;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
 .second .s-t .dek{-webkit-line-clamp:2}
 .col .cos{margin-top:1.6rem}.col .co-list{margin:0}
@@ -126,7 +129,7 @@ h2 a:hover,h3 a:hover{text-decoration-thickness:2px}
 @media (max-width:48rem){.top,.top.no-col{grid-template-columns:1fr}.top>*{padding-inline:0!important;border-left:0!important}
  .home-utility{grid-template-columns:1fr;gap:1.4rem}
  .home-utility .mini{columns:1}
- .second{margin-top:1.3rem;padding-top:1.2rem;border-top:1px solid var(--rule)}
+ .second{grid-template-columns:1fr;margin-top:1.3rem;padding-top:1.2rem;border-top:1px solid var(--rule);gap:1rem}
  .second .s-t{display:grid;grid-template-columns:minmax(0,1fr) 6.8rem;column-gap:.9rem;align-items:start}
  .second .s-t .ph{grid-column:2;grid-row:1/span 3;margin:0}.second .s-t>:not(.ph){grid-column:1}
  .second .s-t h3{font-size:1.06rem;line-height:1.26}.second .s-t .dek{display:none}}
