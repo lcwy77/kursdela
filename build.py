@@ -533,8 +533,16 @@ def img(p, sizes, eager=False):
         return (f'<img src="{esc(p["image_url"])}" sizes="{sizes}" width="960" height="680" '
                 f'alt="{esc(p.get("image_caption", ""))}" {load_attr}>')
     stem = p["image"].rsplit(".", 1)[0]
-    return (f'<img src="/img/{stem}-800.jpg" srcset="/img/{stem}-400.jpg 400w, /img/{stem}-800.jpg 800w, /img/{stem}.jpg 1600w" '
-            f'sizes="{sizes}" width="1600" height="1067" alt="{esc(p.get("image_caption", ""))}" {load_attr}>')
+    # Не предполагать, что у каждого снимка есть responsive-копии:
+    # если их нет, браузер должен получить оригинал, а не 404 по srcset.
+    variants = [(f"/img/{stem}-400.jpg", 400), (f"/img/{stem}-800.jpg", 800), (f"/img/{stem}.jpg", 1600)]
+    available = [(url, width) for url, width in variants
+                 if (OUT / url.lstrip("/")).exists()]
+    srcset = ", ".join(f"{url} {width}w" for url, width in available)
+    src = f"/img/{stem}.jpg"
+    srcset_attr = f' srcset="{srcset}"' if len(available) > 1 else ""
+    return (f'<img src="{src}"{srcset_attr} sizes="{sizes}" '
+            f'width="1600" height="1067" alt="{esc(p.get("image_caption", ""))}" {load_attr}>')
 
 
 def ph(p, href, sizes, eager=False):
