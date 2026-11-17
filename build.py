@@ -566,7 +566,7 @@ def page(path, title, desc, main, up="", current="", extra_head="", og_image="im
 <meta property="og:url" content="{url}"><meta property="og:image" content="{og_image_url}">{'<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">' if og_image.startswith("img/og/") else ""}
 <meta name="robots" content="max-image-preview:large">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#141922">
+<meta name="theme-color" content="#FFFFFF">
 <link rel="icon" href="{up}favicon.ico" sizes="48x48">
 <link rel="icon" href="{up}favicon-96.png" type="image/png" sizes="96x96">
 <link rel="icon" href="{up}favicon-192.png" type="image/png" sizes="192x192">
