@@ -4,7 +4,7 @@ date: 2026-11-17 16:00
 rubric: ekonomika
 description: Андрей Вдовин строил банковскую группу, инвестировал в «Азбуку вкуса» и «Кофе Хауз», но после валютного кризиса столкнулся с кредиторами и уголовными делами. Разбираем его карьеру, крах бизнес-группы и дело о кредите Финпромбанка на $11 млн.
 image: vdovin-finprombank-11-millionov.jpg
-image_url: https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Moscow_RussiaCentralBank_M00.jpg/2048px-Moscow_RussiaCentralBank_M00.jpg
+image_url: https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Moscow_RussiaCentralBank_M00.jpg/1958px-Moscow_RussiaCentralBank_M00.jpg
 image_caption: Главное здание Банка России в Москве. Иллюстрация к материалу о банковском бизнесе и надзоре
 image_credit: Ludvig14
 image_license: CC BY-SA 4.0
