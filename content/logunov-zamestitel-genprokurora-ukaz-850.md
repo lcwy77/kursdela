@@ -4,7 +4,7 @@ date: 2026-11-17 17:00
 rubric: politika
 description: Владимир Путин подписал указ № 850 о назначении Олега Логунова заместителем генерального прокурора России. До назначения Логунов возглавлял Главное управление кадров Генпрокуратуры.
 image: og.png
-image_url: https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Moscow_-_2026_-_The_building_of_the_Prosecutor_General%E2%80%99s_Office_of_the_Russian_Federation.jpg/960px-Moscow_-_2026_-_The_building_of_the_Prosecutor_General%E2%80%99s_Office_of_the_Russian_Federation.jpg
+image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Moscow_-_2026_-_The_building_of_the_Prosecutor_General%E2%80%99s_Office_of_the_Russian_Federation.jpg
 image_caption: Здание Генеральной прокуратуры РФ в Москве, 8 июня 2026 года
 image_credit: Юрий Д.К.
 image_license: CC BY 4.0
