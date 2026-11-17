@@ -259,6 +259,82 @@ figcaption a{text-decoration:underline;text-decoration-color:var(--rule)}
 .foot p{margin:.8rem 0 0;max-width:68ch}
 .foot p a{color:var(--band-ink)}
 @media (max-width:48rem){.foot .wrap{grid-template-columns:1fr}}
+
+/* Редакционная система внутренних страниц */
+.foot{background:#F4F4F1;color:#555;border-top:1px solid var(--rule)}
+.foot .np,.foot nav,.foot p a{color:#171717}
+.foot nav a:hover,.foot p a:hover{color:var(--olive)}
+.pagehead{padding-block:.2rem 1.35rem;margin-bottom:1.8rem;border-bottom:2px solid var(--ink)}
+.pagehead h1{font-size:clamp(2.3rem,4.8vw,3.55rem);letter-spacing:-.025em}
+.pagehead p{font-size:1.03rem;max-width:68ch}
+.with-rail{grid-template-columns:minmax(0,1fr) 20rem;gap:0 clamp(2.25rem,4vw,3.5rem);max-width:78rem}
+.r-lead{grid-template-columns:minmax(0,1.2fr) minmax(15rem,.8fr);gap:clamp(1.2rem,2.2vw,2rem);padding-bottom:1.7rem}
+.r-lead .ph{aspect-ratio:16/10}
+.r-lead h2{font-size:clamp(1.7rem,2.7vw,2.35rem);line-height:1.1;letter-spacing:-.02em}
+.row{grid-template-columns:minmax(0,1fr) 11rem;gap:1.3rem;padding-block:1.35rem}
+.row h3{font-size:1.28rem;line-height:1.2;letter-spacing:-.01em}
+.row .ph{aspect-ratio:4/3}
+.rail{min-width:0}
+.latest{border-top:2px solid var(--ink);padding-top:.65rem}
+.latest .sh{margin-bottom:.4rem}
+.latest li{grid-template-columns:5.2rem minmax(0,1fr);gap:.75rem;padding-block:.85rem}
+.latest li .ph{aspect-ratio:4/3}
+.latest a.t{font-size:1rem;line-height:1.24}
+.story-head{max-width:64rem;padding-top:.15rem}
+.story-head h1{font-size:clamp(2.25rem,4.8vw,3.65rem);line-height:1.04;letter-spacing:-.027em;max-width:21ch}
+.story-head .dek{max-width:58rem;font-size:clamp(1.12rem,1.8vw,1.34rem);line-height:1.48}
+.byline{margin:1.25rem 0 1.6rem;padding-block:.8rem}
+.story-grid,.story-grid.has-file{grid-template-columns:minmax(0,1fr) 20rem;column-gap:clamp(2.25rem,4vw,3.5rem);max-width:78rem}
+.story-grid{grid-template-areas:"hero rail" "body rail"}
+.story-grid.has-file{grid-template-areas:"hero file" "body rail"}
+.hero{max-width:none;margin-bottom:1.8rem}
+.hero .ph{aspect-ratio:16/9}
+.hero img{object-fit:cover}
+.body{max-width:48rem}
+.body>p{font-size:1.22rem;line-height:1.72;margin-bottom:1.18em}
+.body h2.sub{font-size:1.55rem;line-height:1.2;margin-top:2.35rem}
+.body>.sign{padding-top:1rem;border-top:1px solid var(--rule)}
+.sources{margin-top:2.6rem;padding-top:.85rem}
+.box{background:#F4F4F1;padding:1.1rem 1.25rem 1.25rem}
+.related{margin-top:3.5rem;padding-top:1rem;border-top:2px solid var(--ink)}
+.co-intro{max-width:54rem;margin-bottom:2rem}
+.co-intro p{font-size:1.15rem;line-height:1.68}
+.co-grid{grid-template-columns:repeat(auto-fill,minmax(19rem,1fr));gap:0 2.5rem}
+.co-grid article{padding-block:1.35rem 1.5rem}
+.co-grid h2{font-size:1.5rem;letter-spacing:-.012em}
+.co-grid p{font-size:1rem;line-height:1.55}
+@media (max-width:72rem){
+ .with-rail{grid-template-columns:minmax(0,1fr) 18rem}
+ .story-grid,.story-grid.has-file{grid-template-columns:minmax(0,1fr) 18rem}
+ .story-head{max-width:58rem}
+}
+@media (max-width:62rem){
+ .with-rail{grid-template-columns:1fr;max-width:none}
+ .with-rail>.rail{margin-top:2.3rem;padding-top:1rem;border-top:2px solid var(--ink)}
+ .story-grid,.story-grid.has-file{grid-template-columns:1fr;grid-template-rows:auto;grid-template-areas:"hero" "file" "body" "rail";max-width:none}
+ .body,.hero{max-width:54rem}
+ .story-grid>.rail{margin-top:2.5rem;padding-top:1rem;border-top:2px solid var(--ink)}
+ .story-head{max-width:54rem}
+}
+@media (max-width:48rem){
+ .pagehead{margin-bottom:1.2rem;padding-bottom:1rem}
+ .pagehead h1{font-size:2.35rem}
+ .r-lead{grid-template-columns:1fr;gap:.9rem}
+ .r-lead .ph{aspect-ratio:16/9}
+ .row{grid-template-columns:minmax(0,1fr) 7.2rem;gap:.85rem;padding-block:1rem}
+ .row h3{font-size:1.08rem}
+ .row .dek{display:none}
+ .story-head h1{font-size:clamp(2rem,8vw,2.7rem);line-height:1.06}
+ .story-head .dek{font-size:1.08rem}
+ .byline{margin:1rem 0 1.2rem}
+ .hero{margin-inline:calc(-1*clamp(1rem,3vw,2rem))}
+ .hero figcaption{padding-inline:clamp(1rem,3vw,2rem)}
+ .body>p{font-size:1.08rem;line-height:1.68}
+ .body h2.sub{font-size:1.35rem}
+ .co-grid{grid-template-columns:1fr}
+ .related{margin-top:2.5rem}
+}
+
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "NewsArticle", "headline": "Twelve years at the table: every round of Russia\u2013Ukraine talks, from Minsk and Istanbul to Abu Dhabi", "description": "Geneva 2014, the Minsk agreements, Istanbul 2022, the Alaska summit and Abu Dhabi: how Russia and Ukraine have searched for peace for twelve years and why deals were never implemented.", "datePublished": "2026-11-10T14:49:00+03:00", "dateModified": "2026-11-10T14:49:00+03:00", "inLanguage": "en", "author": {"@type": "NewsMediaOrganization", "name": "Kurs Media", "url": "https://kursmedia.com/en/", "logo": {"@type": "ImageObject", "url": "https://kursmedia.com/favicon-192.png", "width": 192, "height": 192}, "email": "press@kursmedia.com", "sameAs": ["https://t.me/economskepticism"]}, "publisher": {"@type": "NewsMediaOrganization", "name": "Kurs Media", "url": "https://kursmedia.com/en/", "logo": {"@type": "ImageObject", "url": "https://kursmedia.com/favicon-192.png", "width": 192, "height": 192}, "email": "press@kursmedia.com", "sameAs": ["https://t.me/economskepticism"]}, "articleSection": "Politics", "mainEntityOfPage": "https://kursmedia.com/en/articles/russia-ukraine-negotiations-history.html", "image": ["https://kursmedia.com/img/peregovory-rossii-i-ukrainy-istoriya.jpg", "https://kursmedia.com/img/og/en-russia-ukraine-negotiations-history.jpg"]}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Kurs Media", "item": "https://kursmedia.com/en/"}, {"@type": "ListItem", "position": 2, "name": "Politics", "item": "https://kursmedia.com/en/politics.html"}, {"@type": "ListItem", "position": 3, "name": "Twelve years at the table: every round of Russia\u2013Ukraine talks, from Minsk and Istanbul to Abu Dhabi", "item": "https://kursmedia.com/en/articles/russia-ukraine-negotiations-history.html"}]}]}</script>
 <script>(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js?id=113896804','ym');
