@@ -203,11 +203,9 @@ CSS = FONTFACE + """
 /* Курс медиа. Ориентир — деловые газеты: белая бумага, название по центру, тёмная полоса рубрик.
    Название набрано Old Standard — шрифтом русских газет начала XX века. Заголовки и текст — Literata, интерфейс — Golos Text.
    Лайм — фирменный цвет канала — только на тёмном; на белом его заменяет оливковый. */
-:root{--paper:#FFFFFF;--ink:#141922;--ink-2:#394049;--muted:#646B77;--rule:#DCDFE3;--panel:#F3F4F0;
- --band:#141922;--band-ink:#F3F4EF;--band-muted:#9AA2AF;--band-rule:#2B313C;--lime:#CCFF33;--olive:#4C6B00;
+:root{--paper:#FFFFFF;--ink:#111111;--ink-2:#343434;--muted:#696969;--rule:#D8D8D8;--panel:#F2F2EF;
+ --band:#FFFFFF;--band-ink:#111111;--band-muted:#666666;--band-rule:#D8D8D8;--lime:#CCFF33;--olive:#4A6500;
  --plate:"Old Standard TT",Georgia,serif;--serif:"Literata",Georgia,"Times New Roman",serif;--sans:"Golos Text","Helvetica Neue",Arial,sans-serif;color-scheme:light}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#0F1218;--ink:#E8EAEE;--ink-2:#C4C9D1;--muted:#9AA1AD;--rule:#282D37;--panel:#181C24;--band:#080A0E;--band-rule:#232833;--olive:#C2EB4A;color-scheme:dark}}
-:root[data-theme="dark"]{--paper:#0F1218;--ink:#E8EAEE;--ink-2:#C4C9D1;--muted:#9AA1AD;--rule:#282D37;--panel:#181C24;--band:#080A0E;--band-rule:#232833;--olive:#C2EB4A;color-scheme:dark}
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--paper);color:var(--ink);font:400 1rem/1.5 var(--serif);font-optical-sizing:auto;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
@@ -215,7 +213,7 @@ img{display:block;max-width:100%;height:auto}
 a{color:inherit;text-decoration:none}
 a:hover{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.16em}
 :focus-visible{outline:2px solid var(--olive);outline-offset:2px}
-.wrap{max-width:78rem;margin-inline:auto;padding-inline:clamp(1rem,3vw,2rem)}
+.wrap{max-width:84rem;margin-inline:auto;padding-inline:clamp(1rem,3vw,2.25rem)}
 .skip{position:absolute;left:-999px;top:0;background:var(--ink);color:var(--paper);padding:.6rem 1rem;font:600 .9rem var(--sans);z-index:9}.skip:focus{left:1rem}
 /* шапка */
 .np-row{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;gap:1.5rem;padding-block:1.15rem 1.05rem}
@@ -228,15 +226,15 @@ a:hover{text-decoration:underline;text-decoration-thickness:1px;text-underline-o
 .fx{margin:0;font:500 .82rem/1.5 var(--sans);color:var(--ink-2);font-variant-numeric:tabular-nums}
 .fx b{display:block;font-weight:600;color:var(--ink);margin-bottom:.15rem}
 .fx span{display:block}.fx i{font-style:normal;font-size:.72em;color:var(--muted);margin-left:.3em}
-.band{background:var(--band);color:var(--band-ink)}
+.band{background:var(--paper);color:var(--band-ink);border-top:1px solid var(--ink);border-bottom:1px solid var(--ink)}
 .band .wrap{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;gap:1rem}
-.today{font:500 .8rem/1 var(--sans);color:var(--band-muted);white-space:nowrap}
-.band nav{display:flex;gap:clamp(1.1rem,2.4vw,2.2rem);font:600 .96rem/1 var(--sans);padding-block:1rem;overflow-x:auto;scrollbar-width:none}
+.today{font:500 .78rem/1 var(--sans);color:var(--band-muted);white-space:nowrap}
+.band nav{display:flex;gap:clamp(1rem,2vw,1.8rem);font:600 .88rem/1 var(--sans);padding-block:.9rem;overflow-x:auto;scrollbar-width:none}
 .band nav::-webkit-scrollbar{display:none}
 @media (max-width:60rem){.band nav{-webkit-mask-image:linear-gradient(to right,#000 82%,transparent);mask-image:linear-gradient(to right,#000 82%,transparent);padding-right:2rem}}
 .band nav a{white-space:nowrap}
-.band nav a:hover,.util a:hover{color:var(--lime);text-decoration:none}
-.band nav a[aria-current="page"]{color:var(--lime)}
+.band nav a:hover,.util a:hover{color:var(--olive);text-decoration:none}
+.band nav a[aria-current="page"]{color:var(--olive);text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:.45rem}
 .util{justify-self:end;display:flex;gap:1.2rem;font:500 .8rem/1 var(--sans);color:var(--band-muted);white-space:nowrap}
 .band :focus-visible,.foot :focus-visible{outline-color:var(--lime)}
 @media (max-width:60rem){.ear{display:none}.np-row{grid-template-columns:1fr;padding-block:.95rem .8rem}
@@ -256,27 +254,32 @@ main{padding-block:1.6rem 1rem}
 .credit{margin:.35rem 0 .85rem;font:400 .72rem/1.3 var(--sans);color:var(--muted);text-align:right}
 .pt{font-weight:700}.vs{font-weight:400;font-style:italic;color:var(--muted)}
 h2 a:hover,h3 a:hover{text-decoration-thickness:2px}
-/* главная: первый экран */
-.top{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:0 clamp(1.5rem,2.5vw,2.5rem);padding-bottom:1.6rem;border-bottom:1px solid var(--rule)}
+/* главная: редакционная сетка */
+.top{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(20rem,1fr);gap:clamp(1.5rem,3vw,3rem);align-items:start;padding-bottom:1.6rem;border-bottom:1px solid var(--rule)}
 .top>*{min-width:0}
 .home-utility{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr) minmax(0,1fr);gap:1.5rem 2rem;margin-top:1.5rem;padding:1.4rem 0 1.6rem;border-bottom:1px solid var(--rule);border-top:1px solid var(--rule)}
 .home-utility>.dates,.home-utility>.cos{margin-top:0}
 .home-utility .mini{columns:2 13rem;column-gap:1.5rem}
 .home-utility .mini li{break-inside:avoid}
 .home-utility .co-list{margin:0}
-.top.no-col{grid-template-columns:minmax(0,1.55fr) minmax(0,1fr)}
-.lead h2{margin:.1rem 0 .55rem;font:700 clamp(1.75rem,2.7vw,2.3rem)/1.1 var(--serif);letter-spacing:-.014em;text-wrap:balance}
-.lead .dek{font-size:1.08rem;line-height:1.5;margin-bottom:1rem}
+.top.no-col{grid-template-columns:minmax(0,1.45fr) minmax(20rem,1fr)}
+.lead h2{margin:.1rem 0 .7rem;font:700 clamp(2rem,3vw,2.8rem)/1.04 var(--serif);letter-spacing:-.025em;text-wrap:balance}
+.lead .dek{font-size:1.08rem;line-height:1.5;margin-bottom:1rem;max-width:48rem}
+.lead .ph{aspect-ratio:16/10}
 .lead .credit{margin-bottom:0}
-.sub{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem;margin-top:1.1rem;padding-top:1.1rem;border-top:1px solid var(--rule)}
-.second{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.2rem 1rem;align-content:start}
-.second .s+.s{margin:0;padding:0;border:0}
-.second .ph{margin-bottom:.55rem}
-.second h3{margin:0 0 .35rem;font:700 1.06rem/1.2 var(--serif);text-wrap:balance}
-.second .dek{-webkit-line-clamp:3}
-.second .s-t .dek{-webkit-line-clamp:2}
-.second .dek{font-size:.92rem;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
-.second .s-t .dek{-webkit-line-clamp:2}
+.top-rail{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.5rem 2rem;margin-top:1.35rem;padding:1.25rem 0 1.4rem;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.top-rail .card{display:grid;grid-template-columns:minmax(8rem,.9fr) minmax(0,1.1fr);gap:0 1rem;align-content:start}
+.top-rail .card .ph{grid-column:1;grid-row:1/span 3;margin:0;aspect-ratio:4/3}
+.top-rail .card .kick,.top-rail .card h3,.top-rail .card .dek{grid-column:2}
+.top-rail .card h3{margin:.1rem 0 .35rem;font:700 1.12rem/1.18 var(--serif);text-wrap:balance}
+.second{display:grid;grid-template-columns:1fr;gap:1rem;align-content:start}
+.second .s{display:grid;grid-template-columns:minmax(7.5rem,34%) minmax(0,1fr);gap:0 .9rem;align-items:start;padding-bottom:1rem;border-bottom:1px solid var(--rule)}
+.second .s+.s{margin:0;padding-top:0}
+.second .ph{grid-column:1;grid-row:1/span 3;margin:0;aspect-ratio:4/3}
+.second .s>:not(.ph){grid-column:2}
+.second h3{margin:0 0 .35rem;font:700 1.08rem/1.18 var(--serif);text-wrap:balance}
+.second .dek{font-size:.88rem;line-height:1.42;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.second .s-t .dek{-webkit-line-clamp:3}
 .col .cos{margin-top:1.6rem}.col .co-list{margin:0}
 .mini{list-style:none;margin:0;padding:0}
 .mini li{padding-block:.65rem;border-bottom:1px solid var(--rule);break-inside:avoid}
@@ -289,16 +292,21 @@ h2 a:hover,h3 a:hover{text-decoration-thickness:2px}
 .dates li{padding-block:.55rem;border-bottom:1px solid var(--rule);font:400 .86rem/1.38 var(--sans)}
 .dates li:first-child{padding-top:0}
 .dates time{display:block;margin-bottom:.1rem;font-weight:700}
-@media (max-width:72rem){.top{grid-template-columns:minmax(0,1.35fr) minmax(0,1fr)}
+@media (max-width:72rem){.top,.top.no-col{grid-template-columns:minmax(0,1.25fr) minmax(18rem,1fr)}
  .home-utility{grid-template-columns:repeat(2,minmax(0,1fr))}
  .home-utility>.dates{margin-top:0}}
-@media (max-width:48rem){.top,.top.no-col{grid-template-columns:1fr}.top>*{padding-inline:0!important;border-left:0!important}
+@media (max-width:48rem){.top,.top.no-col{grid-template-columns:1fr}
  .home-utility{grid-template-columns:1fr;gap:1.4rem}
  .home-utility .mini{columns:1}
- .second{grid-template-columns:1fr;margin-top:1.3rem;padding-top:1.2rem;border-top:1px solid var(--rule);gap:1rem}
- .second .s-t{display:grid;grid-template-columns:minmax(0,1fr) 6.8rem;column-gap:.9rem;align-items:start}
- .second .s-t .ph{grid-column:2;grid-row:1/span 3;margin:0}.second .s-t>:not(.ph){grid-column:1}
- .second .s-t h3{font-size:1.06rem;line-height:1.26}.second .s-t .dek{display:none}}
+ .top-rail{grid-template-columns:1fr;gap:1rem}
+ .top-rail .card{grid-template-columns:7.5rem minmax(0,1fr);gap:0 .9rem}
+ .top-rail .card .ph{aspect-ratio:4/3}
+ .second{grid-template-columns:1fr;margin-top:1.2rem;padding-top:1.2rem;border-top:1px solid var(--rule);gap:1rem}
+ .second .s{grid-template-columns:7.5rem minmax(0,1fr)}
+ .second .s .ph{grid-column:1;grid-row:1/span 3}
+ .second .s>:not(.ph){grid-column:2}
+ .second .s h3{font-size:1.02rem;line-height:1.22}
+ .second .s .dek{display:none}}
 /* главная: рубрики */
 .sect{margin-top:2.4rem}
 .feat{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1.5rem 1.5rem}
@@ -634,13 +642,13 @@ def front(posts, lang="ru", cos=None):
     cases = sorted([p for p in posts if is_case(p)], key=lambda p: p["updated"], reverse=True)
     left = sum(p["slug"] not in shown for p in cases)
     col = take(cases, min(5, max(3, left - 4)))   # в колонке 3–5 споров, чтобы разделу «Конфликты» ниже остался полный ряд из четырёх с фото
-    lead = f"""<div class="lead-col"><article class="lead">{kick(L, '', lang)}
+    lead = f"""<article class="lead">{kick(L, '', lang)}
 <h2><a href="{art_path(L, lang)}">{esc(L['title'])}</a></h2><p class="dek">{esc(L['description'])}</p>
-{ph(L, art_path(L, lang), "(min-width:72rem) 40rem, (min-width:48rem) 60vw, 100vw", eager=True)}<p class="credit">{credit(L, lang)}</p></article>
-{f'<div class="sub">{"".join(card(p, lang, rub=True, dek=False, sizes="(min-width:72rem) 19rem, (min-width:36rem) 30vw, 7rem") for p in sub)}</div>' if sub else ""}</div>"""
-    second = "".join(f'<article class="s{" s-t" if i else ""}">{ph(p, art_path(p, lang), "(min-width:72rem) 18rem, (min-width:48rem) 35vw, " + ("7rem" if i else "100vw"))}{kick(p, "", lang)}'
+{ph(L, art_path(L, lang), "(min-width:72rem) 48rem, (min-width:48rem) 60vw, 100vw", eager=True)}<p class="credit">{credit(L, lang)}</p></article>"""
+    second = "".join(f'<article class="s{" s-t" if i else ""}">{ph(p, art_path(p, lang), "(min-width:72rem) 14rem, (min-width:48rem) 18vw, 7rem")}{kick(p, "", lang)}'
                      f'<h3><a href="{art_path(p, lang)}">{esc(p["title"])}</a></h3><p class="dek">{esc(p["description"])}</p></article>' for i, p in enumerate(sec))
     second = f'<div class="second">{second}</div>' if sec else ""
+    rail = f'<section class="top-rail">{"".join(card(p, lang, rub=True, dek=False, sizes="(min-width:72rem) 14rem, (min-width:36rem) 30vw, 7rem") for p in sub)}</section>' if sub else ""
     mini = "".join(f'<li><a href="{art_path(c, lang)}">{parties(c, lang)}</a><span class="st">{esc(short(c.get("stadiya", "")))}</span></li>' for c in col)
     k_name, k_file = R["konflikty"][0], R["konflikty"][1]
     cases_box = f'<div>{sect_head(k_name, k_file)}<ul class="mini">{mini}</ul><a class="more" href="{k_file}">{"All case files" if en else "Все разборы"}</a></div>' if col else ""
@@ -652,6 +660,8 @@ def front(posts, lang="ru", cos=None):
         co = f'<section class="cos">{sect_head("Компании", "kompanii/", "Все")}<ul class="co-list">{li}</ul></section>'
     column = f'<section class="home-utility">{cases_box}{dates}{co}</section>' if cases_box or dates or co else ""
     out = [f'<section class="top{"" if column else " no-col"}">{lead}{second}</section>']
+    if rail:
+        out.append(rail)
     if column:
         out.append(column)
 
