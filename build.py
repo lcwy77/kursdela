@@ -439,6 +439,7 @@ def page(path, title, desc, main, up="", current="", extra_head="", og_image="im
     """Возвращает (head, body). up — префикс до корня сайта ('', '../', '../../').
     alts — список (hreflang, url) для парных страниц; switch — ссылка переключателя языка."""
     url = url_of(path)
+    og_image_url = og_image if og_image.startswith(("http://", "https://")) else f"{SITE_URL}/{og_image}"
     cur = lambda k: ' aria-current="page"' if current == k else ""
     en = lang == "en"
     if en:
@@ -470,7 +471,7 @@ def page(path, title, desc, main, up="", current="", extra_head="", og_image="im
 <link rel="canonical" href="{url}">{hl}
 <meta property="og:site_name" content="{name}"><meta property="og:type" content="{og_type}"><meta property="og:locale" content="{locale}">
 <meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}">
-<meta property="og:url" content="{url}"><meta property="og:image" content="{SITE_URL}/{og_image}">{'<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">' if og_image.startswith("img/og/") else ""}
+<meta property="og:url" content="{url}"><meta property="og:image" content="{og_image_url}">{'<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">' if og_image.startswith("img/og/") else ""}
 <meta name="robots" content="max-image-preview:large">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#141922">
@@ -527,8 +528,11 @@ def kick(p, up="", lang="ru", rub=True):
 def img(p, sizes, eager=False):
     if not p.get("image"):
         return ""
-    stem = p["image"].rsplit(".", 1)[0]
     load_attr = 'fetchpriority="high"' if eager else 'loading="lazy" decoding="async"'
+    if p.get("image_url"):
+        return (f'<img src="{esc(p["image_url"])}" sizes="{sizes}" width="960" height="680" '
+                f'alt="{esc(p.get("image_caption", ""))}" {load_attr}>')
+    stem = p["image"].rsplit(".", 1)[0]
     return (f'<img src="/img/{stem}-800.jpg" srcset="/img/{stem}-400.jpg 400w, /img/{stem}-800.jpg 800w, /img/{stem}.jpg 1600w" '
             f'sizes="{sizes}" width="1600" height="1067" alt="{esc(p.get("image_caption", ""))}" {load_attr}>')
 
@@ -784,10 +788,12 @@ def news_ld(p, path, lang="ru"):
     R = RUBRICS_EN if lang == "en" else RUBRICS
     home = SITE_URL + ("/en/" if lang == "en" else "/")
     rub_name, rub_file, _ = R[p["rubric"]]
+    og = og_of(p, lang)
+    og_url = og if og.startswith(("http://", "https://")) else f"{SITE_URL}/{og}"
     art = {"@type": "NewsArticle", "headline": p["title"], "description": p["description"],
            "datePublished": p["date"].isoformat() + "+03:00", "dateModified": p["updated"].isoformat() + "+03:00", "inLanguage": lang,
            "author": org_ld(lang), "publisher": org_ld(lang), "articleSection": rub_name,
-           "mainEntityOfPage": url_of(path), "image": [f"{SITE_URL}/img/{p.get('image', 'og.png')}", f"{SITE_URL}/{og_of(p, lang)}"]}
+           "mainEntityOfPage": url_of(path), "image": [p.get("image_url") or f"{SITE_URL}/img/{p.get('image', 'og.png')}", og_url]}
     crumbs = {"@type": "BreadcrumbList", "itemListElement": [
         {"@type": "ListItem", "position": 1, "name": EN_NAME if lang == "en" else SITE_NAME, "item": home},
         {"@type": "ListItem", "position": 2, "name": rub_name, "item": home + rub_file},
@@ -797,6 +803,8 @@ def news_ld(p, path, lang="ru"):
 
 def og_of(p, lang="ru"):
     """Картинка для превью ссылки: фирменная обложка (tools/cover.py site), иначе фото, иначе общий знак."""
+    if p.get("image_url"):
+        return p["image_url"]
     cover = f"img/og/{'en-' if lang == 'en' else ''}{p['slug']}.jpg"
     if (STATIC / cover).exists():
         return cover
@@ -895,7 +903,11 @@ def build():
     pics = {f"materialy/{p['slug']}.html": p for p in posts if p.get("image")}
     pics.update({f"en/articles/{p['slug']}.html": p for p in posts_en if p.get("image")})
     today = max(p["updated"] for p in posts).date().isoformat()
-    sm = lambda u: (f"<image:image><image:loc>{SITE_URL}/img/{pics[u]['image']}</image:loc></image:image>" if u in pics else "")
+    def sm(u):
+        if u not in pics:
+            return ""
+        image_url = pics[u].get("image_url") or f"{SITE_URL}/img/{pics[u]['image']}"
+        return f"<image:image><image:loc>{html.escape(image_url)}</image:loc></image:image>"
     (OUT / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n' +
         "".join(f"<url><loc>{SITE_URL}/{u}</loc><lastmod>{last.get(u, today)}</lastmod>{sm(u)}</url>\n" for u in urls) + "</urlset>\n", encoding="utf-8")
     (OUT / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {SITE_URL}/sitemap.xml\n", encoding="utf-8")
@@ -920,6 +932,8 @@ def rss_feed(posts, title, link, desc, lang, url):
     def enc(p):
         if not p.get("image"):
             return ""
+        if p.get("image_url"):
+            return f'<enclosure url="{esc(p["image_url"])}" length="0" type="image/jpeg"/>'
         f = STATIC / "img" / p["image"]
         return f'<enclosure url="{SITE_URL}/img/{p["image"]}" length="{f.stat().st_size}" type="image/jpeg"/>'
     items = "".join(f"<item><title>{esc(p['title'])}</title><link>{url(p)}</link><guid>{url(p)}</guid>"
