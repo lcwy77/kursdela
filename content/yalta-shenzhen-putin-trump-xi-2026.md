@@ -4,7 +4,7 @@ date: 2026-11-18 17:30
 rubric: politika
 description: Переговоры Путина, Трампа и Си в Шэньчжэне сравнивают с Ялтой 1945 года. Что может стоять за этим форматом, почему в центре внимания Украина и какие договорённости пока остаются лишь ожиданием.
 image: putin-xi-may-2026.jpg
-image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Vladimir_Putin_and_Xi_Jinping_%28May_2026%29.jpg
+image_url: https://upload.wikimedia.org/wikipedia/commons/f/f7/Vladimir_Putin_and_Xi_Jinping_%28May_2026%29.jpg
 image_caption: Владимир Путин и Си Цзиньпин во время рукопожатия на переговорах в Пекине, 20 мая 2026 года
 image_credit: Официальный сайт Президента Российской Федерации (Kremlin.ru)
 image_license: CC BY 4.0
