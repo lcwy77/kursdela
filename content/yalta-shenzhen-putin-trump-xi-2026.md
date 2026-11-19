@@ -5,7 +5,7 @@ updated: 2026-11-19 12:00
 rubric: politika
 description: Путин, Трамп и Си провели первую трёхстороннюю встречу в Шэньчжэне. О чём говорили лидеры, почему переговоры важны для России и почему сравнение с Ялтой пока преждевременно.
 image: putin-xi-apec-shenzhen-2026.jpg
-image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Russian-Chinese_talks_at_the_2026_APEC_Summit_04.jpg
+image_url: https://upload.wikimedia.org/wikipedia/commons/c/ca/Russian-Chinese_talks_at_the_2026_APEC_Summit_04.jpg
 image_caption: Владимир Путин и Си Цзиньпин на переговорах в Шэньчжэне на полях саммита АТЭС, 18 ноября 2026 года
 image_credit: Kremlin.ru
 image_license: CC BY 4.0
