@@ -5,11 +5,6 @@ updated: 2026-11-20 17:30
 rubric: konflikty
 ru: vk-apple-31-mln-appstore-2026
 description: VK says Apple owes it more than €31 million in unpaid App Store proceeds. Why Russian banks have tried to return under new app names, why VK's developer account matters, and how MAX and two court cases fit into the dispute.
-image: vk-apple-appstore-2026.jpg
-image_caption: Apple smartphones running iOS. Illustration for the dispute between VK and the App Store
-image_credit: IPHONE MAX / Wikimedia Commons
-image_license: CC BY-SA 4.0
-image_src: https://commons.wikimedia.org/wiki/File:IPhone_app.jpg
 src: RBC: VK files new lawsuit against Apple for more than €31 million (Nov 20, 2026; in Russian) | https://www.rbc.ru/business/20/11/2026/6b00394d1dfff0d3d73b4008
 src: Pravo.ru: VK files new lawsuit against Apple (Nov 20, 2026; in Russian) | https://pravo.ru/news/266892/
 src: U.S. District Court: Apple Inc. v. VK LLC, Order Granting Preliminary Injunction (Nov 6, 2026) | https://law.justia.com/cases/federal/district-courts/california/candce/5:2026cv12159/481520/27/
