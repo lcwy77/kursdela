@@ -22,7 +22,6 @@ src: The Record: Apple removes Russia’s state-backed MAX app from its store (4
 src: EUR-Lex: Council Decision (CFSP) 2026/1709 (13 July 2026) | https://eur-lex.europa.eu/eli/dec/2026/1709/oj/eng/pdf
 src: Reuters: Kremlin demands explanation from Apple after Russian apps removed from App Store (25 June 2026) | https://www.reuters.com/world/europe/kremlin-demands-explanation-apple-after-russian-apps-removed-app-store-2026-06-25/
 ---
-# Почему банки маскируют приложения, а VK судится с Apple
 
 **VK требует от Apple более €31 млн и проценты за пользование деньгами, которые американская компания получила через App Store от пользователей сервисов холдинга. Это уже отдельный спор от процесса об удалении приложений. Но главный вопрос шире суммы иска: почему российские банки пытаются возвращаться в магазин Apple под новыми названиями, а VK выбрала судебную стратегию? Ответ, судя по материалам американского суда, может быть не только в желании компании.**
 
