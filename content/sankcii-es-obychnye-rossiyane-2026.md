@@ -10,6 +10,11 @@ image_caption: Здание Еврокомиссии Berlaymont в Брюссе�
 image_credit: Euro Pictures
 image_license: CC BY 2.0
 image_src: https://commons.wikimedia.org/wiki/File:Berlaymont_building_2022.jpg
+src: Reuters: Еврокомиссия предложила 22-й пакет санкций, 23 ноября 2026 года | https://www.reuters.com/business/finance/eu-commission-proposes-22nd-sanctions-package-russia-2026-11-23/
+src: Reuters: In Europe, ordinary Russians are shunned by wary banks, 14 февраля 2025 года | https://www.reuters.com/world/europe/europe-ordinary-russians-are-shunned-by-wary-banks-2025-02-14/
+src: Еврокомиссия: визовые меры для граждан России | https://commission.europa.eu/topics/eu-solidarity-ukraine/eu-sanctions-against-russia-following-invasion-ukraine/visa-measures_en
+src: EUR-Lex: Регламент ЕС № 833/2014, консолидированная редакция | https://eur-lex.europa.eu/eli/reg/2014/833/2026-04-24
+src: Еврокомиссия: разъяснения по платёжным услугам, 13 марта 2026 года | https://finance.ec.europa.eu/publications/provision-payments-services_en
 ---
 22-й пакет расширяет давление на российскую экономику. Но последствия европейских ограничений давно вышли за пределы государственных структур и крупных компаний.
 
@@ -65,8 +70,3 @@ image_src: https://commons.wikimedia.org/wiki/File:Berlaymont_building_2022.jpg
 
 22-й пакет продолжает эту линию. И хотя его основные меры направлены против российских финансовых и энергетических структур, последствия санкционной политики давно стали частью повседневной жизни гораздо более широкого круга людей.
 
-src: Reuters: Еврокомиссия предложила 22-й пакет санкций, 23 ноября 2026 года | https://www.reuters.com/business/finance/eu-commission-proposes-22nd-sanctions-package-russia-2026-11-23/
-src: Reuters: In Europe, ordinary Russians are shunned by wary banks, 14 февраля 2025 года | https://www.reuters.com/world/europe/europe-ordinary-russians-are-shunned-by-wary-banks-2025-02-14/
-src: Еврокомиссия: визовые меры для граждан России | https://commission.europa.eu/topics/eu-solidarity-ukraine/eu-sanctions-against-russia-following-invasion-ukraine/visa-measures_en
-src: EUR-Lex: Регламент ЕС № 833/2014, консолидированная редакция | https://eur-lex.europa.eu/eli/reg/2014/833/2026-04-24
-src: Еврокомиссия: разъяснения по платёжным услугам, 13 марта 2026 года | https://finance.ec.europa.eu/publications/provision-payments-services_en
