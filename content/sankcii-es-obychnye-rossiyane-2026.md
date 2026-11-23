@@ -69,4 +69,4 @@ src: Reuters: Еврокомиссия предложила 22-й пакет с�
 src: Reuters: In Europe, ordinary Russians are shunned by wary banks, 14 февраля 2025 года | https://www.reuters.com/world/europe/europe-ordinary-russians-are-shunned-by-wary-banks-2025-02-14/
 src: Еврокомиссия: визовые меры для граждан России | https://commission.europa.eu/topics/eu-solidarity-ukraine/eu-sanctions-against-russia-following-invasion-ukraine/visa-measures_en
 src: EUR-Lex: Регламент ЕС № 833/2014, консолидированная редакция | https://eur-lex.europa.eu/eli/reg/2014/833/2026-04-24
-src: Еврокомиссия: разъяснения по платёжным услугам, 13 марта 2026 года | https://finance.ec.europa.eu/document/download/66e8fd7d-8057-4b9b-96c2-5e54bf573cd1_en?filename=faqs-sanctions-russia-consolidated_en_0.pdf
+src: Еврокомиссия: разъяснения по платёжным услугам, 13 марта 2026 года | https://finance.ec.europa.eu/publications/provision-payments-services_en
