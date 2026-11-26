@@ -17,6 +17,7 @@ import html, json, re, shutil, datetime as dt
 from pathlib import Path
 from urllib.parse import quote
 
+# Сохраняем авторские фото Карелии целиком, без кадрирования до 3:2.
 # ---------- настройки ----------
 SITE_URL = "https://kursmedia.com"   # свой домен, без косой черты в конце
 SITE_NAME = "Курс медиа"
