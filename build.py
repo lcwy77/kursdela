@@ -374,7 +374,7 @@ figcaption a{text-decoration:underline;text-decoration-color:var(--rule)}
 .body a{text-decoration:underline;text-decoration-color:var(--olive);text-underline-offset:.15em}
 .graphic{margin:1.6rem 0 1.9rem}.graphic img{border:1px solid var(--rule)}
 .body h2.sub{margin:2.1rem 0 .7rem;font:700 1.4rem/1.25 var(--serif);letter-spacing:-.01em}
-.inphoto{margin:1.6rem 0 1.9rem}.inphoto img{display:block;width:100%;height:auto}
+.inphoto{margin:1.6rem 0 1.9rem}.inphoto img{display:block;width:100%;height:auto}.inphoto .ph.natural{aspect-ratio:auto;overflow:visible;background:transparent}.inphoto .ph.natural img{height:auto;object-fit:contain}.hero .ph.natural{aspect-ratio:auto;overflow:visible;background:transparent}.hero .ph.natural img{height:auto;object-fit:contain}
 .box{background:var(--panel);border-top:3px solid var(--ink);padding:1rem 1.15rem 1.15rem;margin-bottom:1.6rem}
 .box h2{margin:0 0 .8rem;font:700 .95rem/1.2 var(--sans)}
 .docket{display:grid;gap:.75rem;margin:0;font:400 .88rem/1.42 var(--sans)}
@@ -625,7 +625,8 @@ def img(p, sizes, eager=False):
         return ""
     load_attr = 'fetchpriority="high"' if eager else 'loading="lazy" decoding="async"'
     if p.get("image_url"):
-        return (f'<img src="{esc(p["image_url"])}" sizes="{sizes}" width="960" height="680" '
+        dimensions = "" if p.get("image_mode") == "natural" else ' width="960" height="680"'
+        return (f'<img src="{esc(p["image_url"])}" sizes="{sizes}"{dimensions} '
                 f'alt="{esc(p.get("image_caption", ""))}" {load_attr}>')
     stem = p["image"].rsplit(".", 1)[0]
     # Авторские фотографии Карелии сохраняем в исходной вертикальной ориентации.
@@ -822,12 +823,15 @@ def article_main(p, posts, path, lang="ru", ru_link="", cos=None):
              f'<button type="button" data-copy="{"Link copied" if en else "Ссылка скопирована"}">{"Copy link" if en else "Скопировать ссылку"}</button></div>')
     head = f"""<header class="story-head"><div class="kick">{rub_link(p, '../', lang)}</div><h1>{esc(p['title'])}</h1><p class="dek">{esc(p['description'])}</p></header>
 <div class="byline"><div class="when"><span class="by">{by}</span><time datetime="{p['date'].isoformat()}">{ru_date(p['date'], lang)}, {p['date']:%H:%M}</time>{upd}</div>{share}</div>"""
-    hero = (f'<figure class="hero"><div class="ph">{img(p, "(min-width:78rem) 46rem, (min-width:62rem) 62vw, 100vw", eager=True)}</div>'
+    hero = (f'<figure class="hero"><div class="ph{" natural" if p.get("image_mode") == "natural" else ""}">{img(p, "(min-width:78rem) 46rem, (min-width:62rem) 62vw, 100vw", eager=True)}</div>'
             f'<figcaption>{esc(p.get("image_caption", ""))}. <span class="cr">{credit(p, lang)}</span></figcaption></figure>') if p.get("image") else ""
     def inphoto(spec):
-        f, cap, who, lic, src = [x.strip() for x in spec.split("|")]
-        q = {"image": f, "image_caption": cap, "image_credit": who, "image_license": lic, "image_src": src}
-        return (f'<figure class="inphoto"><div class="ph">{img(q, "(min-width:62rem) 42rem, 100vw")}</div>'
+        parts = [x.strip() for x in spec.split("|")]
+        f, cap, who, lic, src = parts[:5]
+        image_url = parts[5] if len(parts) > 5 and parts[5] else ""
+        q = {"image": f, "image_caption": cap, "image_credit": who, "image_license": lic,
+             "image_src": src, "image_url": image_url, "image_mode": "natural"}
+        return (f'<figure class="inphoto"><div class="ph natural">{img(q, "(min-width:62rem) 42rem, 100vw")}</div>'
                 f'<figcaption>{esc(cap)}. <span class="cr">{credit(q, lang)}</span></figcaption></figure>')
     paras = [inphoto(x[len(PHOTO_MARK):]) if x.startswith(PHOTO_MARK) else x for x in p["paras"]]
     if p.get("graphic"):
