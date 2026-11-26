@@ -627,6 +627,11 @@ def img(p, sizes, eager=False):
         return (f'<img src="{esc(p["image_url"])}" sizes="{sizes}" width="960" height="680" '
                 f'alt="{esc(p.get("image_caption", ""))}" {load_attr}>')
     stem = p["image"].rsplit(".", 1)[0]
+    # Авторские фотографии Карелии сохраняем в исходной вертикальной ориентации.
+    # Не подключаем старые горизонтальные responsive-копии и не задаём им 3:2.
+    if stem in {"karelia-1", "karelia-2", "karelia-3"}:
+        return (f'<img src="/img/{stem}.jpg" sizes="{sizes}" '
+                f'alt="{esc(p.get("image_caption", ""))}" {load_attr}>')
     # Не предполагать, что у каждого снимка есть responsive-копии:
     # если их нет, браузер должен получить оригинал, а не 404 по srcset.
     variants = [(f"/img/{stem}-400.jpg", 400), (f"/img/{stem}-800.jpg", 800), (f"/img/{stem}.jpg", 1600)]
