@@ -5,11 +5,11 @@ updated: 2026-11-26 09:52
 rubric: politika
 description: Туристы едут в Карелию за озёрами и лесами. Жители сталкиваются с оттоком населения, аварийным жильём, нехваткой врачей и закрытой границей с Финляндией.
 image: petrozavodsk-embankment.jpg
-image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Petrozavodsk%2006-2017%20img47%20Embankment.jpg?width=1600
+image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Petrozavodsk%2006-2017%20img48%20Embankment.jpg?width=1600
 image_caption: Онежская набережная в Петрозаводске
 image_credit: A. Savin / Wikimedia Commons
 image_license: Free Art License
-image_src: https://commons.wikimedia.org/wiki/File:Petrozavodsk_06-2017_img47_Embankment.jpg
+image_src: https://commons.wikimedia.org/wiki/File:Petrozavodsk_06-2017_img48_Embankment.jpg
 src: Правительство Карелии. Региональная программа повышения рождаемости, редакция от 4 августа 2026 года | https://kodeks.karelia.ru/api/show/465433352
 src: Стратегия социально-экономического развития Петрозаводска до 2034 года | https://kodeks.karelia.ru/api/show/408119792
 src: Правительство Карелии. Этап расселения аварийного жилья и план на 2026 год, 7 октября 2026 года | https://adm.gov10.ru/news/07-10-2026-glava-karelii-lichno-kontroliruet-novyy-etap-rasseleniya-avariynogo-zhilya-v-respublike/
@@ -51,7 +51,7 @@ src: Петрозаводск ГОВОРИТ. Ежегодный отчёт гл
 
 Городская стратегия, утверждённая в декабре 2025 года, фиксирует: примерно 22% протяжённости местных автомобильных дорог не отвечают нормативным требованиям. На уровне всей республики региональные власти сообщили о ремонте 172 километров региональных дорог и семи мостов в 2025 году. Это другая категория дорожной сети: такие работы не отменяют проблем муниципальных улиц. Состояние одной улицы не описывает весь город, но официальный документ подтверждает, что проблема не сводится к впечатлению случайного прохожего.
 
-<figure class="inphoto"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Petrozavodsk%202019.jpg?width=1200" alt="Жилые дома в Петрозаводске"><figcaption>Жилая застройка Петрозаводска. Фото: Semenov.m7 / Wikimedia Commons, CC BY-SA 4.0.</figcaption></figure>
+<figure class="inphoto"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/%D0%96%D0%B8%D0%BB%D1%8B%D0%B5%20%D0%B4%D0%BE%D0%BC%D0%B0%20%D0%BD%D0%B0%20%D1%83%D0%BB%D0%B8%D1%86%D0%B5%20%D0%90%D0%BD%D0%BE%D1%85%D0%B8%D0%BD%D0%B0%2C%20%D0%9F%D0%B5%D1%82%D1%80%D0%BE%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4%D1%81%D0%BA.jpg?width=1200" alt="Жилые дома на улице Анохина в Петрозаводске"><figcaption>Жилые дома на улице Анохина в Петрозаводске. Фото: Semenov.m7 / Wikimedia Commons, CC BY 4.0.</figcaption></figure>
 
 ## Старый жилой фонд и очередь на переселение
 
@@ -60,7 +60,7 @@ src: Петрозаводск ГОВОРИТ. Ежегодный отчёт гл
 
 Для человека, который живёт в таком доме, статистика означает ожидание конкретного срока, нового адреса и ответа на простой вопрос: сколько ещё зим придётся провести в старом жилье. В мае 2026 года председатель Следственного комитета Александр Бастрыкин раскритиковал работу регионального следственного управления из-за затягивания расследования дела о нарушении прав жителей аварийных домов. В сентябре он вновь поручил представить доклад по обращению жителей дома на улице Коммунистов в Петрозаводске, где, по их словам, протекала кровля, была сырость и промерзали коммуникации.
 
-<figure class="inphoto"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Petrozavodsk%2006-2017%20img02%20Rigachina%20Street.jpg?width=1200" alt="Деревянное здание на улице Ригачина в Петрозаводске"><figcaption>Деревянное здание на улице Ригачина в Петрозаводске. Фото: A. Savin / Wikimedia Commons, Free Art License.</figcaption></figure>
+<figure class="inphoto"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Petrozavodsk%202019.jpg?width=1200" alt="Жилые дома на пересечении проспекта Ленина и улицы Дзержинского в Петрозаводске"><figcaption>Жилые дома на пересечении проспекта Ленина и улицы Дзержинского. Фото: Semenov.m7 / Wikimedia Commons, CC BY-SA 4.0.</figcaption></figure>
 
 ## Республика, которая становится меньше
 
